@@ -81,7 +81,7 @@ function drawTopFO()
 function botao($id, $nome, $preco)
 {
   ?>
-    <form action="../Site/confirmarProduto.php" method="post" id="formHotel">
+    <form action="../SiteViagens/confirmarProduto.php" method="post" id="formHotel">
         
         </div>
         <div id="quanti">
@@ -113,7 +113,7 @@ function navBarTopFO()
 {
   ?>
       <nav class="w-100" id="navBarTop">
-        <a href="../Site/paginaPrincipal.php">
+        <a href="../SiteViagens/paginaPrincipal.php">
           <div id="logotipo"></div>
         </a>
         <label id="titulo">
@@ -131,7 +131,7 @@ function navBarTop()
 {
   ?>
       <nav class="w-100" id="navBarTop">
-        <a href="../Site/index.php">
+        <a href="../SiteViagens/index.php">
           <div id="logotipo"></div>
         </a>
         <label id="titulo">
@@ -159,11 +159,11 @@ function navBarBottomFO()
                   Pacotes
                 </a>
                 <div class="dropdown-menu" id="dropDownMenuP" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item p-3 text-center" href="../Site/viagens.php"
+                  <a class="dropdown-item p-3 text-center" href="../SiteViagens/viagens.php"
                     style="color: black; font-weight: bold;">Viagens</a>
-                  <a class="dropdown-item p-3 text-center" href="../Site/hoteis.php"
+                  <a class="dropdown-item p-3 text-center" href="../SiteViagens/hoteis.php"
                     style="color: black; font-weight: bold;">Hoteis</a>
-                  <a class="dropdown-item p-3 text-center" href="../Site/pacotes.php"
+                  <a class="dropdown-item p-3 text-center" href="../SiteViagens/pacotes.php"
                     style="color: black; font-weight: bold;">Pacotes</a>
                 </div>
               </li>
@@ -185,24 +185,24 @@ function navBarBottomFO()
                   Atividades
                 </a>
                 <div class="dropdown-menu" id='dropDownMenuA' aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item p-3 text-center" href="../Site/eventos.php?id=Festival"
+                  <a class="dropdown-item p-3 text-center" href="../SiteViagens/eventos.php?id=Festival"
                     style="color: black; font-weight: bold;">Festivais</a>
-                  <a class="dropdown-item p-3 text-center dropdown" href="../Site/eventos.php?id=Dia"
+                  <a class="dropdown-item p-3 text-center dropdown" href="../SiteViagens/eventos.php?id=Dia"
                     style="color: black; font-weight: bold;">Durante o Dia</a>
-                  <a class="dropdown-item p-3 text-center" href="../Site/eventos.php?id=Festa"
+                  <a class="dropdown-item p-3 text-center" href="../SiteViagens/eventos.php?id=Festa"
                     style="color: black; font-weight: bold;">Festas</a>
-                  <a class="dropdown-item p-3 text-center" href="../Site/eventos.php?id=Noite"
+                  <a class="dropdown-item p-3 text-center" href="../SiteViagens/eventos.php?id=Noite"
                     style="color: black; font-weight: bold;">Noite</a>
                   <a class="dropdown-item p-3 text-center" href="" style="color: black; font-weight: bold;">Diversões</a>
-                  <a class="dropdown-item p-3 text-center" href="../Site/eventos.php?id=Feira"
+                  <a class="dropdown-item p-3 text-center" href="../SiteViagens/eventos.php?id=Feira"
                     style="color: black; font-weight: bold;">Feira</a>
                 </div>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-light" href="../Site/monumentos.php">Monumentos</a>
+                <a class="nav-link text-light" href="../SiteViagens/monumentos.php">Monumentos</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-light" href="../Site/restaurantes.php">Restaurantes</a>
+                <a class="nav-link text-light" href="../SiteViagens/restaurantes.php">Restaurantes</a>
               </li>
             </ul>
           </div>
@@ -732,7 +732,7 @@ function navBarPacote()
 
   ?>
     <nav class="w-100" id="navBarTop">
-      <a href="../Site/paginaPrincipal.php">
+      <a href="../SiteViagens/paginaPrincipal.php">
         <div id="logotipo"></div>
       </a>
       <label id="titulo">
@@ -751,7 +751,7 @@ function navBarHoteis()
 
   ?>
     <nav class="w-100" id="navBarTop">
-      <a href="../Site/paginaPrincipal.php">
+      <a href="../SiteViagens/paginaPrincipal.php">
         <div id="logotipo"></div>
       </a>
       <label id="titulo">
@@ -932,68 +932,59 @@ function viagens()
       </div>
     </form>
 
-    <div class="w-100 d-flex flex-wrap ml-4">
+    <div class="w-100 d-flex flex-wrap">
       <?php while ($dados = mysqli_fetch_array($result)) {
 
         $sql = "SELECT * FROM destinos WHERE destinoId = {$dados['viagemChegadaDestinoId']}";
         $chegada = mysqli_query($con, $sql);
         $chegadas = mysqli_fetch_array($chegada);
         ?>
+
+          <!--<a href="viagem.php?id=<?php/* echo $dados['viagemId'] */?>" style="color:black;">-->
           <div id="caixaViagens">
+              
+
+            <label id="tituloViagens">Data da viagem <?php echo date('d/m/Y', strtotime($dados['viagemData'])); ?></label>
+
+            <div id="caixaDireitaViagens">
+
+              <label id="campoDirTit">DESTINO DE CHEGADA</label>
+              <label id="campoDirDados"><?php echo $chegadas['destinoNome'] ?></label>
 
 
-            <a href="viagem.php?id=<?php echo $dados['viagemId'] ?>" style="color:black;">
-              <div id="campoCima" style="background-color: #1f559c; color: white">
-                <div id="campoEsq">De
-                  <?php echo $dados['destinoNome'] ?>
-                </div>
-                <div id="campoDir">Para
-                  <?php echo $chegadas['destinoNome'] ?>
-                </div>
-              </div>
-              <div id="campoCima" class="text-center" style="font-size:18pt; padding-top:10px;">
-                <?php echo date('d/m/Y', strtotime($dados['viagemData'])); ?>
-              </div>
-
-              <div id="campoCima" style="background-color: #1f559c; color: white">
-
-                <div id="campoEsq" class="w-50 text-center">Partida</div>
-                <div id="campoDir" class="w-50 text-center">Chegada</div>
-
-              </div>
-
-              <div id="campoCima">
-
-                <div id="campoEsq" class="w-50 text-center">
-                  <?php echo date('H:i', strtotime($dados['viagemIni'])); ?>
-                </div>
-                <div id="campoDir" class="w-50 text-center">
-                  <?php echo date('H:i', strtotime($dados['viagemChegada'])); ?>
-                </div>
-
-              </div>
+              <label id="campoDirTit">TIPO DA VIAGEM</label>
+              <label id="campoDirDados"><?php echo $dados['viagemTipo'] ?></label>
 
 
-              <div id="campoCima" class="text-center"
-                style="font-size:18pt; padding-top:10px;background-color: #1f559c; color: white">Suporte Telefónico:
-                <?php echo $dados['viagemTelefone'] ?>
-              </div>
+              <label id="campoEsqTit">HORA DE PARTIDA</label>
+              <label id="campoEsqDados"><?php echo date('H:i', strtotime($dados['viagemIni']));  ?></label>
 
 
-              <div id="campoCima" class="text-center" style="font-size:18pt; padding-top:10px;">
-                <?php echo $dados['viagemPreco'] ?>€ / Bilhete
-              </div>
+              <label id="campoEsqTit">SUPORTE TÉCNICO</label>
+              <label id="campoEsqDados"><?php echo $dados['viagemTelefone']; ?></label>             
+
+            </div>
+
+
+            <div id="caixaEsquerdaViagens">
+              
+              <label id="campoDirTit">DESTINO DE PARTIDA</label>
+              <label id="campoDirDados"><?php echo $dados['destinoNome'] ?></label>
+
+              <label id="campoEsqTit">CLASSE DA VIAGEM</label>
+              <label id="campoEsqDados"><?php echo $dados['viagemClasse'] ?></label>
+
+              <label id="campoDirTit">HORA DE CHEGADA</label>
+              <label id="campoDirDados"><?php echo date('H:i', strtotime($dados['viagemChegada']));  ?></label>
+
+              <label id="campoDirTit">LUGARES DISPONIVEIS</label>
+              <label id="campoDirDados"><?php echo $dados['viagemLugares'];  ?> Lugares</label>
 
 
 
-              <?php
-              botao($dados['viagemId'], $dados['destinoNome'], $dados['viagemPreco']);
-              ?>
-
-
-            </a>
+            </div>
           </div>
-
+      </a>
 
           <?php
       }
@@ -1010,7 +1001,7 @@ function navBarViagens()
 
   ?>
     <nav class="w-100" id="navBarTop">
-      <a href="../Site/paginaPrincipal.php">
+      <a href="../caixaViagens/paginaPrincipal.php">
         <div id="logotipo"></div>
       </a>
       <label id="titulo">
@@ -1030,7 +1021,7 @@ function navBarAtividades()
 
   ?>
     <nav class="w-100" id="navBarTop">
-      <a href="../Site/paginaPrincipal.php">
+      <a href="../SiteViagens/paginaPrincipal.php">
         <div id="logotipo"></div>
       </a>
       <label id="titulo">
@@ -1191,7 +1182,7 @@ function navBarPaises()
 
   ?>
     <nav class="w-100" id="navBarTop">
-      <a href="../Site/paginaPrincipal.php">
+      <a href="../SiteViagens/paginaPrincipal.php">
         <div id="logotipo"></div>
       </a>
       <label id="titulo">
@@ -1291,7 +1282,7 @@ function navBarConcelhos()
 
   ?>
     <nav class="w-100" id="navBarTop">
-      <a href="../Site/paginaPrincipal.php">
+      <a href="../SiteViagens/paginaPrincipal.php">
         <div id="logotipo"></div>
       </a>
       <label id="titulo">
@@ -1370,7 +1361,7 @@ function navBarMonumentos()
 
   ?>
     <nav class="w-100" id="navBarTop">
-      <a href="../Site/paginaPrincipal.php">
+      <a href="../SiteViagens/paginaPrincipal.php">
         <div id="logotipo"></div>
       </a>
       <label id="titulo">
@@ -1508,7 +1499,7 @@ function navBarRestaurantes()
 
   ?>
     <nav class="w-100" id="navBarTop">
-      <a href="../Site/paginaPrincipal.php">
+      <a href="../SiteViagens/paginaPrincipal.php">
         <div id="logotipo"></div>
       </a>
       <label id="titulo">
@@ -1628,7 +1619,7 @@ function navBarHotel($id)
 
   ?>
     <nav class="w-100" id="navBarTop">
-      <a href="../Site/paginaPrincipal.php">
+      <a href="../SiteViagens/paginaPrincipal.php">
         <div id="logotipo"></div>
       </a>
       <label id="titulo">
@@ -1755,7 +1746,7 @@ function navBarRestaurante($id)
 
   ?>
     <nav class="w-100" id="navBarTop">
-      <a href="../Site/paginaPrincipal.php">
+      <a href="../SiteViagens/paginaPrincipal.php">
         <div id="logotipo"></div>
       </a>
       <label id="titulo">
@@ -1891,7 +1882,7 @@ function navBarMonumento($id)
 
   ?>
     <nav class="w-100" id="navBarTop">
-      <a href="../Site/paginaPrincipal.php">
+      <a href="../SiteViagens/paginaPrincipal.php">
         <div id="logotipo"></div>
       </a>
       <label id="titulo">
@@ -2034,7 +2025,7 @@ function navBarPacotes($id)
 
   ?>
     <nav class="w-100" id="navBarTop">
-      <a href="../Site/paginaPrincipal.php">
+      <a href="../SiteViagens/paginaPrincipal.php">
         <div id="logotipo"></div>
       </a>
       <label id="titulo">
@@ -2272,7 +2263,7 @@ function navBarPais($id)
 
   ?>
     <nav class="w-100" id="navBarTop">
-      <a href="../Site/paginaPrincipal.php">
+      <a href="../SiteViagens/paginaPrincipal.php">
         <div id="logotipo"></div>
       </a>
       <label id="titulo">
@@ -2384,7 +2375,7 @@ function navBarConcelho($id)
 
   ?>
     <nav class="w-100" id="navBarTop">
-      <a href="../Site/paginaPrincipal.php">
+      <a href="../SiteViagens/paginaPrincipal.php">
         <div id="logotipo"></div>
       </a>
       <label id="titulo">
@@ -2557,7 +2548,7 @@ function navBarAtividade($id)
 
   ?>
     <nav class="w-100" id="navBarTop">
-      <a href="../Site/paginaPrincipal.php">
+      <a href="../SiteViagens/paginaPrincipal.php">
         <div id="logotipo"></div>
       </a>
       <label id="titulo">
@@ -2577,7 +2568,7 @@ function navBarCarrinho()
 
   ?>
     <nav class="w-100" id="navBarTop">
-      <a href="../Site/paginaPrincipal.php">
+      <a href="../SiteViagens/paginaPrincipal.php">
         <div id="logotipo"></div>
       </a>
       <?php

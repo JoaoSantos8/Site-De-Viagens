@@ -57,7 +57,7 @@ while ($dados = mysqli_fetch_array($result)) { ?>
     <td class="p-3"><strong><?php if ($_SESSION['precoTotal'] == "0") {
                   echo "CARRINHO VAZIO";
                 } else {
-                  echo $_SESSION['precoTotal'] ?>€
+                  echo $_SESSION['precoTotal']?>€
                     <?php
                 }
                 ?></strong></td>
