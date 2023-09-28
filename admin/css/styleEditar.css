@@ -1,0 +1,146 @@
+:root{
+    --cinza: rgb(109, 109, 109);
+}
+#nome, #email, #telefone, #idade, #cargo, #fimEdi, #imagem{
+    letter-spacing: 5px;
+    padding: 20px;
+    background-color: var(--roxo);
+    border: double 10px var(--cinza);
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+    width: 420px;
+}
+#fimEdi{
+    margin-left: 3% !important;
+}
+
+#fimEdi:hover{
+    background-color: white;
+    border: double 10px var(--roxo);
+    color: var(--roxo);
+}
+
+#nome{
+    margin-left: 14%;
+}
+
+#email{
+    margin-left: 14% !important;
+    margin-top: 2% !important;
+}
+
+#inputEmail{
+    margin-left: 16% !important;
+    width: 380px !important;
+}
+
+#inputNome{
+    margin-left: 16% !important;
+}
+
+#inputTelefone{
+    margin-left: 7% !important;
+}
+
+#inputIdade{
+    margin-left: 6% !important;
+}
+
+#telefone{
+    margin-left: 5% !important;
+    margin-top: 2%  !important;
+}
+
+#imagem{
+    margin-left: 3% !important;
+    margin-top: 4%  !important;
+}
+
+#idade{
+    margin-left: 5% !important;
+}
+
+#cargo{
+    margin-left: 5% !important;
+    margin-top: 8px;
+}
+
+#slect{
+    margin-left: 6% !important;
+    cursor: pointer !important;
+    padding: 20px !important;
+    margin: 0% 5% 1%;
+    width: 320px;
+    border: double 10px var(--cinza);
+    border-radius: 20px !important;
+    text-align: center;
+}
+
+body{
+    font-family: 'Times New Roman', Times, serif;
+    background-color: var(--cinza) !important;
+}
+
+#inputNome, #inputEmail, #inputTelefone, #inputIdade, #inputImagem{
+    padding: 20px;
+    margin: 0% 5% 1%;
+    width: 320px;
+    border: double 10px var(--cinza);
+    border-radius: 20px;
+}
+
+#inputImagem{
+    cursor: pointer !important  ;
+}
+
+#titulo{
+    letter-spacing: 5px;
+    padding: 20px;
+    background-color: var(--roxo);
+    border: double 10px var(--cinza);
+    margin: 2% 3% 2%;
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+}
+
+#n{
+    float: left;
+}
+
+#mid{
+    margin-left: 25%;
+    margin-top: 2px;
+}
+
+#ima{
+    width: 150px;
+    height: 150px;
+    margin-left: 87%;
+    margin-top: -97px;
+    border: double 10px white;
+    border-radius: 20px;
+    margin-bottom: 10%;
+}
+
+#t{
+    float: right;
+    margin-top: -213px;
+    margin-right: 26%;
+}
+
+  
+  #image{
+    float: right;
+    margin-top: -219px;
+    margin-right: 26%;
+  }
+
+#img{
+    display: none;
+}
+  #inputImagem{
+    background-color: white;
+}
+

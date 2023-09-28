@@ -1,0 +1,204 @@
+
+/*********Perfil *************/
+#perfil{
+    width: auto;
+    margin-left: 1%;
+    margin-right: 16%;
+    margin-top: 1%;
+    height: 383px;
+    background-color: white;
+    border-radius: 20px;
+    border: solid 4px var(--roxo);
+}
+
+#imgPerfil{
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 5%;
+    left: 7%;
+    border: solid 7px var(--claro);
+    float: left;
+}
+
+#dadosLeft{
+    float: right;
+    margin-right: 45%;
+    width: 20%;
+    display: inline;
+    font-size: 18pt;
+    padding-top: 1%;
+}
+#dadosMiddle{
+    float: right;
+    margin-right: -30%;
+    width: 10%;
+    font-size: 18pt;
+    padding-top: 1%;
+}
+
+#dadosRight{
+    float: right;
+    margin-right: -50%;
+    width: 10%;
+    font-size: 18pt;
+    padding-top: 5%;
+}
+
+#titulo{
+    float: right;
+    margin-right: 7%;
+    padding: 10px;
+    width: 58%;
+    background-color: var(--claro);
+    color: white;
+    box-shadow: 10px 10px 10px var(--roxo);
+}
+#imgPerfil:hover{
+	animation: roda 2s reverse;
+    cursor: pointer;
+    height: 350px;
+    width: 350px;
+    position: absolute;
+    top: 3%;
+}
+
+@keyframes roda {
+	0% {
+		transform: rotate(0);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+#n{
+    background-color: var(--claro);
+    width: 310px;
+    height: 50px;
+    color: white;
+    padding-top: 2%;
+    box-shadow: 10px 10px 10px var(--roxo);
+}
+#nome, #email, #telefone, #cargo, #idade{
+    background-color: var(--roxo);
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 310px;
+    color: white;
+    box-shadow: 10px 10px 10px var(--claro);
+}
+
+#btn1, #btn2, #btn3, #btn4{
+    height: 300px;
+    box-shadow: 10px 10px 5px rgb(87, 87, 87);
+    width: 807px;
+    margin: 20px;
+    z-index: 0;
+    background-color: white;
+    border-radius: 15px;
+    border: solid 5px var(--roxo);
+}
+
+#btn1V{
+    height: 300px;
+    box-shadow: 10px 10px 5px rgb(87, 87, 87);
+    width: 807px;
+    margin: 20px;
+    z-index: 0;
+    background-color: white;
+    border-radius: 15px;
+    border: solid 5px var(--roxo);
+    
+    margin-left: 35%;
+}
+
+#btn1, #btn1V{  
+    background-image: url(../images/viagens.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#btn2{  
+    background-image: url(../images/hoteis.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#btn3{  
+    background-image: url(../images/pacotes.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#btn4{  
+    background-image: url(../images/atividades.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#btn1:active, #btn2:active, #btn3:active, #btn4:active, #btn1V:active{
+  transform: translateY(7px);
+}
+
+#btn1:hover, #btn2:hover, #btn3:hover, #btn4:hover, #btn1V:hover{
+    cursor: pointer;
+    box-shadow: -10px -10px 10px rgb(87, 87, 87);
+}
+
+#btnsCima{
+    margin-left: 5%;
+    width: auto;
+    float: left;
+    display: flex;
+}
+
+#btnsBaixo{
+    margin-left: 5%;
+    width: auto;
+    display: flex;
+    float: left;
+}
+
+#tabela{
+    width: 85%;
+}
+
+
+/************página utilizadores ******************/
+#cabecabutton{
+    display:block; 
+    border-radius:none;
+    text-align: center;
+    letter-spacing: 5px;
+    padding: 20px;
+    font-weight: bold;
+    border-radius: 0px;
+}
+
+#cabecaButton:hover{
+    text-decoration: none;
+    background-color: white;
+    border: solid 3px green;
+    color: green !important;
+}
+
+#cabeca{
+    padding:0px !important;
+    border:none;
+    border-radius: 0px;
+}
+
+#cabecaButton:active{
+  transform: translateY(2px);
+}
+/***************************Pagina editar***************/
+#formulario{
+    box-shadow: 10px 10px 10px black;
+    background-color: gray;
+    border-radius: 10px;
+}
+
+#imagemN{
+    background-color: white;
+}

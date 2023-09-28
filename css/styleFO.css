@@ -1,0 +1,1397 @@
+:root{
+    --blue: #2782ff !important;
+    --borda: rgb(189, 189, 189);
+}
+
+/*********** NavBar Top **************************/
+#navBarTop{
+    background-color: var(--blue);
+    height: 100px;
+}
+
+#logotipo{
+    background-image: url(../images/logotipo.png);
+    width: 200px;
+    height: 75px;
+    position: absolute;
+    top: 1%;
+    left: 5%;
+}
+
+#titulo{
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    top: 25px;
+    left: 45%;
+    text-transform: uppercase;
+    font-size: 20pt;
+}
+
+#opcoes{
+    width: 400px;
+    height: 70px;
+    position: absolute;
+    right: 2%;
+    top: 15px;
+    background-color: var(--blue);
+    display: flex;
+    border-radius: 20px;
+}
+
+#signUp{
+    background-color: var(--blue);
+    color: white;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    height: 70px;
+}
+
+#login{ 
+  background-color: var(--blue);
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  height: 70px;
+}
+
+#signUp:hover{
+    background-color: white;
+    color: black;
+}
+
+#login:hover{
+    background-color: white;
+    color: black;
+}
+
+#signUp:active{
+    border: none;
+}
+
+#login:active{
+    border: none;
+}
+
+/******************Nav Bar Bottom ****************************/
+#navBarBottom{
+    background-color: #1845834f;
+    height: 100px;
+    border-top-left-radius: 20px !important;
+    border-top-right-radius: 20px !important;
+    font-family: 'Times New Roman', Times, serif;
+    width: 1650px !important;
+}
+
+#navBarBottom:hover{
+  background-color: #184583;
+}
+
+a{
+    color: white !important;
+    text-decoration: none !important;
+}
+
+.navbar{
+    height: 100px;
+}
+
+.nav-item{
+    padding-right: 120px;
+    padding-left: 50px;
+    font-size: 18pt;
+    cursor: pointer;
+}
+
+#dropDownMenuP{
+    width: 273px;
+    background-color: var(--blue);
+    display: none;
+    position: absolute;
+    top: -256px;
+    left: -21px;
+    border-radius: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.dropdown-item:hover{
+    color: black !important;
+}
+
+#dropDownMenuD{
+    width: 292px;
+    background-color: var(--blue);
+    display: none;
+    position: absolute;
+    top: -186px;
+    left: -32px;
+    border-radius: 20px;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+
+#dropDownMenuA{
+    width: 300px;
+    background-color: var(--blue);
+    display: none;
+    position: absolute;
+    top: -466px;;
+    left: -36px;
+    border-radius: 20px;
+}
+
+#navBarB{
+    border-top-left-radius: 20px !important;
+    border-top-right-radius: 20px !important;
+}
+
+
+
+/************************** Sign Up css **********************************************/
+
+
+#card, #cardL{
+    background-image: url(../images/signUp.png);
+    width: 400px;
+    height: 700px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    box-shadow: -10px 10px 10px gray;
+}
+
+#cardSignUp{
+    height: 700px;
+    width: 1200px;
+    margin: 3% auto;
+    display: flex;
+}
+
+#insDados, #insDadosL{
+    height: 700px;
+    width: 900px;
+    box-shadow: 10px 10px 10px rgb(128, 128, 128);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+#tDados, #tDadosL{
+    color: black;
+}
+
+#tDadosL{
+  margin-top: 15%;
+}
+
+#nome, #email, #idade, #telefone, #pass, #cPass{
+    border: 5px solid var(--blue);
+    height: 80px;
+    width: 200px;
+    padding: 20px;
+    font-weight: bold;
+    margin-right: 40px;
+    margin-bottom: 40px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+#inputNome, #inputEmail, #inputIdade, #inputTelefone, #inputPass, #inputCPass{
+    border: solid 5px var(--blue);
+    height: 80px;
+    width: 400px;
+    font-size: 15pt;
+    border-radius: 10px;
+}
+
+#pass, #cPass{
+    width: 250px !important;
+}
+
+#cPass{
+    margin-top: 12%;
+}
+
+#primeiraEtapa{
+    margin-left: 12% !important;
+    display: block;
+}
+
+#segundaEtapa{
+    display: none;
+}
+
+#terceiraEtapa{
+    margin-left: 6% !important;
+    margin-top: 4%;
+    display: none;
+}
+
+#inputPass, #inputCPass{
+  cursor: pointer;
+}
+
+
+#next1{ 
+    margin-left: 84%;
+    position: relative;
+    bottom: 52px;
+    left: -16%;
+    border: solid 5px var(--blue);
+    background-color: var(--blue);
+    color: white;
+    font-weight: bold;
+    width: 200px;
+    height: 80px;
+    letter-spacing: 2px;
+    border-radius: 10px;
+}
+
+
+
+#next1:hover, #loginL:hover{
+    box-shadow: 10px 10px 10px var(--borda);
+    background-color: white;
+    color: var(--blue);
+}
+
+#p1{
+    background-color: var(--blue);
+}
+
+#p1, #p2, #p3{
+    border: solid 5px var(--blue);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding-top: 5px;
+    margin-right: 2%;
+    font-weight: bold;
+}
+
+#paginas{
+    display: flex;
+    margin-left: 8%;
+}
+
+#next1:active, #loginL:active{
+  transform: translateY(7px);
+}
+
+
+/*******************Imagem **********************/
+#imagemSel{
+    display: flex;
+    margin-top: -5% !important;
+    margin-bottom: 13%;
+  }
+  .file-upload {
+    background-color: #ffffff;
+    width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 10px 10px 10px 10px var(--blue);
+  }
+  
+  .file-upload-btn {
+    width: 100%;
+    margin: 0;
+    color: #fff;
+    background: var(--blue);
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    border-bottom: 4px solid var(--blue);
+    transition: all .2s ease;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  
+  .file-upload-btn:hover {
+    background: var(--blue);
+    color: #ffffff;
+    transition: all .2s ease;
+    cursor: pointer;
+    box-shadow: 10px 10px 10px gray;
+  }
+  
+  .file-upload-btn:active {
+    border: 0;
+    transition: all .2s ease;
+  }
+  
+  .file-upload-content {
+    display: none;
+    text-align: center;
+  }
+  
+  .file-upload-input {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .image-upload-wrap {
+    margin-top: 20px;
+    border: 4px dashed var(--blue);
+    position: relative;
+  }
+  
+  .image-dropping,
+  .image-upload-wrap:hover {
+    background-color: rgba(38, 96, 255, 0.733);
+    border: 4px dashed #ffffff;
+  }
+  
+  .image-title-wrap {
+    padding: 0 15px 15px 15px;
+    color: #222;
+  }
+  
+  .drag-text {
+    text-align: center;
+  }
+  
+  .drag-text h3 {
+    font-weight: 100;
+    text-transform: uppercase;
+    color: black;
+    padding: 60px 0;
+  }
+  
+  .file-upload-image {
+    max-height: 200px;
+    max-width: 200px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  .remove-image {
+    width: 200px;
+    margin: 0;
+    color: #fff;
+    background: #cd4535;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    border-bottom: 4px solid #b02818;
+    transition: all .2s ease;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  
+  .remove-image:hover {
+    background: #c13b2a;
+    color: #ffffff;
+    transition: all .2s ease;
+    cursor: pointer;
+  }
+  
+  .remove-image:active {
+    border: 0;
+    transition: all .2s ease;
+  }
+
+
+
+  /****************************Cargo********************************/
+  #slect{
+    width: 600px;
+    background-color: white;
+    border-top-left-radius: 10px;
+    box-shadow: 10px 10px 10px 10px var(--blue);
+    margin-bottom: 6%;
+  }
+  .rule {
+    margin: 10px 0;
+    border: none;
+    height: 1.5px;
+    background-image: linear-gradient(left, #f0f0f0, #c9bbae, #f0f0f0);
+  }
+  
+  /* ===== Select Box ===== */
+  .sel {
+    font-size: 1rem;
+    display: block;
+    margin-left: 14%;
+    width: 350px;
+    background-color: transparent;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .sel::before {
+    position: absolute;
+    content: "\f063";
+    font-family: "FontAwesome";
+    font-size: 2em;
+    color: #fff;
+    right: 20px;
+    top: calc(50% - 0.5em);
+  }
+  
+  .sel.active::before {
+    transform: rotateX(-180deg);
+  }
+  
+  .sel__placeholder {
+    display: block;
+    font-family: "Quicksand";
+    font-size: 2.3em;
+    color: #838e95;
+    padding: 0.2em 0.5em;
+    text-align: left;
+    pointer-events: none;
+    user-select: none;
+    visibility: visible;
+  }
+  
+  .sel.active .sel__placeholder {
+    visibility: hidden;
+  }
+  
+  .sel__placeholder::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0.2em 0.5em;
+    content: attr(data-placeholder);
+    visibility: hidden;
+  }
+  
+  .sel.active .sel__placeholder::before {
+    visibility: visible;
+  }
+  
+  .sel__box {
+    position: absolute;
+    top: calc(100% + 4px);
+    left: -4px;
+    display: none;
+    list-style-type: none;
+    text-align: left;
+    font-size: 1em;
+    background-color: #fff;
+    width: calc(100% + 8px);
+    box-sizing: border-box;
+  }
+  
+  .sel.active .sel__box {
+    display: block;
+    animation: fadeInUp 500ms;
+  }
+  
+  .sel__box__options {
+    display: list-item;
+    font-family: "Quicksand";
+    font-size: 1.5em;
+    color: #838e95;
+    padding: 0.5em 1em;
+    user-select: none;
+  }
+  
+  .sel__box__options::after {
+    content: "\f00c";
+    font-family: "FontAwesome";
+    font-size: 0.5em;
+    margin-left: 5px;
+    display: none;
+  }
+  
+  .sel__box__options.selected::after {
+    display: inline;
+  }
+  
+  .sel__box__options:hover {
+    background-color: #ebedef;
+  }
+  
+  /* ----- Select Box Black Panther ----- */
+  .sel {
+    border-bottom: 4px solid rgba(0, 0, 0, 0.3);
+  }
+  
+  .sel--black-panther {
+    z-index: 3;
+  }
+  
+  /* ----- Select Box Superman ----- */
+  .sel--superman {
+    /*   display: none; */
+    z-index: 2;
+  }
+  
+  /* ===== Keyframes ===== */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translate3d(0, 20px, 0);
+    }
+  
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 0;
+    }
+  }
+
+
+  /************************************   Login   ******************/
+
+#inputEmailL{
+  border: solid 5px var(--blue);
+  height: 80px;
+  width: 400px;
+  font-size: 15pt;
+  border-radius: 10px;
+}
+
+#passL{
+    
+  border: 5px solid var(--blue);
+  height: 80px;
+  width: 250px;
+  padding: 20px;
+  font-weight: bold;
+  margin-right: 40px;
+  margin-bottom: 40px;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-left: 7%;
+}
+
+#inputPassL{
+  border: solid 5px var(--blue);
+    height: 80px;
+    width: 400px;
+    font-size: 15pt;
+    border-radius: 10px;
+}
+
+#emailL{
+  
+  margin-left: 7%;
+  border: 5px solid var(--blue);
+  height: 80px;
+  width: 200px;
+  padding: 20px;
+  font-weight: bold;
+  margin-right: 40px;
+  margin-bottom: 40px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+#loginL{
+  margin-left: 38%;
+  border: solid 5px var(--blue);
+  background-color: var(--blue);
+  color: white;
+  font-weight: bold;
+  width: 200px;
+  height: 80px;
+  letter-spacing: 2px;
+  border-radius: 10px;
+}
+
+/**************Menu Perfil***********************/
+
+#menuPerfil{
+  display: none;
+  background-color: var(--blue);
+  position: absolute;
+  top: 86px;
+  right: 2%;
+  left: 18%;
+}
+
+#perfilUti{
+    text-align: center;
+    color: white;
+    letter-spacing: 5px;
+    
+}
+
+#imgP{
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+  border: 3px solid white;
+}
+
+
+#link{
+  display: flex;
+}
+
+#itemDrop{
+  color: black; 
+  font-weight: bold; 
+  letter-spacing: 2px; 
+  text-transform:uppercase;
+}
+
+
+/**********************Página principal*******************/
+
+#containerCima{
+  background-image: url(../images/fundo.png);
+  background-repeat: no-repeat;
+  max-height: 1120px;
+}
+
+
+.bOrd{
+  background-color: white;
+  color: black;
+}
+
+.bOrd:hover{
+  border: 2px solid black;
+}
+
+
+#caixa{
+  background-color: #8ab9fc8e;
+  border-radius: 10px;
+  height: auto;
+  border: solid 3px white;
+}
+
+#filtro{
+  width: 500px;
+}
+
+.preco{
+  background-color: #2782ff;
+  color: white;
+  border-bottom-right-radius: 10px;
+  height: auto;
+}
+
+.info{
+  font-size: 18pt;
+  font-weight: 600;
+  color: black;
+}
+
+.tituolo{
+  color: black;
+}
+
+#caixa:hover{
+  
+  border: solid 3px black;
+}
+
+
+.hora, .data{
+  height: 70px;
+  font-size: 18pt;
+  font-weight: 600;
+  padding-top: 8px;
+}
+
+
+.horaInfo{
+  height: 70px;
+}
+
+.horaLege, .dataLege{
+  background-color: rgb(11, 11, 114);
+  color: white;
+  height: 70px;
+}
+
+/***************Restaurantes************************/
+
+#caixaR{
+  background-color: rgb(11, 11, 114);
+  margin: 140px;
+  max-height: 1200px;
+  max-width: 750px;
+  overflow-y: auto;
+  border-radius: 10px;
+}
+
+#titul{
+  color:white;
+  position: sticky; 
+  top: 0; 
+  z-index:10;
+  background-color: rgb(11, 11, 114);
+}
+
+.precoR{
+  
+  background-color: #2782ff;
+  color: white;
+  height: auto;
+  height: 50px;
+  padding: 8px;
+  font-size: 18pt;
+}
+
+#caixaDentro{
+  background-color: #8ab9fc8e;
+  display: flex; 
+  align-items: center;
+}
+
+
+#caixaDentro:hover{
+  border: 3px solid white;
+}
+
+#fundoRA{
+  background-image: url(../images/fundoPal.png);
+  height: 1500px;
+}
+
+#caixaA{
+  
+  background-color: rgb(11, 11, 114);
+  max-height: 1200px;
+  max-width: 750px;
+  overflow-y: auto;
+  border-radius: 10px;
+  margin-top: 140px;
+  margin-right: 140px;
+}
+
+/*************Caixa Pacotes****************/
+
+#caixaPacotes{
+  background-color: rgb(167, 167, 167);
+  margin-top: 100px;
+  height: auto;
+}
+
+#caixaPacote{
+  background-color: #1f559c;
+  height: auto;
+  border-radius: 10px;
+}
+
+#imgPacote{
+  margin:40px; 
+  border:solid 3px white; 
+  border-radius: 10px;
+  height: 450px;
+  width: 792px;
+}
+
+#imagemPC{
+  margin:40px; 
+  border:solid 3px white; 
+  border-radius: 10px;
+  height: 457px;
+  width: 805px;
+  position: relative;
+}
+
+#destinosChe{
+  height: 70px;
+  border-bottom: solid 3px white;
+}
+
+#caixaDir{
+  height: 515px;
+  width: 700px;
+  margin-right: 80px;
+  margin-top: -480px;
+  background-color: #2a7ce6;
+  border-radius: 10px;
+  font-size: 18pt;
+}
+
+#dataP{
+  padding-top: 10px;
+  border-bottom: solid 3px white;
+  padding-bottom: 10px;
+}
+
+#descH{
+  position: absolute;
+  left: 0; 
+  bottom: 0;
+  width: 100%; 
+  background-color: rgba(0, 0, 0, 0.7); 
+  color: white; 
+  padding: 20px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+#descHT{
+  position: absolute;
+  left: 0; 
+  top: 0;
+  width: 100%; 
+  background-color: rgba(0, 0, 0, 0.7); 
+  color: white; 
+  padding: 20px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+#caixaPacote:hover{
+  border: solid 3px white;
+  cursor: pointer;
+}
+
+
+
+#caixaHoteis{
+  width: 800px;
+  height: auto;
+  background-color: #1f559c;
+  margin: 80px;
+  border-radius: 10px;
+}
+
+#caixaHoteis:hover{
+  border: 3px solid black;
+}
+
+/*********************Lista Viagens*****************/
+
+#campoCima{
+  height: 70px;
+  border-bottom: solid 3px white;
+  border-radius: 10px;
+  font-size: 18pt;
+  text-align: center;
+  padding-top: 10px;
+}
+
+
+#caixaViagens{
+  background-color: #2782ff;
+  border: 3px solid white;
+  width: 45%;
+  margin: 30px;
+  border-radius: 10px;
+}
+
+
+#campoEsq{
+  padding-left: 150px;
+  padding-top: 15px; 
+  font-size: 18pt;
+  height: 70px;
+  float: left;
+}
+
+#campoDir{
+  padding-right: 150px; 
+  padding-top: 15px;
+  font-size: 18pt;
+  float: right;
+}
+
+
+#caixaViagens:hover{
+  border: solid 3px black;
+}
+
+/************************Paises*******************************/
+
+#caixaPais{
+  width: 600px;
+  height: 700px;  
+  margin: 100px;
+  background-color: #1f559c;
+  border-radius: 10px;
+}
+
+
+#caixaPais:hover{
+  border: solid 3px black;
+}
+
+#concelho{
+  width: auto;
+  padding: 15px;
+}
+
+
+#concelho:hover{
+  border: solid 3px white;
+}
+
+#pais{
+  border: solid 10px #0c6ef0;
+}
+
+
+#pais:hover{
+  background-color: white;
+  color: black;
+}
+/****************Individual**************/
+/******Hotel********/
+
+#caixaInfos{
+  border: 7px solid var(--blue);
+  background-color: var(--gray);
+  width: auto;
+  height: 700px;
+  margin: 5% 5%;
+  border-radius: 20px;
+}
+
+#imgInfo{
+  margin: 2%;
+  border: 5px solid var(--blue);
+  width: 808px;
+  border-radius: 20px;
+  position: relative;
+}
+
+#imagemInfo{
+  width: 100%;
+  height: 450px;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+#descInfo {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente para legibilidade */
+  color: white;
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  margin-bottom: 0px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+
+#tituloInfo{
+  background-color: var(--gray);
+  border: 7px solid var(--blue);
+  width: auto;
+  height: 80px;
+  text-align: center;
+  padding: 15px;
+  margin: -5% 41%;
+  border-radius: 10px;
+  font-size: 18pt;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+  
+#caixaInfo{
+  background-color: var(--gray);
+  width: 300px;
+  height: 450px;
+  float: right;
+  margin-top: -25%;
+  margin-right: 4%;
+  height: 400px;
+  width: 800px;
+  border-radius: 20px;
+} 
+
+#caixaEmail{
+  background-color: var(--blue);
+  height: 110px;
+  padding-top: 10px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+#emailInfo{
+  height: 50px;
+  text-align: center;
+  font-size: 18pt;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+  background-color: #184583;
+  width: 100%;
+  padding-top: 8px;
+}
+
+#infoEmail{
+  height: 50px;
+  text-align: center;
+  font-size: 18pt;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+}
+
+
+#caixaTel{
+  background-color: var(--blue);
+  height: 110px;
+  padding-top: 10px;
+  margin-top: 30px;
+}
+
+#telInfo{
+  height: 50px;
+  text-align: center;
+  font-size: 18pt;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+  background-color: #184583;
+  width: 100%;
+  padding-top: 8px;
+}
+
+#infoTel{
+  height: 50px;
+  text-align: center;
+  font-size: 18pt;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+}
+
+#caixaPreco{
+  background-color: var(--blue);
+  height: 110px;
+  padding-top: 10px;
+  margin-top: 30px;
+}
+
+#infoPreco1, #infoPreco2, #infoPreco3{
+  height: 50px;
+  text-align: center;
+  font-size: 18pt;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+  width: 33%;
+  float: left;
+}
+
+#precoInfo1, #precoInfo2{
+  height: 50px;
+  text-align: center;
+  font-size: 18pt;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+  width: 33%;
+  float: left;
+  background-color: #184583;
+  padding-top: 8px;
+}
+
+
+#precoInfo3{
+  height: 50px;
+  text-align: center;
+  font-size: 18pt;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;  
+  width: 34%;
+  float: right;
+  background-color: #184583;
+  padding-top: 8px;
+}
+
+#caixaConcelho{
+  background-color: var(--blue);
+  height: 110px;
+  padding-top: 10px;
+  margin-top: 30px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+#concelhoInfo{
+  height: 50px;
+  text-align: center;
+  font-size: 18pt;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+  background-color: #184583;
+  width: 100%;
+  padding-top: 8px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+#infoConcelho{
+  height: 50px;
+  text-align: center;
+  font-size: 18pt;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+}
+
+
+/*************************Form Quantidade***************************/
+#btnH{
+  width: 500px;
+  margin-top: -4%;
+  border: 5px solid var(--blue);
+  border-radius: 10px;
+  height: 80px;
+  margin-left: 35%;
+  margin-right: 46%;
+  position: relative;
+  z-index: 9999;
+}
+
+#btnHotel{
+  width: 500px;
+  margin-top: 5%;
+  border: 5px solid var(--blue);
+  border-radius: 10px;
+  height: 80px;
+  margin-left: 34%;
+  margin-right: 46%;
+}
+
+#btnH{
+  display: none;
+}
+
+#formHotel{
+  display: none;
+  z-index: 0;
+}
+
+#quanti{
+  width: 500px;
+  margin-top: -8%;
+  border: 5px solid var(--blue);
+  border-radius: 10px;
+  height: 205px;
+  margin-left: 35%;
+  margin-right: 45%;
+  z-index: 10;
+  position: relative;
+  background-color: var(--gray);
+  display: none;
+  box-shadow: 10px 10px 10px black;
+}
+
+#inputQuanti{
+  margin: 3% auto;
+  width: 100%;
+  height: 40px;
+}
+
+#labelQuanti{
+  width: 100%;
+  font-size: 18pt;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding-top: 2%;
+}
+
+#caixasHoteis{
+  background-color: var(--blue);
+  width: 90%;
+  margin: 5% 5%;
+  height: 450px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+#caixasHoteis:hover{
+}
+
+#tri1, #tri2{
+  height: 50px;
+  width: 50px;
+  margin-top: 9%;
+  background-color: white;
+  transform: rotate(45deg);
+}
+
+#tri1{
+  float: right;
+  margin-right: -25px;
+}
+
+#tri2{
+  float: left;
+  margin-left: -25px;
+}
+
+#titsHoteis{
+  background-color: white;
+  color: black;
+  text-align: center;
+  padding: 15px;
+  width: auto;
+  height: 70px;
+  font-size: 18pt;
+  margin-top: -3%;
+  margin-left: 43%;
+  margin-right: 30%;
+  border: 5px solid var(--blue);
+  border-radius: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+#imgHoteis{
+  width: 500px;
+  height: 300px;
+  display: flex;
+  margin-left: 10%;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px black;
+}
+
+#caixaInfosHoteis{
+  background-color: whitesmoke;
+  width: 800px;
+  height: 322px;
+  display: flex;
+  float: right;
+  margin-top: -13%;
+  margin-right: 5%;
+  border-top-right-radius: 22px;
+  border-top-left-radius: 22px;
+  border: 3px solid white;
+}
+
+#infoEmails{
+  height: 107px;
+  border-top-left-radius: 20px;
+  width: 100%;
+  padding: 5px;
+  background-color:#0c6ef0;
+}
+
+#tEmail{
+  height: 55px;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 5px;
+  text-transform: uppercase;
+}
+
+#dadosEmails{
+  height: 55px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 1px;
+  width: 100%;
+}
+
+#caixaEsqHotel{
+  width: 50%;
+  height: 320px;
+}
+
+#caixaDirHotel{
+  width: 50%;
+  height: 320px;
+}
+
+#btnSM{
+  width: 1875px;
+  height: 70px;
+  margin-top: 3%;
+  border-radius: none;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}z
+
+#btnSM:hover{
+  color: var(--success);
+  background-color: white;
+  border: 3px solid var(--success);
+}
+/***************************************************************************/
+
+
+
+
+
+
+
+#linhaRec{
+  height:100px; 
+  font-size:20pt;
+  text-align: center;
+}
+
+
+#linhaRec:hover{
+  cursor: pointer;
+  background-color: #2d466693;
+}
+
+#caixaHotelP{
+  height: auto;
+  background-color: #1f559c;
+  margin: 30px;
+  border-radius: 10px;
+  margin-left: 100px;
+  width: 900px;
+  float: left;
+} 
+
+
+#caixaViagensP{
+  background-color: #2782ff;
+  border: 3px solid white;
+  margin: 30px;
+  border-radius: 10px;
+  float: right;
+  width: 1400px; 
+}
+
+#ativ{
+  height: 70px;
+  background-color: #1d1b9e;
+  color: white;
+  text-align: center !important;
+  border-top: 3px solid white;
+  padding: 17px;
+  border-bottom: 3px solid white;
+  width: 100%;
+  font-size: 18pt;
+}
+
+
+footer{
+  background-color: #222;
+}

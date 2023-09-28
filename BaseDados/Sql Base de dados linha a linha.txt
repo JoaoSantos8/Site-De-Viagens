@@ -1,0 +1,136 @@
+CREATE DATABASE Site;
+USE Site;
+CREATE TABLE `destinos` (
+  `destinoId` INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `destinoNome` VARCHAR(255) NOT NULL,
+  `destinoImagemURL` VARCHAR(255) NOT NULL,
+  `destinoDescricao` VARCHAR(255) NOT NULL)
+ENGINE = InnoDB;
+
+CREATE TABLE `utilizadores` (
+  `utilizadorId` INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `utilizadorNome` VARCHAR(255) NOT NULL,
+  `utilizadorEmail` VARCHAR(255) NOT NULL,
+  `utilizadorImagemURL` VARCHAR(255) NOT NULL,
+  `utilizadorIdade` INT(9) NOT NULL,
+  `utilizadorTelefone` VARCHAR(255) NOT NULL,
+  `utilizadorCargo` ENUM('Geral', 'Hoteis', 'Monumentos', 'Viagens', 'Atividades', 'Restaurantes') NOT NULL DEFAULT('Geral'),
+  `utilizadorPass` VARCHAR(255) NOT NULL,
+  `utilizadorConfirmPass` VARCHAR(255) NOT NULL)
+ENGINE = InnoDB;
+
+CREATE TABLE `concelhos` (
+  `concelhoId` INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `concelhoNome` VARCHAR(255) NOT NULL,
+  `concelhoImagemURL` VARCHAR(255) NOT NULL,
+  `concelhoDescricao` VARCHAR(255) NOT NULL,
+  `concelhoDestinoId` INT(11) NOT NULL,
+    FOREIGN KEY (`concelhoDestinoId`) REFERENCES `destinos` (`destinoId`))
+ENGINE = InnoDB;
+
+CREATE TABLE `hoteis` (
+  `hotelId` INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `hotelNome` VARCHAR(255) NOT NULL,
+  `hotelImagemURL` VARCHAR(255) NOT NULL,
+  `hotelDescricao` VARCHAR(255) NOT NULL,
+  `hotelEmail` VARCHAR(255) NOT NULL,
+  `hotelTelefone` int(9) NOT NULL,
+  `hotelPreco` FLOAT(11) NOT NULL,
+  `hoteisConcelhoId` INT(11) NOT NULL,
+    FOREIGN KEY (`hoteisConcelhoId`) REFERENCES `Site`.`concelhos` (`concelhoId`))
+ENGINE = InnoDB;
+
+CREATE TABLE `companhias` (
+  `companhiaId` INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `companhiaNome` VARCHAR(255) NOT NULL,
+  `companhiaTelefone` INT(9) NOT NULL)
+ENGINE = InnoDB;
+
+CREATE TABLE `viagens` (
+  `viagemId` INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `viagemData` DATE NOT NULL,
+  `viagemIni` TIME NOT NULL,
+  `viagemChegada` TIME NOT NULL,
+  `viagemTelefone` int(11) NOT NULL,
+  `viagemLugares` int(11) NOT NULL,
+  `viagemPreco` FLOAT(11) NOT NULL,
+  `viagemTipo` ENUM('Ida', 'Ida e Volta') NOT NULL,
+  `viagemClasse` ENUM('Classe Economica', 'Classe Executiva') NOT NULL DEFAULT('Classe Económica'),
+  `viagemChegadaDestinoId` int(11) NOT NULL,
+    FOREIGN KEY (`viagemChegadaDestinoId`) REFERENCES `Site`.`destinos` (`destinoId`),
+  `viagemDestinoId` int(11) NOT NULL,
+    FOREIGN KEY (`viagemDestinoId`) REFERENCES `Site`.`destinos` (`destinoId`),
+  `viagemCompanhiaId` INT(11) NOT NULL,
+    FOREIGN KEY (`viagemCompanhiaId`) REFERENCES `Site`.`companhias` (`companhiaId`))
+ENGINE = InnoDB;
+
+CREATE TABLE `pacotes` (
+  `pacoteId` INT(11) NOT NULL PRIMARY KEY,
+  `pacoteNome` VARCHAR(255) NULL DEFAULT NULL,
+  `pacoteHotelId` INT(11) NOT NULL,
+  `pacoteViagemId` INT(11) NOT NULL,
+    FOREIGN KEY (`pacoteHotelId`) REFERENCES `hoteis` (`hotelId`),
+    FOREIGN KEY (`pacoteViagemId`)  REFERENCES `viagens` (`viagemId`))
+ENGINE = InnoDB;
+
+CREATE TABLE `monumentos` (
+  `monumentoId` INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `monumentoNome` VARCHAR(255) NOT NULL,
+  `monumentoImagemURL` VARCHAR(255) NOT NULL,
+  `monumentoDescricao` VARCHAR(255) NULL DEFAULT NULL,
+  `monumentoEmail` VARCHAR(255) NULL DEFAULT NULL,
+  `monumentoTelefone` int(9) NULL DEFAULT NULL,
+  `monumentoPreco` INT(11) NULL DEFAULT NULL,
+  `monumentoConcelhoId` INT(11) NOT NULL,
+    FOREIGN KEY (`monumentoConcelhoId`) REFERENCES `concelhos` (`concelhoId`))
+ENGINE = InnoDB;
+
+CREATE TABLE `restaurantes` ( 
+  `restauranteId` INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `restauranteNome` VARCHAR(255) NOT NULL,
+  `restauranteImagemURL` VARCHAR(255) NOT NULL,
+  `restauranteDescricao` VARCHAR(255) NOT NULL,
+  `restauranteTelefone` INT(9) NOT NULL,
+  `restaurantePreco` INT(9) NOT NULL,
+  `restauranteConcelhoId` INT(11) NOT NULL,
+    FOREIGN KEY (`restauranteConcelhoId`) REFERENCES `concelhos` (`concelhoId`))
+ENGINE = InnoDB;
+
+CREATE TABLE `eventos` (
+  `eventoId` INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `eventoNome` VARCHAR(255) NOT NULL,
+  `eventoImagemURL` VARCHAR(255) NOT NULL,
+  `eventoDescricao` varchar(255) NOT NULL,
+  `eventoEmail` varchar(255) NOT NULL,
+  `eventoDataC` date NOT NULL,
+  `eventoDataA` date NOT NULL,
+  `eventoPreco` int(9) NOT NULL,
+  `eventoTipo` ENUM('Noite', 'Dia','Festival','Festa','Feira') NOT NULL DEFAULT ('Dia'),
+  `eventoConcelhoId` INT(11) NOT NULL,
+    FOREIGN KEY (`eventoConcelhoId`) REFERENCES `concelhos` (`concelhoId`))
+ENGINE = InnoDB;
+
+CREATE TABLE `atividades`(
+  `atividadeId` INT(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `atividadeNome` VARCHAR(255) NOT NULL,
+  `atividadeImagemURL` VARCHAR(255) NOT NULL,
+  `atividadePreco` INT(11) NOT NULL,
+  `atividadeEventoId` INT(11) NOT NULL,
+    FOREIGN KEY (`atividadeEventoId`) REFERENCES `eventos` (`eventoId`))
+ENGINE = InnoDB;
+
+CREATE TABLE `carrinho` ( 
+  `carrinhoId` INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `carrinhoProdutoId` int(4) NOT NULL,
+  `carrinhoPreco` int(11) NOT NULL,
+	FOREIGN KEY (`carrinhoProdutoId`) REFERENCES `produtos` (`produtoId`),
+  `carrinhoUtilizadorId` int(4) NOT NULL,
+    FOREIGN KEY (`carrinhoUtilizadorId`) REFERENCES `utilizadores` (`utilizadorId`))
+ENGINE = InnoDB;
+
+CREATE TABLE `produtos` ( 
+  `produtoId` INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `produtoNome` varchar(255) NOT NULL,
+  `produtoNum` int(4) NOT NULL,
+  `produtoPreco` int(11) NOT NULL)
+ENGINE = InnoDB;
