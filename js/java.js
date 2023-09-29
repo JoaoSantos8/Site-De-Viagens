@@ -325,6 +325,7 @@ function IsEmail(email) {
 
 /************************Form Quantidade***************************/
 
+/***************Hoteis*********************************/
 $("#btnHotel").click(function(){
     $("#btnHotel").css("display","none");
     $("#quanti").slideDown();
@@ -339,6 +340,20 @@ $("#btnH").click(function(){
   $("#formHotel").submit();
 });
 
+/***************Viagens*********************************/
+$("#btnViagens").click(function(){
+  $("#btnViagens").css("display","none");
+  $("#quantiV").slideDown();
+  $("#quantiV").val("");
+  $("#formViagens").slideDown();
+  $("#btnV").slideDown();
+});
+
+
+
+$("#btnV").click(function(){  
+$("#formViagens").submit();
+});
 
   /******************************Imagem **********************/
   function lerImagem(input) {

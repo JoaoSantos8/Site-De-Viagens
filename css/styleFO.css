@@ -880,13 +880,12 @@ a{
 #caixaViagens{
   width: 40%;
   border: 5px solid var(--blue);
-  height: 500px;
+  height: 630px !important;
   margin-left: 4%;
   margin-right: 4%;
   margin-top: 2%;
   margin-bottom: 4%;
   border-radius: 20px;
-  height: 600px;
   box-shadow: 10px 10px 10px var(--blue);
 }
 
@@ -900,6 +899,8 @@ a{
   text-align: center;
   padding-top: 1px;
   font-size: 20pt;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
   border-bottom:5px solid white;
 }
 
@@ -942,10 +943,80 @@ a{
   background-color: white;
   height: 50px;
 }
+
+
+#btnV{
+  width: 540px;
+  margin-top: 41%;
+  border: 5px solid var(--blue);
+  border-radius: 10px;
+  height: 80px;
+  margin-left: -545px;
+  position: relative;
+  z-index: 9999;
+}
+
+#btnViagens{
+  width: 300px;
+  margin-top: 3%;
+  border: 5px solid var(--blue);
+  border-radius: 10px;
+  height: 80px;
+  margin-left: 30%;
+}
+
+#btnV{
+  display: none;
+}
+
+#formViagens{
+  display: none;
+  z-index: 0;
+}
+
+#quantiV{
+  width: 550px;
+  margin-top: 33%;
+  border: 5px solid var(--blue);
+  border-radius: 10px;
+  height: 230px;
+  margin-left: -37%;
+  z-index: 10;
+  background-color: var(--gray);
+  display: none;
+  box-shadow: 10px 10px 10px black;
+
+}
+
+#btnV:hover, #btnViagens:hover{
+  color: var(--success);
+  background-color: white;
+  border: 3px solid var(--success);
+}
+
+#btnSMV{
+  width: 50%;
+  height: 70px;
+  margin-top: 3%;
+  margin-left: 25%;
+  border-radius: none;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: 3px solid var(--blue);
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px var(--blue);
+}
+
+#btnSMV:hover{
+  color: var(--success);
+  background-color: white;
+  border: 3px solid var(--success);
+}
 /************************Paises*******************************/
 
 #caixaPais{
-  width: 600px;
+  width: 600px; 
   height: 700px;  
   margin: 100px;
   background-color: #1f559c;
@@ -1358,7 +1429,7 @@ a{
   font-weight: bold;
   letter-spacing: 1px;
   text-transform: uppercase;
-}z
+}
 
 #btnSM:hover{
   color: var(--success);

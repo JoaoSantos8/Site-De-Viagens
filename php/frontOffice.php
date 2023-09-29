@@ -108,6 +108,35 @@ function botao($id, $nome, $preco)
   <?php
 }
 
+function botaoViagens($id, $nome, $preco)
+{
+  ?>
+    <form action="../SiteViagens/confirmarProdutoViagem.php" method="post" id="formViagens">
+        
+        </div>
+        <div id="quantiV">
+                <label for="inputQuanti" id="labelQuanti">Quantos bilhetes quer?</label>
+                <input type="number" id="inputQuanti" name="quantidade">
+            </div>
+            <?php
+            //$_SESSION['precoTotal']=0;
+            ?>
+
+          <input type="hidden" name="id" value="<?php echo $id; ?>">
+          <input type="hidden" name="nomeProduto" value="<?php echo $nome; ?>">
+          <input type="hidden" name="preco" value="<?php echo $preco; ?>">
+          <button type="button" class="btn btn-success" id="btnV">Confirmar</button>
+
+          <script>
+
+           
+
+          </script>
+
+  </form>
+
+  <?php
+}
 
 function navBarTopFO()
 {
@@ -940,7 +969,6 @@ function viagens()
         $chegadas = mysqli_fetch_array($chegada);
         ?>
 
-          <!--<a href="viagem.php?id=<?php/* echo $dados['viagemId'] */?>" style="color:black;">-->
           <div id="caixaViagens">
               
 
@@ -980,11 +1008,13 @@ function viagens()
               <label id="campoDirTit">LUGARES DISPONIVEIS</label>
               <label id="campoDirDados"><?php echo $dados['viagemLugares'];  ?> Lugares</label>
 
-
-
             </div>
+            
+            
+            
+          <a href="viagem.php?id=<?php echo $dados['viagemId'] ?>"><button type="button" class="btn btn-success" id="btnSMV">Saber Mais ...</button></a>
+
           </div>
-      </a>
 
           <?php
       }
