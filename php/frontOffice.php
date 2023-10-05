@@ -81,7 +81,7 @@ function drawTopFO()
 function botao($id, $nome, $preco)
 {
   ?>
-    <form action="../SiteViagens/confirmarProduto.php" method="post" id="formHotel">
+    <form action="../SiteViagens/confirmarProdutoHotel.php" method="post" id="formHotel">
         
         </div>
         <div id="quanti">
@@ -111,12 +111,12 @@ function botao($id, $nome, $preco)
 function botaoViagens($id, $nome, $preco)
 {
   ?>
-    <form action="../SiteViagens/confirmarProdutoViagem.php" method="post" id="formViagens">
+        <form action="../SiteViagens/confirmarProdutoViagem.php" method="post" id="formViagens">
         
         </div>
-        <div id="quantiV">
-                <label for="inputQuanti" id="labelQuanti">Quantos bilhetes quer?</label>
-                <input type="number" id="inputQuanti" name="quantidade">
+        <div id="quantiV" style="margin-top: -6%;">
+                <label for="inputQuantiV" id="labelQauntiV">Quantos Bilhetes Pretende?</label>
+                <input type="number" id="inputQuantiV" name="quantidade">
             </div>
             <?php
             //$_SESSION['precoTotal']=0;
@@ -322,7 +322,7 @@ function slidePacotes()
               $resultado = mysqli_query($con, $sql);
               $dadosD = mysqli_fetch_array($resultado);
               ?>
-                <div id="caixa" class="w-25 m-5">
+                <div id="caixa">
                   <a href="pacote.php?id=<?php echo $dados['pacoteId'] ?>">
                     <h4 class="text-center mt-1 p-3 tituolo">
                       <?php echo $dados['pacoteNome'] ?>
@@ -333,7 +333,7 @@ function slidePacotes()
                       <div class="w-50 float-left">Destino:
                         <?php echo $dadosD['destinoNome'] ?>
                       </div>
-                      <div class="w-50 float-right">Hotel
+                      <div class="w-50 float-right">
                         <?php echo $dados['hotelNome'] ?>
                       </div>
                     </div>
@@ -351,7 +351,7 @@ function slidePacotes()
 
 
 
-                <div id="caixa" class="w-25 m-5">
+                <div id="caixa" class="w-50" style="max-height: 578px;">
                   <a href="viagens.php" style="color:black !important;">
 
                     <?php
@@ -437,7 +437,7 @@ function slidePacotes()
 
 
             <?php } elseif ($filtro === 'hoteis') { ?>
-                <div id="caixa" class="w-25 m-5">
+                <div id="caixa" class="w-50" style="max-height: 558px;">
                   <a href="hotel.php?id=<?php echo $dados['hotelId'] ?>" style="color:black !important;">
 
                     <h4 class="text-center tituolo pt-3" style="height:70px;">
@@ -2475,8 +2475,7 @@ function atividade($id)
       
 
         <div id="caixaHoteis" class="w-50" style="
-    margin-left: 550px;
-">
+    margin-left: 550px;">
 
           <div class="text-center w-100"
               style="color:white; padding-top:10px; font-size: 24pt;height:70px;border-bottom:solid 3px white;">
@@ -2608,3 +2607,104 @@ function navBarCarrinho()
     <?php
 
 }
+
+
+/***********************************Viagem******************************************************/
+function viagem($id)
+{
+  global $con;
+
+
+  $sql = "SELECT * FROM viagens INNER JOIN destinos ON viagemDestinoId = destinoId WHERE viagemId='$id'";
+  $result = mysqli_query($con, $sql);
+  $dados = mysqli_fetch_array($result);
+
+        $sqli = "SELECT * FROM destinos WHERE destinoId = {$dados['viagemChegadaDestinoId']}";
+        $chegada = mysqli_query($con, $sqli);
+        $chegadas = mysqli_fetch_array($chegada);
+
+        ?>
+
+          <div id="caixaViagemUni">
+              
+
+            <label id="tituloViagens">Data da viagem <?php echo date('d/m/Y', strtotime($dados['viagemData'])); ?></label>
+
+            <div id="caixaDireitaViagens">
+
+              <label id="campoDirTit">DESTINO DE CHEGADA</label>
+              <label id="campoDirDados"><?php echo $chegadas['destinoNome'] ?></label>
+
+
+              <label id="campoDirTit">TIPO DA VIAGEM</label>
+              <label id="campoDirDados"><?php echo $dados['viagemTipo'] ?></label>
+
+
+              <label id="campoEsqTit">HORA DE PARTIDA</label>
+              <label id="campoEsqDados"><?php echo date('H:i', strtotime($dados['viagemIni']));  ?></label>
+
+
+              <label id="campoEsqTit">SUPORTE TÉCNICO</label>
+              <label id="campoEsqDados"><?php echo $dados['viagemTelefone']; ?></label>             
+
+            </div>
+
+
+            <div id="caixaEsquerdaViagens">
+              
+              <label id="campoDirTit">DESTINO DE PARTIDA</label>
+              <label id="campoDirDados"><?php echo $dados['destinoNome'] ?></label>
+
+              <label id="campoEsqTit">CLASSE DA VIAGEM</label>
+              <label id="campoEsqDados"><?php echo $dados['viagemClasse'] ?></label>
+
+              <label id="campoDirTit">HORA DE CHEGADA</label>
+              <label id="campoDirDados"><?php echo date('H:i', strtotime($dados['viagemChegada']));  ?></label>
+
+              <label id="campoDirTit">LUGARES DISPONIVEIS</label>
+              <label id="campoDirDados"><?php echo $dados['viagemLugares'];  ?> Lugares</label>
+
+            </div>
+            
+            
+            
+          
+
+    <input type="button" value="Reserve já" class="btn btn-success" id="btnViagens">
+
+    <?php botaoViagens($dados['viagemId'], $chegadas['destinoNome'], $dados['viagemPreco']); ?>
+      
+          </div>
+
+    <?php
+}
+function navBarViagem($id)
+{
+  global $con;
+
+  $sql = "SELECT * FROM viagens INNER JOIN companhias ON viagemCompanhiaId = companhiaId
+  INNER JOIN destinos ON viagemDestinoId = destinoId";
+        $result = mysqli_query($con, $sql);
+        $dados = mysqli_fetch_array($result);
+
+  $sql = "SELECT * FROM destinos WHERE destinoId = {$dados['viagemChegadaDestinoId']}";
+        $chegada = mysqli_query($con, $sql);
+        $chegadas = mysqli_fetch_array($chegada);
+
+  ?>
+    <nav class="w-100" id="navBarTop">
+      <a href="../SiteViagens/paginaPrincipal.php">
+        <div id="logotipo"></div>
+      </a>
+      <label id="titulo">
+        <font class="text-center">Destino: <?php echo $chegadas['destinoNome'] ?></font>
+      </label>
+
+      <?php
+        menuNavBar();
+        ?>
+    </nav>
+    <?php
+
+}
+

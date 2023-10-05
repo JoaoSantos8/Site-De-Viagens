@@ -16,11 +16,10 @@ $quanti = intval($_POST['quantidade']);
 $preco = floatval($_POST['preco']);
 $num = $_SESSION['utilizadorId'];
 
-$sql = "INSERT INTO produtos VALUES (0, '$nome', '$num', '$quanti', '$preco')";
+$sql = "INSERT INTO produtos VALUES (0, '$nome', '$num','viagem', '$quanti', '$preco','$id')";
 mysqli_query($con, $sql);
 
-$sqlii = "UPDATE viagens SET vaigemLugares = 'viagemLugares'- $quanti 
-WHERE viagemId = '$num'";
+$sqlii = "UPDATE viagens SET viagemLugares = viagemLugares - $quanti WHERE viagemId = '$id'";
 mysqli_query($con, $sqlii);
 
 
@@ -43,7 +42,9 @@ if (mysqli_num_rows($resultVerificar) == 0) {
     mysqli_query($con, $sqli);
     header("location:carrinho.php");
 }
+
 //echo "Preço Total: ".$_SESSION['precoTotal']." <br>";
 //echo "Preço Uni: ".$preco." <br>";
 //echo "Quantidade: ".$quanti;
+//echo $sqlii;
 ?>

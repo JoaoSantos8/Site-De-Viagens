@@ -336,8 +336,13 @@ $("#btnHotel").click(function(){
 
 
 
-$("#btnH").click(function(){  
+$("#btnH").click(function(){
+  var Quantidade = $("#quanti").val();
+  if(Quantidade!=0){
   $("#formHotel").submit();
+  }else{
+    $("quanti").css("border","2px solid red")
+  }
 });
 
 /***************Viagens*********************************/
@@ -346,13 +351,19 @@ $("#btnViagens").click(function(){
   $("#quantiV").slideDown();
   $("#quantiV").val("");
   $("#formViagens").slideDown();
-  $("#btnV").slideDown();
+  $("#btnV").css("display","block");
 });
 
 
 
-$("#btnV").click(function(){  
-$("#formViagens").submit();
+$("#btnV").click(function(){
+  var Quantidade = $("#inputQuantiV").val();
+if(Quantidade!=0){
+  $("#formViagens").submit();
+}else{
+  $("#inputQuantiV").css("border","2px solid red");
+}
+
 });
 
   /******************************Imagem **********************/

@@ -16,7 +16,7 @@ $quanti = intval($_POST['quantidade']);
 $preco = floatval($_POST['preco']);
 $num = $_SESSION['utilizadorId'];
 
-$sql = "INSERT INTO produtos VALUES (0, '$nome', '$num', '$quanti', '$preco')";
+$sql = "INSERT INTO produtos VALUES (0, '$nome', '$num','hotel', '$quanti', '$preco','$id')";
 mysqli_query($con, $sql);
 
 
