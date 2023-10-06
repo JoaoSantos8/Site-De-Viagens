@@ -1006,7 +1006,14 @@ function viagens()
               <label id="campoDirDados"><?php echo date('H:i', strtotime($dados['viagemChegada']));  ?></label>
 
               <label id="campoDirTit">LUGARES DISPONIVEIS</label>
-              <label id="campoDirDados"><?php echo $dados['viagemLugares'];  ?> Lugares</label>
+              <label id="campoDirDados">
+                <?php
+                if($dados['viagemLugares']==0){?>
+                  <font style="color:red;">LUGARES ESGOTADOS</font>
+                <?php
+                }else{
+                echo $dados['viagemLugares'];  ?> Lugares</label><?php
+                }?>
 
             </div>
             
@@ -2662,7 +2669,14 @@ function viagem($id)
               <label id="campoDirDados"><?php echo date('H:i', strtotime($dados['viagemChegada']));  ?></label>
 
               <label id="campoDirTit">LUGARES DISPONIVEIS</label>
-              <label id="campoDirDados"><?php echo $dados['viagemLugares'];  ?> Lugares</label>
+              <label id="campoDirDados">
+                <?php
+                if($dados['viagemLugares']==0){?>
+                  <font style="color:red;">LUGARES ESGOTADOS</font>
+                <?php
+                }else{
+                echo $dados['viagemLugares'];  ?> Lugares</label><?php
+                }?>
 
             </div>
             
@@ -2670,10 +2684,15 @@ function viagem($id)
             
           
 
+    <?php if($dados['viagemLugares']!=0){?>
     <input type="button" value="Reserve já" class="btn btn-success" id="btnViagens">
-
-    <?php botaoViagens($dados['viagemId'], $chegadas['destinoNome'], $dados['viagemPreco']); ?>
+<?php
+      botaoViagens($dados['viagemId'], $chegadas['destinoNome'], $dados['viagemPreco']);
+      }else {?>
       
+      <input type="button" value="Voltar" class="btn btn-success" id="back" onclick="history.go(-1)/*Também Podia ser history.back()*/">
+
+      <?php } ?>
           </div>
 
     <?php

@@ -20,6 +20,7 @@ $_SESSION['precoTotal']-$precoProduto*$quantiProduto;
 $sqlRemoverProduto = "DELETE FROM produtos WHERE produtoId = $id";
 mysqli_query($con, $sqlRemoverProduto);
 
+
 // Atualizar o valor total na tabela carrinho
 $num = $_SESSION['utilizadorId'];
 $_SESSION['precoTotal']=$_SESSION['precoTotal']-$precoProduto*$quantiProduto;
@@ -32,7 +33,10 @@ mysqli_query($con, $sqlAtualizarTotal);
 //Atualizar tabela viagens
 
 if($categoria=="viagem"){
-    $sqlviagem="UPDATE viagens set viagemLugares = viagemLugares+$quantiProduto WHERE viagemId='$produtoNum'";
+    $contV=$dados['produtoQuanti'];
+    $sql = "UPDATE viagens SET viagemLugares = viagemLugares + $contV WHERE viagemId = " . $dados['produtoNum'];
+    //echo $sql;
+    mysqli_query($con, $sql);
 }
 
 

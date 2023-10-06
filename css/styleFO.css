@@ -964,7 +964,7 @@ a{
   height: 50px;
 }
 
-#btnViagens{
+#btnViagens, #back{
   width: 50%;
   height: 70px;
   margin-top: 2%;
@@ -994,14 +994,14 @@ a{
 }
 
 #btnH{
-  width: 450px;
+  width: 500px;
   height: 70px;
-  margin-top: -4%;
-  margin-left: 36%;
+  margin-top: -5%;
+  margin-left: 35%;
   border-radius: none;
   font-weight: bold;
   letter-spacing: 1px;
-  text-transform: uppercase;
+  text-transform: uppercase;  
   border-radius: 10px;
   z-index: 9999;
   position: relative;
@@ -1439,12 +1439,6 @@ a{
 }
 /***************************************************************************/
 
-
-
-
-
-
-
 #linhaRec{
   height:100px; 
   font-size:20pt;
@@ -1492,4 +1486,26 @@ a{
 
 footer{
   background-color: #222;
+}
+
+#eliminaProduto, #limparCarrinho{
+  border-radius: 0px;
+  width: 200px;
+  margin: 10px;
+}
+
+#eliminaProduto:hover, #limparCarrinho:hover {
+  animation: borda 2s infinite;
+}
+
+@keyframes borda {
+  0% {
+    border-radius: 0;
+  }
+  50% {
+    border-radius: 15px;
+  }
+  100% {
+    border-radius: 0;
+  }
 }

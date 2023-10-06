@@ -337,11 +337,11 @@ $("#btnHotel").click(function(){
 
 
 $("#btnH").click(function(){
-  var Quantidade = $("#quanti").val();
+  var Quantidade = $("#inputQuanti").val();
   if(Quantidade!=0){
   $("#formHotel").submit();
   }else{
-    $("quanti").css("border","2px solid red")
+    $("#inputQuanti").css("border","2px solid red")
   }
 });
 

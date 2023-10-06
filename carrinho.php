@@ -37,7 +37,14 @@ navBarCarrinho();
 while ($dados = mysqli_fetch_array($result)) { ?>
     <tr>
         <td class="p-3"><?php echo $dados['produtoNome'] ?></td>
-        <td class="p-3"><?php echo $dados['produtoQuanti'] ?></td>
+        <td class="p-3"><?php echo $dados['produtoQuanti'];
+        if($dados['produtoCategoria']=="hotel"){
+            ?> QUARTOS<?php
+        }else{
+            ?> BILHETES <?php
+        }
+        
+        ?></td>
         <td class="p-3"><?php echo $dados['produtoPreco'] ?>€</td>
         <td class="p-3"><?php echo $dados['produtoCategoria'] ?></td>
         <td class="align-middle p-2">
@@ -45,7 +52,7 @@ while ($dados = mysqli_fetch_array($result)) { ?>
                         <div class="w-100" id="eliminar">
                             <input type="hidden" name="id" value="<?php echo $dados['produtoId']; ?>">
                             <button formaction="eliminarProduto.php" type="submit"
-                                class="btn btn-danger w-75 m-2">Eliminar Produto</button>
+                                class="btn btn-danger" id="eliminaProduto">Eliminar Produto</button>
                         </div>
                     </form>
                 </td>

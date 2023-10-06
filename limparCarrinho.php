@@ -5,7 +5,6 @@ global $con;
 session_start();
 
 
-$contV=0;
 
 $sql = 'SELECT * FROM produtos WHERE produtoUtilizador = ' . $_SESSION['utilizadorId'];
 $result = mysqli_query($con, $sql);
@@ -13,7 +12,9 @@ $result = mysqli_query($con, $sql);
 while ($dados = mysqli_fetch_array($result)) {
 
     if($dados['produtoCategoria']=='viagem'){
-        $sql = "UPDATE viagens SET viagemLugares = viagemLugares + 1 WHERE viagemId = " . $dados['produtoNum'];
+        $contV=$dados['produtoQuanti'];
+        $sql = "UPDATE viagens SET viagemLugares = viagemLugares + $contV WHERE viagemId = " . $dados['produtoNum'];
+        //echo $sql;
         mysqli_query($con, $sql);
     }
 
@@ -30,6 +31,6 @@ mysqli_query($con, $sql);
 
 
 
-header("location:carrinho.php");
+    header("location:carrinho.php");
 ?>
     
