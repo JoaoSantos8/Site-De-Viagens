@@ -346,6 +346,22 @@ $("#btnH").click(function(){
 });
 
 /***************Viagens*********************************/
+function verificar(cont){
+  var Quantidade = $("#inputQuantiV").val();
+  if(Quantidade!=0){
+    if(Quantidade>cont){
+    alert("SEM LUGARES SUFICIENTES");
+    $("#inputQuantiV").css("border","2px solid red");
+    }else if(Quantidade<=cont){
+    $("#formViagens").submit(); 
+  }
+  }else{
+    alert("LUGARES INVÁLIDOS");
+    $("#inputQuantiV").css("border","2px solid red");
+  }
+}
+
+
 $("#btnViagens").click(function(){
   $("#btnViagens").css("display","none");
   $("#quantiV").slideDown();
@@ -354,17 +370,6 @@ $("#btnViagens").click(function(){
   $("#btnV").css("display","block");
 });
 
-
-
-$("#btnV").click(function(){
-  var Quantidade = $("#inputQuantiV").val();
-if(Quantidade!=0){
-  $("#formViagens").submit();
-}else{
-  $("#inputQuantiV").css("border","2px solid red");
-}
-
-});
 
   /******************************Imagem **********************/
   function lerImagem(input) {

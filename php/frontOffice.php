@@ -31,7 +31,7 @@ function menuNavBar(){
                 <?php } ?>
                 <a class="dropdown-item p-3 text-center" href="admin/editarPerfil.php"
                 id="itemDrop">Perfil</a>
-              <a class="dropdown-item p-3 text-center" href="carrinho.php" id="itemDrop">Seu Carrinho</a>
+              <a class="dropdown-item p-3 text-center" href="carrinho.php" id="itemDrop">Carrinho</a>
                 <a class="dropdown-item p-3 text-center" href="admin/logout.php"
                   id="itemDrop">Terminar Sessão</a>
 
@@ -112,20 +112,22 @@ function botaoViagens($id, $nome, $preco)
 {
   ?>
         <form action="../SiteViagens/confirmarProdutoViagem.php" method="post" id="formViagens">
-        
+        <?php 
+        global $con;
+        $sql = "SELECT * FROM viagens INNER JOIN destinos ON viagemDestinoId = destinoId WHERE viagemId='$id'";
+        $result = mysqli_query($con, $sql);
+        $dados = mysqli_fetch_array($result); 
+        ?>
         </div>
         <div id="quantiV" style="margin-top: -6%;">
                 <label for="inputQuantiV" id="labelQauntiV">Quantos Bilhetes Pretende?</label>
                 <input type="number" id="inputQuantiV" name="quantidade">
             </div>
-            <?php
-            //$_SESSION['precoTotal']=0;
-            ?>
 
           <input type="hidden" name="id" value="<?php echo $id; ?>">
           <input type="hidden" name="nomeProduto" value="<?php echo $nome; ?>">
           <input type="hidden" name="preco" value="<?php echo $preco; ?>">
-          <button type="button" class="btn btn-success" id="btnV">Confirmar</button>
+          <button type="button" class="btn btn-success" id="btnV" onclick="verificar(<?php echo $dados['viagemLugares'] ?>)">Confirmar</button>
 
           <script>
 
