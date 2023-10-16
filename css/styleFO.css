@@ -3,6 +3,11 @@
     --borda: rgb(189, 189, 189);
 }
 
+body{
+  width: 1920px;
+  margin: 0px auto;
+}
+
 /*********** NavBar Top **************************/
 #navBarTop{
   background: rgb(39,130,255);
@@ -15,8 +20,8 @@
     width: 200px;
     height: 75px;
     position: absolute;
-    top: 1%;
-    left: 5%;
+    top: 2vh;
+    left: 10vh;
 }
 
 #titulo{
@@ -162,7 +167,7 @@ a{
     box-shadow: -10px 10px 10px gray;
 }
 
-#cardSignUp{
+#cardSignUp, #formLogin{
     height: 700px;
     width: 1200px;
     margin: 3% auto;
@@ -658,6 +663,7 @@ a{
   background-repeat: no-repeat;
   max-height: 1320px;
   width: 1920px;
+  padding: 16px;
 }
 
 

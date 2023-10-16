@@ -316,6 +316,7 @@ function slidePacotes()
       </form>
 
       <h2 class="mt-5" id="titu">PACOTES</h2>
+      <div id="slide">
       <div class="w-100 d-flex flex-wrap align-items-center" id="containerCima">
 
         <?php while ($dados = mysqli_fetch_array($result)) { ?>
@@ -480,8 +481,8 @@ function slidePacotes()
         <?php } ?>
 
 
+        </div>
       </div>
-
 
 
 

@@ -202,39 +202,47 @@ $(document).ready(function() {
 
   /************************** Login **********************/
 
-    $("#loginL").click(function(){
-      
-      var emaile= $("#inputEmailL").val();
-      maile=IsEmail(emaile);
+  $("#loginL").click(function() {
+    login();
+});
 
-      if(maile==false || emaile==""){
+if (window.location.href.indexOf("login.php") > -1) {
+  $(window).on("keydown", function(event) {
+      if (event.keyCode === 13) {
+          login();
+      }
+  });
+}
+
+function login() {
+    var emaile = $("#inputEmailL").val();
+    var maile = IsEmail(emaile);
+
+    if (maile == false || emaile == "") {
         alert("EMAIL INVÁLIDO");
-        $("#inputEmailL").css("border","solid 5px red");
-      }else if(maile==true){
-        $("#inputEmailL").css("border","solid 5px rgb(14, 248, 6)");
-      }
+        $("#inputEmailL").css("border", "solid 5px red");
+    } else if (maile == true) {
+        $("#inputEmailL").css("border", "solid 5px rgb(14, 248, 6)");
+    }
 
-      if($("#inputPassL").val()=="" || $("#inputPassL").val().length<4){
+    if ($("#inputPassL").val() == "" || $("#inputPassL").val().length < 4) {
         alert("PASSWORD INVÁLIDA");
-        $("#inputPassL").css("border","solid 5px red");
-      }else if($("#inputPassL").val()!="" && $("#inputPassL").val().length>4){
-        $("#inputPassL").css("border","solid 5px rgb(14, 248, 6)");
-      }
+        $("#inputPassL").css("border", "solid 5px red");
+    } else if ($("#inputPassL").val() != "" && $("#inputPassL").val().length > 4) {
+        $("#inputPassL").css("border", "solid 5px rgb(14, 248, 6)");
+    }
 
-      if($("#inputPassL").val()!="" && $("#inputPassL").val().length>4 && maile==true){
-        $("#loginL").attr("type","submit");
-      }
+    if ($("#inputPassL").val() != "" && $("#inputPassL").val().length > 4 && maile == true) {
+        $("#formLogin").submit();
+    }
+}
+$("#inputPassL").on("mouseenter", function() {
+  $(this).attr("type", "text");
+});
 
-
-    });
-
-      $("#inputPassL").hover(function(){
-        $("#inputPassL").attr("type","text");
-      });
-
-      $("#inputPassL").mouseleave(function(){
-        $("#inputPassL").attr("type","password");
-      });
+$("#inputPassL").on("mouseleave", function() {
+  $(this).attr("type", "password");
+});
 
       $("#link").click(function(){
         $("#menuPerfil").slideToggle();

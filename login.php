@@ -21,7 +21,7 @@ navBarTopFO();
 ?>
 
 
-        <form action="confirmarLogin.php" method="post" id="cardSignUp" enctype="multipart/form-data">
+        <form action="confirmarLogin.php" method="post" id="formLogin" enctype="multipart/form-data">
         <div id="cardL"></div>
         <div id="insDadosL">
             
