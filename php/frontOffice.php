@@ -652,24 +652,11 @@ function pacotes()
     $dados = mysqli_fetch_array($result);
   }
   ?>
-     <!--<form action="" method="GET" class="w-25"  id="pesquisaPacotes">
+     <form action="" method="GET" class="w-25"  id="pesquisaPacotes">
         <div id="pesquisaPacotess">
 
               <div class="dropdown-toggle" id="menuDD">
-              <div class="d-flex float-left">Destino<br><div id="textDesc"><br>Procure seu destino ...</div></div>
-              <div  class="dropdown-menu" id="dropMenuDestino">
-
-                  <?php /*
-                  $sql='SELECT * FROM destinos';
-                  $resulta= mysqli_query($con, $sql);
-
-                  while ($destinos = mysqli_fetch_array($resulta)) {
-                  ?>
-                    <li><div class="dropdown-item" id="menuArtigo"><?php echo $destinos['destinoNome']?></div></li>
-
-                  <?php }*/ ?>  
-
-                  </div></div>
+              <div class="d-flex float-left">Destino<br><div id="textDesc"><br>Procure seu destino ...</div></div></div>
               
               
               <div class="dropdown-toggle" id="menuDDA">
@@ -682,18 +669,8 @@ function pacotes()
 
         </div>
 
-      </form>-->
+      </form>
 
-      <div class="dropdown-center">
-  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Centered dropdown
-  </button>
-  <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="#">Action</a></li>
-    <li><a class="dropdown-item" href="#">Action two</a></li>
-    <li><a class="dropdown-item" href="#">Action three</a></li>
-  </ul>
-</div>
 
 
       <div id="caixaPacotes">

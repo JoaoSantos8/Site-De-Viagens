@@ -928,6 +928,7 @@ a{
 
 #filtro{
   width: 500px;
+  float: right;
 }
 
 .preco{
