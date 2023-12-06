@@ -11,7 +11,16 @@
     }
 
     drawTopFO();
+    ?>
+        <style>
+            body{
+                background-image: url("images/fundoPacotes.jpg");
+            }
+
+        </style>
+    <?php
     navBarPacote();
+    pacotesCima();
     pacotes();
     navBarBottomFO();
     drawBottomFO();

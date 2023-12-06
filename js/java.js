@@ -35,176 +35,110 @@ $(document).ready(function() {
 
 
       /******************* SIGN UP ******************/
-      $("#next1").click(function(){
+      
+      $("#signUpBaixo").click(function(){
+        var nome = $('#inputNome').val().trim();
+                var email = $("#inputEmail").val();
+                var maile = IsEmail(email);
+                var telefone = $("#inputTelefone").val().trim();
+                var idade = $("#inputIdade").val();
+                var pass = $("#inputPass").val().trim();
+                var passC = $("#inputPassC").val().trim();
 
-        if($("#identificador").val()=="1"){
+                if (nome === "") {
+                    $("#inputNome").css("border-bottom", "5px solid red");
+                    event.preventDefault();
+                } else {
+                    $("#inputNome").css("border-bottom", "5px solid greenyellow");
+                }
 
-        if($("#inputNome").val()==""){
-          alert("ESCREVA O SEU NOME");
-          $("#inputNome").css("border","solid 5px red");
-        }else if($("#inputNome").val().length<4){
-          alert("SEU NOME É MUITO PEQUENO");
-          $("#inputNome").css("border","solid 5px orange");
-        }else if($("#inputNome").val()!="" && $("#inputNome").val().length>4){
-          $("#inputNome").css("border","solid 5px var(--success)");
-        }
+                if (email === "" || maile === false) {
+                    $("#inputEmail").css("border-bottom", "5px solid red");
+                    event.preventDefault();
+                } else {
+                    $("#inputEmail").css("border-bottom", "5px solid greenyellow");
+                }
 
+                if (!($.isNumeric(telefone)) || telefone.length !== 9) {
+                    $("#inputTelefone").css("border-bottom", "5px solid red");
+                    event.preventDefault();
+                } else {
+                    $("#inputTelefone").css("border-bottom", "5px solid greenyellow");
+                }
 
-        var mail= $("#inputEmail").val();
-        email=IsEmail(mail);
+                if (idade === "" || isNaN(idade) || idade < 18) {
+                    $("#inputIdade").css("border-bottom", "5px solid red");
+                    event.preventDefault();
+                } else {
+                    $("#inputIdade").css("border-bottom", "5px solid greenyellow");
+                }
 
-
-        if($("#inputEmail").val()==""){
-          alert("ESCREVA O SEU EMAIL");
-          $("#inputEmail").css("border","solid 5px red");
-        }else if(email==false){
-          alert("O SEU EMAIL NÂO É VÁLIDO");
-          $("#inputEmail").css("border","solid 5px orange");
-        }else if(email==true){
-          $("#inputEmail").css("border","solid 5px rgb(14, 248, 6)");
-        }
-
-        if($("#inputIdade").val()<=17){
-          alert("A SUA IDADE NÃO É VÁLIDA");
-          $("#inputIdade").css("border","solid 5px red");
-        }else if($("#inputIdade").val()>17){
-          $("#inputIdade").css("border","solid 5px rgb(14, 248, 6)");
-        }
-
-
-        var telefone = $("#inputTelefone").val();
                 
-        if (!($.isNumeric(telefone)) || telefone.length !== 9) {
-            alert("SEU NÚMERO NÃO É VÁLIDO");
-            $("#inputTelefone").css("border", "solid 5px red");
+                var senhaValida = validarSenha(pass);
+
+                if (passC === "" || passC !== pass) {
+                  alert("As Passwords São Diferentes")
+                    $("#inputPassC").css("border-bottom", "5px solid red");
+                    event.preventDefault();
+                } else {
+                    $("#inputPassC").css("border-bottom", "5px solid greenyellow");
+                }
+
+                if (nome !== "" && email !== "" && maile && telefone !== "" && idade !== "" && !isNaN(idade) && idade >= 18 && senhaValida==true && passC !== "" && passC === pass) {
+                    $("#signUpForm").submit();
+                }
+      });
+
+        $("#inputPass").hover(function(){
+          $(this).attr("type","text");
+          $(this).css("cursor","pointer");
+        });
+        $("#inputPass").mouseleave(function(){
+          $(this).attr("type","password");
+        });
+    
+    
+        $("#inputPassC").hover(function(){
+          $(this).attr("type","text");
+          $(this).css("cursor","pointer");
+        });
+        $("#inputPassC").mouseleave(function(){
+          $(this).attr("type","password");
+        });
+
+      function validarSenha(senha) {
+        var comprimentoMinimo = 8;
+        var possuiCaracterEspecial = /[!@#$%^&*(),.?":{}|<>]/.test(senha);
+        var possuiNumero = /\d/.test(senha);
+        var possuiMaiuscula = /[A-Z]/.test(senha);
+        var possuiMinuscula = /[a-z]/.test(senha);
+    
+        if (senha.length < comprimentoMinimo) {
+            alert("A senha deve ter pelo menos " + comprimentoMinimo + " caracteres.");
+            $("#inputPass").css("border-bottom", "5px solid red");
+            return false;
+        } else if (!possuiCaracterEspecial) {
+            alert("A senha deve conter pelo menos um caracter especial.");
+            $("#inputPass").css("border-bottom", "5px solid red");
+            return false;
+        } else if (!possuiNumero) {
+            alert("A senha deve conter pelo menos um número.");
+            $("#inputPass").css("border-bottom", "5px solid red");
+            return false;
+        } else if (!possuiMaiuscula) {
+            alert("A senha deve conter pelo menos uma letra maiúscula.");
+            $("#inputPass").css("border-bottom", "5px solid red");
+            return false;
+        } else if (!possuiMinuscula) {
+            alert("A senha deve conter pelo menos uma letra minúscula.");
+            $("#inputPass").css("border-bottom", "5px solid red");
+            return false;
         } else {
-            $("#inputTelefone").css("border", "solid 5px rgb(14, 248, 6)");
+          $("#inputPass").css("border-bottom", "5px solid greenyellow");
+            return true;
         }
-
-      if($("#inputNome").val()!="" && email==true && $("#inputTelefone").val().length==9 && $("#inputIdade").val()>17){
-        $("#primeiraEtapa").css("display","none");
-        $("#p1").css("background-color","white");
-        $("#p2").css("background-color","var(--blue)");
-        $("#segundaEtapa").css("display","block");
-        $("#identificador").val(2);
-      }
-    
-    
-    
-    }else if($("#identificador").val()=="2"){
-
-      $title=$("#imgTitle").text();
-      $cargo=$("#select-profession").val();
-
-
-        if($title=="Sua Imagem"){
-
-
-          alert("FALTA A SUA IMAGEM");
-          $(".file-upload").css("box-shadow","10px 10px 10px 10px red");
-          $(".file-upload-btn").css("background","red");
-          $(".file-upload-btn").css("border-bottom","solid 4px red");
-          $(".file-upload-btn:hover").css("background","red");
-          $(".image-upload-wrap").css("border","4px dashed red");
-          $(".image-dropping").css("background-color","red");
-
-
-        }else if($title!="Sua Imagem"){
-
-          $(".file-upload").css("box-shadow","10px 10px 10px 10px var(--blue)");
-          $(".file-upload-btn").css("background","var(--blue)");
-          $(".file-upload-btn").css("border-bottom","solid 4px var(--blue)");
-          $(".file-upload-btn:hover").css("background","var(--blue)");
-          $(".image-upload-wrap").css("border","4px dashed var(--blue)");
-          $(".image-dropping").css("background-color","var(--blue)");
-
-
-        }
-
-
-        if($cargo=="dif"){
-
-
-          alert("FALTA SELECIONAR O CARGO");
-          $("#slect").css("box-shadow","10px 10px 10px 10px red");
-
-
-        }else if($cargo!="dif"){
-
-
-          $("#slect").css("box-shadow","10px 10px 10px 10px var(--blue)");
-
-
-        }
-
-
-        if($title!="" && $cargo!="dif"){
-
-
-        $("#segundaEtapa").css("display","none");
-        $("#terceiraEtapa").css("display","block");
-        $("#identificador").val(3);
-        $("#p2").css("background-color","white");
-        $("#p3").css("background-color","var(--blue)");
-        $("#next1").val("TERMINAR");
-
-        }
-      }else if($("#identificador").val()=="3"){
-
-
-        if($("#inputPass").val().length<4){
-          alert("SUA PASSWORD É PEQUENA");
-          $("#inputPass").css("border","solid 5px red");
-        }else if($("#inputPass").val().length>4){
-          $("#inputPass").css("border","solid 5px rgb(14, 248, 6)");
-        }
-
-
-        if($("#inputCPass").val().length<4){
-          alert("ESTA PASSWORD É PEQUENA\nE COM CERTEZA NÃO ESTÁ IGUAL");
-          $("#inputCPass").css("border","solid 5px red");
-        }else if($("#inputCPass").val().length>4){
-          $("#inputCPass").css("border","solid 5px orange");
-        }
-
-
-      if($("#inputPass").val()!=$("#inputCPass").val()){
-        alert("TEMOS UM PROBLEMA A PASSWORD NÃO CORRESPONDEM");
-        $("#inputCPass").css("border","solid 5px orange");
-        $("#inputPass").css("border","solid 5px orange");
-      }else if($("#inputPass").val()==$("#inputCPass").val() && $("#inputPass").val()!="" && $("#inputCPass").val()!=""){
-        alert("PASSWORDS IGUAIS");
-        $("#inputCPass").css("border","solid 5px rgb(14, 248, 6)");
-        $("#inputPass").css("border","solid 5px rgb(14, 248, 6)");
-        $("#next1").attr("type","submit");
-      }
-
-
-      }
-    })
-
-
-    $("#inputPass").hover(function(){
-      $(this).attr("type","text");
-    });
-    $("#inputPass").mouseleave(function(){
-      $(this).attr("type","password");
-    });
-
-
-    $("#inputCPass").hover(function(){
-      $(this).attr("type","text");
-    });
-    $("#inputCPass").mouseleave(function(){
-      $(this).attr("type","password");
-    });
-
-
+    }
   /************************** Login **********************/
-
-  $("#loginL").click(function() {
-    login();
-});
 
 if (window.location.href.indexOf("login.php") > -1) {
   $(window).on("keydown", function(event) {
@@ -214,28 +148,30 @@ if (window.location.href.indexOf("login.php") > -1) {
   });
 }
 
-function login() {
+$("#confirmarL").click(function(){
     var emaile = $("#inputEmailL").val();
     var maile = IsEmail(emaile);
 
     if (maile == false || emaile == "") {
-        alert("EMAIL INVÁLIDO");
-        $("#inputEmailL").css("border", "solid 5px red");
+        $("#inputEmailL").css("border-bottom", "solid 5px red");
+        event.preventDefault();
     } else if (maile == true) {
-        $("#inputEmailL").css("border", "solid 5px rgb(14, 248, 6)");
+        $("#inputEmailL").css("border-bottom", "solid 5px greenyellow");
     }
 
     if ($("#inputPassL").val() == "" || $("#inputPassL").val().length < 4) {
-        alert("PASSWORD INVÁLIDA");
-        $("#inputPassL").css("border", "solid 5px red");
+        $("#inputPassL").css("border-bottom", "solid 5px red");
+        event.preventDefault();
     } else if ($("#inputPassL").val() != "" && $("#inputPassL").val().length > 4) {
-        $("#inputPassL").css("border", "solid 5px rgb(14, 248, 6)");
+        $("#inputPassL").css("border-bottom", "solid 5px greenyellow");
     }
 
     if ($("#inputPassL").val() != "" && $("#inputPassL").val().length > 4 && maile == true) {
-        $("#formLogin").submit();
+      $("#formLogin").submit();
     }
-}
+
+});
+
 $("#inputPassL").on("mouseenter", function() {
   $(this).attr("type", "text");
 });
@@ -253,11 +189,15 @@ $("#inputPassL").on("mouseleave", function() {
       })
 });
 
+/*************Pacotes*******************/
 
+$("#menuDD").click(function(){
+  $("#dropMenuDestino").slideToggle();
+});
 
-
-
-
+$("#dropMenuDestino").mouseleave(function(){
+  $("#dropMenuDestino").slideUp();
+});
 
 
 
