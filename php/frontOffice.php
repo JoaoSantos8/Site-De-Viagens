@@ -66,7 +66,7 @@ function drawTopFO()
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&display=swap">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Itim&display=swap">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
      
         <link rel="icon" type="image/x-icon" href="images/logoPe.ico">
 
@@ -652,28 +652,15 @@ function pacotes()
     $dados = mysqli_fetch_array($result);
   }
   ?>
-     <form action="" method="GET" class="w-25"  id="pesquisaPacotes">
-        <div id="pesquisaPacotess">
-
-              <div class="dropdown-toggle" id="menuDD">
-              <div class="d-flex float-left">Destino<br><div id="textDesc"><br>Procure seu destino ...</div></div></div>
-              
-              
-              <div class="dropdown-toggle" id="menuDDA">
-              <div class="d-flex float-left">Data<br><div id="textDescDD"><br>Selecione a Data ...</div></div></div>
-
-              <div class="dropdown-toggle" id="menuDP">
-              <div class="d-flex float-left">Preço<br><div id="textDescD"><br>Defina o Seu Preço ...</div></div></div>
-              
-              <input type="submit" value="Procurar" class="btn btn-primary" id="procurarBotao">
-
-        </div>
+     <form action="" method="GET" id="pesquisaPacotes">
+        
+        <div class="dropdown dropdown-toogle" id="destinosFiltro">Destinos</div>
 
       </form>
 
 
 
-      <div id="caixaPacotes">
+      <div id="caixaPacotes"  class="d-flex flex-wrap align-items-center">
         <?php while ($dados = mysqli_fetch_array($result)) {
           $sql = "SELECT * FROM destinos WHERE destinoId = {$dados['viagemDestinoId']}";
           $resultado = mysqli_query($con, $sql);
@@ -697,6 +684,7 @@ function pacotes()
 
       </div>
 
+</div>
       <?php
 }
 

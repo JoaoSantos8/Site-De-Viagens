@@ -119,6 +119,13 @@ CREATE TABLE `atividades`(
     FOREIGN KEY (`atividadeEventoId`) REFERENCES `eventos` (`eventoId`))
 ENGINE = InnoDB;
 
+CREATE TABLE `produtos` ( 
+  `produtoId` INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `produtoNome` varchar(255) NOT NULL,
+  `produtoNum` int(4) NOT NULL,
+  `produtoPreco` int(11) NOT NULL)
+ENGINE = InnoDB;
+
 CREATE TABLE `carrinho` ( 
   `carrinhoId` INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
   `carrinhoProdutoId` int(4) NOT NULL,
@@ -126,11 +133,4 @@ CREATE TABLE `carrinho` (
 	FOREIGN KEY (`carrinhoProdutoId`) REFERENCES `produtos` (`produtoId`),
   `carrinhoUtilizadorId` int(4) NOT NULL,
     FOREIGN KEY (`carrinhoUtilizadorId`) REFERENCES `utilizadores` (`utilizadorId`))
-ENGINE = InnoDB;
-
-CREATE TABLE `produtos` ( 
-  `produtoId` INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  `produtoNome` varchar(255) NOT NULL,
-  `produtoNum` int(4) NOT NULL,
-  `produtoPreco` int(11) NOT NULL)
 ENGINE = InnoDB;

@@ -84,8 +84,9 @@ $(document).ready(function() {
                     $("#inputPassC").css("border-bottom", "5px solid greenyellow");
                 }
 
-                if (nome !== "" && email !== "" && maile && telefone !== "" && idade !== "" && !isNaN(idade) && idade >= 18 && senhaValida==true && passC !== "" && passC === pass) {
-                    $("#signUpForm").submit();
+                if (nome !== "" && email !== "" && maile && telefone !== "" && idade !== "" && !isNaN(idade) && idade >= 18 && senhaValida && passC !== "" && passC === pass) {
+                  $("#signUpForm").attr("action", "admin/confirmaNovoUtilizador.php").submit();
+
                 }
       });
 
@@ -106,38 +107,28 @@ $(document).ready(function() {
           $(this).attr("type","password");
         });
 
-      function validarSenha(senha) {
-        var comprimentoMinimo = 8;
-        var possuiCaracterEspecial = /[!@#$%^&*(),.?":{}|<>]/.test(senha);
-        var possuiNumero = /\d/.test(senha);
-        var possuiMaiuscula = /[A-Z]/.test(senha);
-        var possuiMinuscula = /[a-z]/.test(senha);
-    
-        if (senha.length < comprimentoMinimo) {
-            alert("A senha deve ter pelo menos " + comprimentoMinimo + " caracteres.");
-            $("#inputPass").css("border-bottom", "5px solid red");
-            return false;
-        } else if (!possuiCaracterEspecial) {
-            alert("A senha deve conter pelo menos um caracter especial.");
-            $("#inputPass").css("border-bottom", "5px solid red");
-            return false;
-        } else if (!possuiNumero) {
-            alert("A senha deve conter pelo menos um número.");
-            $("#inputPass").css("border-bottom", "5px solid red");
-            return false;
-        } else if (!possuiMaiuscula) {
-            alert("A senha deve conter pelo menos uma letra maiúscula.");
-            $("#inputPass").css("border-bottom", "5px solid red");
-            return false;
-        } else if (!possuiMinuscula) {
-            alert("A senha deve conter pelo menos uma letra minúscula.");
-            $("#inputPass").css("border-bottom", "5px solid red");
-            return false;
-        } else {
-          $("#inputPass").css("border-bottom", "5px solid greenyellow");
-            return true;
-        }
-    }
+        function validarSenha(senha) {
+          var comprimentoMinimo = 8;
+          var possuiCaracterEspecial = /[!@#$%^&*(),.?":{}|<>]/.test(senha);
+          var possuiNumero = /\d/.test(senha);
+          var possuiMaiuscula = /[A-Z]/.test(senha);
+          var possuiMinuscula = /[a-z]/.test(senha);
+      
+          if (senha.length < comprimentoMinimo ||
+              !possuiCaracterEspecial ||
+              !possuiNumero ||
+              !possuiMaiuscula ||
+              !possuiMinuscula) {
+              alert("A senha não atende aos critérios necessários.");
+              $("#inputPass").css("border-bottom", "5px solid red");
+              event.preventDefault();
+              return false;
+          } else {
+              $("#inputPass").css("border-bottom", "5px solid greenyellow");
+              return true;
+          }
+      }
+      
   /************************** Login **********************/
 
 if (window.location.href.indexOf("login.php") > -1) {

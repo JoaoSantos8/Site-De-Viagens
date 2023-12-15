@@ -15,6 +15,7 @@ Date: 2023-08-27 21:54:55
 
 SET FOREIGN_KEY_CHECKS=0;
 
+USE `site` ;
 -- ----------------------------
 -- Table structure for `atividades`
 -- ----------------------------

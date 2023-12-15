@@ -4,7 +4,6 @@
 }
 
 body{
-  width: 1920px;
   margin: 0px auto;
 }
 
@@ -1033,16 +1032,9 @@ a{
 #caixaPacotes{
   height: auto;
   background-color: #e1ebecb7;
-  margin-left: 150px;
-  display: flex;
-  flex-wrap: wrap;
-  width: 1600px;
-  margin-right: 150px;
-  border-radius: 20px;
-  margin-bottom: 200px;
-  position: relative;
-  top: 100px;
-  z-index: -1;
+  margin-bottom: 150px;
+  margin-left: 100px;
+  margin-right: 100px;
 }
 
 #caixaPacote{
@@ -1074,94 +1066,15 @@ a{
   font-family: 'Itim', sans-serif;
   margin-top: 20px;
 }
-
 #pesquisaPacotes{
-  margin-top: 8%;
-  margin-left: -900px;
-  float: left;
   background-color: white;
-  width: 900px !important;
-  display: flex !important;
-}
-
-#pesquisaPacotess{
-  height: 70px;
-  width: 900px !important;
-  flex-wrap: wrap;
-  display: flex !important;
-}
-
-#tituloDoPacote{
-  text-align: center;
-  font-family: 'Jacques Francois Shadow', cursive;
-  color: black;
-  font-size: 20pt;
-}
-
-#menuDD, #menuDP, #menuDDA{
-  width: 25%;
-  height: 70px;
-  align-items: center;
-  flex-direction: row;
-  justify-content: space-evenly;
-  font-family: 'Itim', sans-serif;
-  display: flex;
-  font-size: 16pt;
-  text-align: left;
-}
-  
-#menuDD:hover, #menuDDA:hover, #menuDP:hover{
-  cursor: pointer;
-}
-
-#procurarBotao{
-  width: 23%;
-  margin: 1%;
-}
-
-#textDesc{
-  font-size:10pt; 
-  color:gray;
-  position:relative; 
-  left:-70px; 
-  top: 8px;
-}
-
-#textDescD{
-  font-size:10pt; 
-  color:gray;
-  position:relative; 
-  left:-52px; 
-  top: 8px;
-  text-align: left;
-}
-
-#textDescDD{
-  font-size:10pt; 
-  color:gray;
-  position:relative; 
-  left:-44px; 
-  top: 8px;
-  text-align: left;
-}
-
-#dropMenuDestino{
-  height: auto;
-  max-width: 230px;
-  background-color: wheat;
-  position: relative;
-  top: 221px;
-  left: -900px;
-  z-index: 2;
   display: block;
+  width: auto;
+  margin-top: 250px;
+  margin-right: 250px;
+  margin-left: 250px;
 }
 
-#menuArtigo{
-  text-align: center;
-  width: 228px;
-  height: 50px;
-  display: block;
-}
 /*********************Lista Viagens*****************/
 
 #caixaViagens{

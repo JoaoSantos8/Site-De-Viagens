@@ -32,7 +32,7 @@ navBarTopFO();
 </style>
 
 
-    <form action="admin/confirmaNovoUtilizador.php" method="POST" id="signUpForm">
+    <form method="POST" id="signUpForm">
         
     <div id="signUpCima">
         <h1>Criar Sua Conta</h1>
