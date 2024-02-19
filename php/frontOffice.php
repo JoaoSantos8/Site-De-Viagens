@@ -28,13 +28,13 @@ function menuNavBar()
 
                   <div id="menuPerfil" class="dropdown-menu">
                     <?php if ($_SESSION['utilizadorCargo'] != "Utilizador") { ?>
-                          <a class="dropdown-item p-3 text-center" href="admin/index.php" style="color: black; font-weight: bold; letter-spacing: 2px; text-transform:uppercase;">Gestão</a>
+                          <a class="dropdown-item p-3 text-center" href="admin/index.php" style="color: white;"  id="itemDrop">Gestão</a>
                     <?php } ?>
                     <a class="dropdown-item p-3 text-center" href="admin/editarPerfil.php"
-                    id="itemDrop">Perfil</a>
-                  <a class="dropdown-item p-3 text-center" href="carrinho.php" id="itemDrop">Carrinho</a>
+                    id="itemDrop" style="color: white ;">Perfil</a>
+                  <a class="dropdown-item p-3 text-center" href="carrinho.php" id="itemDrop" style="color: white;">Carrinho</a>
                     <a class="dropdown-item p-3 text-center" href="admin/logout.php"
-                      id="itemDrop">Terminar Sessão</a>
+                      id="itemDrop" style="color: white;">Terminar Sessão</a>
 
                   </div>
 
@@ -60,22 +60,17 @@ function drawTopFO()
       <html lang="pt">
 
       <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&display=swap">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Itim&display=swap">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-     
-        <link rel="icon" type="image/x-icon" href="images/logoPe.ico">
-
         <link rel="stylesheet" href="css/styleFO.css">
-        <title> E U R O - T R I P</title>
+        <title> E U R O - T R I P</title>   
       </head>
 
       <body>
-
         <?php
 }
 
@@ -191,13 +186,13 @@ function navBarBottomFO()
                     aria-haspopup="true" aria-expanded="false">
                     Pacotes
                   </a>
-                  <div class="dropdown-menu" id="dropDownMenuP" aria-labelledby="navbarDropdownMenuLink">
+                  <div class="dropdown-menu" id="dropDownMenuP"aria-labelledby="navbarDropdownMenuLink">
                     <a class="dropdown-item p-3 text-center" href="../SiteViagens/viagens.php"
-                      style="color: black; font-weight: bold;">Viagens</a>
+                      style="color: white; font-weight: bold;">Viagens</a>
                     <a class="dropdown-item p-3 text-center" href="../SiteViagens/hoteis.php"
-                      style="color: black; font-weight: bold;">Hoteis</a>
+                      style="color: white; font-weight: bold;">Hoteis</a>
                     <a class="dropdown-item p-3 text-center" href="../SiteViagens/pacotes.php"
-                      style="color: black; font-weight: bold;">Pacotes</a>
+                      style="color: white; font-weight: bold;">Pacotes</a>
                   </div>
                 </li>
 
@@ -208,8 +203,8 @@ function navBarBottomFO()
                   </a>
                   <div class="dropdown-menu" id='dropDownMenuD' aria-labelledby="navbarDropdownMenuLink">
                     <a class="dropdown-item p-3 text-center" href="paises.php"
-                      style="color: black; font-weight: bold;">Paises</a>
-                    <a class="dropdown-item p-3 text-center" href="concelhos.php" style="color: black; font-weight: bold;">Concelhos</a>
+                      style="color: white; font-weight: bold;">Paises</a>
+                    <a class="dropdown-item p-3 text-center" href="concelhos.php" style="color: white; font-weight: bold;">Concelhos</a>
                   </div>
                 </li>
                 <li class="nav-item dropdown" id="dropDownA">
@@ -219,16 +214,16 @@ function navBarBottomFO()
                   </a>
                   <div class="dropdown-menu" id='dropDownMenuA' aria-labelledby="navbarDropdownMenuLink">
                     <a class="dropdown-item p-3 text-center" href="../SiteViagens/eventos.php?id=Festival"
-                      style="color: black; font-weight: bold;">Festivais</a>
+                      style="color: white; font-weight: bold;">Festivais</a>
                     <a class="dropdown-item p-3 text-center dropdown" href="../SiteViagens/eventos.php?id=Dia"
-                      style="color: black; font-weight: bold;">Durante o Dia</a>
+                      style="color: white; font-weight: bold;">Durante o Dia</a>
                     <a class="dropdown-item p-3 text-center" href="../SiteViagens/eventos.php?id=Festa"
-                      style="color: black; font-weight: bold;">Festas</a>
+                      style="color: white; font-weight: bold;">Festas</a>
                     <a class="dropdown-item p-3 text-center" href="../SiteViagens/eventos.php?id=Noite"
-                      style="color: black; font-weight: bold;">Noite</a>
-                    <a class="dropdown-item p-3 text-center" href="" style="color: black; font-weight: bold;">Diversões</a>
+                      style="color: white; font-weight: bold;">Noite</a>
+                    <a class="dropdown-item p-3 text-center" href="" style="color: white; font-weight: bold;">Diversões</a>
                     <a class="dropdown-item p-3 text-center" href="../SiteViagens/eventos.php?id=Feira"
-                      style="color: black; font-weight: bold;">Feira</a>
+                      style="color: white; font-weight: bold;">Feira</a>
                   </div>
                 </li>
                 <li class="nav-item">
@@ -302,18 +297,18 @@ function slidePacotes()
         <form action="" method="GET" class="mt-5 w-50 float-left" id="ordenar">
           <div class="input-group ">
             <h5 class="mt-2 ml-2">Ordenação: </h5>
-            <button type="submit" class="btn ml-3 mb-3 bOrd" name="order" value="DESC">Maior para Menor&nbsp;<img
+            <button type="submit" class="btn ml-3 mb-3 bOrdF" name="order" value="DESC">Maior para Menor&nbsp;<img
                 src="images/desc.png" width="20px" height="20px"></button>
-            <button type="submit" class="btn ml-3 mb-3 bOrd" name="order" value="CRESC">Menor para Maior&nbsp;<img
+            <button type="submit" class="btn ml-3 mb-3 bOrdF" name="order" value="CRESC">Menor para Maior&nbsp;<img
                 src="images/cresc.png" width="20px" height="20px"></button>
           </div>
         </form>
         <form action="" method="GET" class="mt-5 float-right" id="filtro">
           <div class="input-group">
             <h5 class="mt-2 ml-2">Filtros: </h5>
-            <button type="submit" class="btn ml-3 mb-3 bOrd" name="filtro" value="pacotes">Pacotes</button>
-            <button type="submit" class="btn ml-3 mb-3 bOrd" name="filtro" value="viagens">Viagens</button>
-            <button type="submit" class="btn ml-3 mb-3 bOrd" name="filtro" value="hoteis">Hoteis</button>
+            <button type="submit" class="btn ml-3 mb-3 bOrdF" name="filtro" value="pacotes">Pacotes</button>
+            <button type="submit" class="btn ml-3 mb-3 bOrdF" name="filtro" value="viagens">Viagens</button>
+            <button type="submit" class="btn ml-3 mb-3 bOrdF" name="filtro" value="hoteis">Hoteis</button>
           </div>
         </form>
 
@@ -652,10 +647,43 @@ function pacotes()
     $dados = mysqli_fetch_array($result);
   }
   ?>
-     <form action="" method="GET" id="pesquisaPacotes">
+      <form action="" method="GET" id="pesquisaPacotes">
         
-        <div class="dropdown dropdown-toogle" id="destinosFiltro">Destinos</div>
+      <div class="dropdown w-25" >
+      <a class="btn w-100 dropdown-toggle align-middle text-center" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Destinos
+      </a>
 
+      <div class="dropdown-menu dropD" aria-labelledby="dropdownMenuLink">
+        <a class="dropdown-item" href="#">Alguma ação</a>
+        <a class="dropdown-item" href="#">Outra ação</a>
+        <a class="dropdown-item" href="#">Alguma coisa aqui</a>
+      </div>
+      </div>
+
+      <div class="dropdown w-25 align-middle">
+      <a class="btn  w-100 dropdown-toggle align-middle text-center dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Data
+      </a>
+
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+        <a class="dropdown-item" href="#">Alguma ação</a>
+        <a class="dropdown-item" href="#">Outra ação</a>
+        <a class="dropdown-item" href="#">Alguma coisa aqui</a>
+      </div>
+      </div>
+
+      <div class="dropdown w-25 align-middle">
+      <a class="btn dropdown-toggle  w-100 dropdown-toggle align-middle text-center" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Preço
+      </a>
+
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+        <a class="dropdown-item" href="#">Alguma ação</a>
+        <a class="dropdown-item" href="#">Outra ação</a>
+        <a class="dropdown-item" href="#">Alguma coisa aqui</a>
+      </div>
+      </div>
       </form>
 
 

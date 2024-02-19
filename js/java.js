@@ -182,14 +182,6 @@ $("#inputPassL").on("mouseleave", function() {
 
 /*************Pacotes*******************/
 
-$("#menuDD").click(function(){
-  $("#dropMenuDestino").slideToggle();
-});
-
-$("#dropMenuDestino").mouseleave(function(){
-  $("#dropMenuDestino").slideUp();
-});
-
 
 
 /*****************Cargo ************/  

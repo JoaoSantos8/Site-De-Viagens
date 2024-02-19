@@ -20,7 +20,8 @@ navBarCarrinho();
 
 <h1 class="p-5 text-center w-75 mx-auto d-block mt-5" style="background-color: #2782ff;">Carrinho de <?php echo $_SESSION['utilizadorNome'] ?></h1>
 
-<table class="text-center w-75 mx-auto rounded" style="font-size:18pt; border:5px solid #2782ff; ">
+<table class="text-center w-75 mx-auto rounded" style="font-size:18pt; border:5px solid #2782ff;
+    margin-bottom: 110px; ">
 
 <thead>
 <tr>

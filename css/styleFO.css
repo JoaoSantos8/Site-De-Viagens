@@ -124,7 +124,6 @@ body{
 }
 
 a{
-    color: white !important;
     text-decoration: none !important;
 }
 
@@ -887,6 +886,9 @@ a{
   text-transform:uppercase;
 }
 
+#itemDrop:hover{
+  color: black !important; 
+}
 
 /**********************Página principal*******************/
 
@@ -915,7 +917,7 @@ a{
   max-height: 438px;
   max-width: 589px !important;
   border: solid 3px white;
-  margin: 2% 20px;
+  margin: 2% 15px;
 }
 
 #caixa:active{
@@ -926,8 +928,13 @@ a{
 }
 
 #filtro{
-  width: 500px;
+  width: 370px;
   float: right;
+}
+
+.bOrdF:hover{
+  background-color: gray;
+  color: white;
 }
 
 .preco{
@@ -1065,16 +1072,35 @@ a{
   text-align: left;
   font-family: 'Itim', sans-serif;
   margin-top: 20px;
+  margin-bottom: 70px;
 }
 #pesquisaPacotes{
   background-color: white;
-  display: block;
-  width: auto;
-  margin-top: 250px;
-  margin-right: 250px;
-  margin-left: 250px;
+  width: 900px !important;
+  display: flex !important;
+  margin-left: 100px;
 }
 
+#destinosFiltro:hover{
+  cursor: pointer;
+}
+
+
+
+#destinosFiltro{
+  align-items: center;
+  text-align: center;
+  width: 25%;
+  height: 70px;
+  display: flex;
+  justify-content: space-around;
+}
+
+#menuDestinoF{
+  background-color: white;
+  color: black !important;
+  margin-top: -610px;
+}
 /*********************Lista Viagens*****************/
 
 #caixaViagens{
