@@ -12,7 +12,7 @@
     
     $id=intval($_GET['id']);
 
-    drawTopFO();
+    drawTopEventosFO();
     navBarAtividade($id);
     atividade($id);
     recomendR();

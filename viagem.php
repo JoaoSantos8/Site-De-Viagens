@@ -12,7 +12,7 @@
 
     $id=intval($_GET['id']);
     
-    drawTopFO();
+    drawTopViagensFO();
     navBarViagem($id);
     viagem($id);
     navBarBottomFO();

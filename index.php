@@ -8,7 +8,7 @@
         session_destroy();
     }
     
-    drawTopFO();
+    drawTopPPFO();
     navBarTop();
     slidePacotes(); 
     fundo();

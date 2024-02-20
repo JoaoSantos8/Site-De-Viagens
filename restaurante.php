@@ -12,7 +12,7 @@
     
     $id=intval($_GET['id']);
 
-    drawTopFO();
+    drawTopRestaurantesFO();
     navBarRestaurante($id);
     restaurante($id);
     recomendM();

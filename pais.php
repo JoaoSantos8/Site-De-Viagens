@@ -12,7 +12,7 @@
     
     $id=intval($_GET['id']);
 
-    drawTopFO();
+    drawTopPaisesFO();
     navBarPais($id);
     pais($id);
     recomendC();
