@@ -10,7 +10,7 @@
         exit;
     }
 
-    drawTopFO();
+    drawTopPaisesFO();
     navBarPaises();
     paises();
     navBarBottomFO();

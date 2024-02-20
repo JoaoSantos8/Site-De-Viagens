@@ -30,7 +30,7 @@ if (isset($_GET['escrevo']) && !empty($_GET['escrevo'])) {
     </div>
 </form>
 
-<div id="cabeca" class="ml-5 mt-5">
+<div id="cabeca" class="mt-5">
     <a href="novoPacote.php" class="btn-sm btn-success w-100" id="cabecaButton">NOVO PACOTE</a>
 </div>
 

@@ -13,7 +13,7 @@ if (isset($_GET['erro'])) {
 }
 
 
-drawTopFO();
+drawTopSignUpFO();
 navBarTopFO();
 ?>
 <style>
@@ -64,5 +64,5 @@ navBarTopFO();
 
 
 <?php
-drawBottomFO();
+drawBottomSignUpFO();
 ?>

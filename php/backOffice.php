@@ -126,12 +126,12 @@ function navBarBO()
 
 
 
-    <div id="perfil">
+    <section id="perfil">
       <img src="../admin/<?php echo $_SESSION['utilizadorImagemURL'] ?>" id="imgPerfil">
       <h2 id="titulo" class="text-center mt-4">SEU PERFIL</h2>
 
-
-      <div id="dadosLeft">
+      <section class="w-100 d-flex flex-wrap float-right" id="dadosBO">
+      <div id="" class="p-3">
         <div id="n" class="text-center">NOME</div>
         <div id="nome" class="text-center">
           <?php echo $_SESSION['utilizadorNome'] ?>
@@ -143,7 +143,7 @@ function navBarBO()
       </div>
 
 
-      <div id="dadosMiddle">
+      <div id="" class="p-3">
         <div id="n" class="text-center">IDADE</div>
         <div id="idade" class="text-center">
           <?php echo $_SESSION['utilizadorIdade'] ?>
@@ -155,22 +155,25 @@ function navBarBO()
 
       </div>
 
-      <div id="dadosRight">
+      <div id="" class="p-3">
         <div id="n" class="text-center">CARGO</div>
         <div id="cargo" class="text-center align-middle">
           <?php echo $_SESSION['utilizadorCargo'] ?>
         </div>
       </div>
-    </div>
+    </section>
+
+    </section>
 
     <div id="cabeca">
     <a href="../paginaPrincipal.php" class="btn btn-success w-100" id="cabecaButton">PÁGINA PRÍNCIPAL</a>
-    </div>  
+    </div> 
+  
     <?php
 
     if ($_SESSION['utilizadorCargo'] == "Geral") {
       ?>
-      <div id="btnsCima">
+      <section id="btnsCima" class="w-100 d-flex flex-wrap align-items-center pl-5">
         <a href="../admin/listaViagens.php" class="link-styled">
           <div id="btn1">
           </div>
@@ -180,9 +183,10 @@ function navBarBO()
           <div id="btn2">
           </div>
         </a>
-      </div>
+      </section>
 
-      <div id="btnsBaixo"><a href="../admin/listaPacotes.php" class="link-styled">
+      <section id="btnsBaixo" class="w-100 d-flex flex-wrap align-items-center pl-5">
+        <a href="../admin/listaPacotes.php">
           <div id="btn3">
           </div>
         </a>
@@ -190,14 +194,15 @@ function navBarBO()
           <div id="btn4">
           </div>
         </a>
-      </div>
+    </section>
 
       <?php
     }
 
     if ($_SESSION['utilizadorCargo'] == "Viagens") {
       ?>
-      <div id="btnsCima"><a href="../admin/listaViagens.php" class="link-styled">
+      <div id="btnsCima">
+        <a href="../admin/listaViagens.php" class="link-styled">
           <div id="btn1">
           </div>
         </a>
@@ -248,7 +253,7 @@ function drawBottomBO()
 {
   ?>
   </body>
-  <script src="../admin/js/java.js"></script>
+  <script src="../admin/js/main.js"></script>
   <script src="../js/java.js"></script>
 
   </html>

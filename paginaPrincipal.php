@@ -8,7 +8,7 @@
         exit;
     }
 
-    drawTopFO();
+    drawTopPPFO();
     navBarTopFO();
     slidePacotes();
     fundo();

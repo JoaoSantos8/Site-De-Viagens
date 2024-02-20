@@ -1,0 +1,115 @@
+
+
+/************************************   Login   ******************/
+
+#formLogin{
+    width: 700px;
+    height: 400px;
+    margin: auto;
+    margin-top: 3%;
+    margin-bottom: 139px;
+    background-color: #9DABC7;
+    border-radius: 25px;
+    box-shadow: 10px 10px 10px #012548;
+  }
+
+  #inputEmailL{
+    background-color: transparent;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 5px solid #012548;
+    margin: 10%;
+    font-size: 16pt;
+    width: 80%;
+    color: #012548;
+    transition: border-bottom 0.5s ease;
+  }
+
+  #inputEmailL::placeholder{
+    color: #012548;
+    font-family: 'Itim', sans-serif;
+    padding-left: 10px;
+    font-size: 16pt;
+    text-align: center;
+    font-style: italic;
+  }
+
+  #inputEmailL:focus{
+    border-bottom: 2px solid transparent;
+    outline: none;
+    color: #012548;
+    text-align: center;
+    font-family: 'Itim', sans-serif;
+  }
+
+
+  #inputPassL{
+    background-color: transparent;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    font-size: 16pt;
+    border-bottom: 5px solid #012548;
+    margin: auto;
+    width: 80%;   
+    transition: border-bottom 0.5s ease;
+    margin: 10%; 
+    color: #012548;
+  }
+
+  #inputPassL:focus{
+    border-bottom: 2px solid transparent;
+    outline: none;
+    color: #012548;
+    text-align: center;
+    font-family: 'Itim', sans-serif;
+  }
+
+  #inputPassL::placeholder{
+    color: #012548;
+    font-size: 16pt;
+    font-family: 'itim';
+    text-align: center;
+    padding-left: 10px;
+    font-style: italic;
+  }
+
+  #tituloL{
+    font-style: oblique;
+    text-transform: uppercase;
+    margin: auto;
+    text-align: center;
+    font-family: 'Itim', sans-serif;
+    color: #012548;
+    margin-top: 2%;
+    width: 450px;
+    font-style: italic;
+    background-color: #9DABC7;
+  }
+
+  #confirmarL{
+    background-color: #9DABC7;
+    border: none;
+    margin: auto;
+    margin-top: 43px !important;
+    margin-left: 100px !important;
+    height: 60px;
+    width: 500px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    font-family: 'Itim', sans-serif;
+    color: #012548;
+    font-size: 16pt;
+    box-shadow: 10px 10px 10px #012548;
+  }
+
+  #confirmarL:hover{
+    background-color: #012548;
+    color: white;
+    box-shadow: 10px 10px 10px white;
+  }
+
+  #confirmarL:focus{
+    outline: none;
+  }

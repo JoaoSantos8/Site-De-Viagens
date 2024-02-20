@@ -1,0 +1,88 @@
+
+/**********************Página principal*******************/
+
+#containerCima{
+    background-image: url(../images/fundo.png);
+    background-repeat: no-repeat;
+    max-height: 1320px;
+    width: 1920px;
+    padding: 16px;
+  }
+  
+  
+  .bOrd{
+    background-color: white;
+    color: black;
+  }
+  
+  .bOrd:hover{
+    border: 2px solid black;
+  }
+  
+  
+  #caixa{
+    background-color: #8ab9fc8e;
+    border-radius: 10px;
+    max-height: 438px;
+    max-width: 589px !important;
+    border: solid 3px white;
+    margin: 2% 15px;
+  }
+  
+  #caixa:active{
+    margin-left: 25px;
+    margin-top: 3%;
+    margin-bottom: 1%;
+    margin-right: 15px;
+  }
+  
+  #filtro{
+    width: 370px;
+    float: right;
+  }
+  
+  .bOrdF:hover{
+    background-color: gray;
+    color: white;
+  }
+  
+  .preco{
+    background-color: #2782ff;
+    color: white;
+    border-bottom-right-radius: 10px;
+    height: auto;
+  }
+  
+  .info{
+    font-size: 18pt;
+    font-weight: 600;
+    color: black;
+  }
+  
+  .tituolo{
+    color: black;
+  }
+  
+  #caixa:hover{
+    
+    border: solid 3px black;
+  }
+  
+  
+  .hora, .data{
+    height: 70px;
+    font-size: 18pt;
+    font-weight: 600;
+    padding-top: 8px;
+  }
+  
+  
+  .horaInfo{
+    height: 70px;
+  }
+  
+  .horaLege, .dataLege{
+    background-color: rgb(11, 11, 114);
+    color: white;
+    height: 70px;
+  }

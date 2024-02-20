@@ -10,7 +10,7 @@
         exit;
     }
 
-    drawTopFO();
+    drawTopMonumentosFO();
     navBarMonumentos();
     monumentos();
     navBarBottomFO();

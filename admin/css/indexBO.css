@@ -24,29 +24,6 @@
     float: left;
 }
 
-#dadosLeft{
-    float: right;
-    margin-right: 45%;
-    width: 20%;
-    display: inline;
-    font-size: 18pt;
-    padding-top: 1%;
-}
-#dadosMiddle{
-    float: right;
-    margin-right: -30%;
-    width: 10%;
-    font-size: 18pt;
-    padding-top: 1%;
-}
-
-#dadosRight{
-    float: right;
-    margin-right: -50%;
-    width: 10%;
-    font-size: 18pt;
-    padding-top: 5%;
-}
 
 #titulo{
     float: right;
@@ -94,7 +71,7 @@
 #btn1, #btn2, #btn3, #btn4{
     height: 300px;
     box-shadow: 10px 10px 5px rgb(87, 87, 87);
-    width: 807px;
+    width: 700px;
     margin: 20px;
     z-index: 0;
     background-color: white;
@@ -103,7 +80,7 @@
 }
 
 #btn1V{
-    height: 300px;
+    height: 350px;
     box-shadow: 10px 10px 5px rgb(87, 87, 87);
     width: 807px;
     margin: 20px;
@@ -146,19 +123,12 @@
     box-shadow: -10px -10px 10px rgb(87, 87, 87);
 }
 
-#btnsCima{
-    margin-left: 5%;
-    width: auto;
-    float: left;
-    display: flex;
+#dadosBO{
+    padding-left: 500px;
+    padding-top: 20px;
+    font-size: 14pt;
 }
 
-#btnsBaixo{
-    margin-left: 5%;
-    width: auto;
-    display: flex;
-    float: left;
-}
 
 #tabela{
     width: 85%;

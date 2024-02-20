@@ -9,9 +9,9 @@
         exit;
     }
 
-    drawTopFO();
+    drawTopHoteisFO();
     navBarHoteis();
     hoteis();
     navBarBottomFO();
-    drawBottomFO();
+    drawBottomHoteisFO();
 ?>

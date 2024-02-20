@@ -16,5 +16,5 @@
     navBarViagem($id);
     viagem($id);
     navBarBottomFO();
-    drawBottomFO();
+    drawBottomViagensFO();
 ?>

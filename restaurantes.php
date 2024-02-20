@@ -9,7 +9,7 @@
         exit;
     }
 
-    drawTopFO();
+    drawTopRestaurantesFO();
     navBarRestaurantes();
     restaurantesss();
     navBarBottomFO();

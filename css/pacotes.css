@@ -1,0 +1,225 @@
+
+body {
+    background: rgb(12, 110, 240);
+    background: linear-gradient(180deg, rgba(12, 110, 240, 1) 14%, rgba(157, 196, 249, 1) 39%, rgba(255, 255, 255, 1) 65%, rgba(255, 255, 255, 1) 85%);
+    font-family: 'itim';
+}
+
+li{
+    list-style-type: none;
+}
+
+a{
+    color: white !important;
+    letter-spacing: 3px;
+}
+
+/*************Caixa Pacotes****************/
+
+#caixaPacotes{
+    height: auto;
+    background-color: #e1ebecb7;
+    margin-bottom: 150px;
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+  
+  #caixaPacote{
+    margin-left: 50px;
+    margin-right: 50px;
+    display: flex;
+    margin-top: 120px;
+    width: 25%;
+  }
+  
+  #tituloPacotes{
+    margin-left: 50px;
+    margin-top: 30px;
+    color: white;
+    width: 1000px;
+    font-size: 35pt;
+    float: left;
+    text-align: left;
+    font-family: 'Jacques Francois Shadow', cursive;
+  }
+  
+  #tituloPacotesSegundo{
+    margin-left: 50px;
+    color: white;
+    width: 1000px;
+    font-size: 18pt;
+    float: left;
+    text-align: left;
+    font-family: 'Itim', sans-serif;
+    margin-top: 20px;
+    margin-bottom: 70px;
+  }
+  #pesquisaPacotes{
+    background-color: white;
+    width: 900px !important;
+    display: flex !important;
+    margin-left: 100px;
+  }
+  
+  #destinosFiltro:hover{
+    cursor: pointer;
+  }
+  
+  
+  
+  #destinosFiltro{
+    align-items: center;
+    text-align: center;
+    width: 25%;
+    height: 70px;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  #menuDestinoF{
+    background-color: white;
+    color: black !important;
+    margin-top: -610px;
+  }
+  
+  #pacotesCima{
+    width: 100%;
+    height: 300px;
+  }
+  
+  #pacotesMeio{
+    width: 100%;
+    height: 1000px;
+  }
+  
+  #filtro{
+    background-color: #0e70d1bd;
+    font-weight: bold;
+    position: fixed;
+    left: 50px;
+    width: auto;
+  }
+  
+
+/***********************Slide preço ******************/
+
+.price-input-container { 
+    width: 100%; 
+  } 
+  
+  .price-input .price-field { 
+    display: flex; 
+    margin-bottom: 22px; 
+  } 
+  
+  .price-field span { 
+    margin-right: 10px; 
+    margin-top: 6px; 
+    font-size: 17px; 
+  } 
+  
+  .price-field input { 
+    flex: 1; 
+    height: 35px; 
+    font-size: 15px; 
+    font-family: "DM Sans", sans-serif; 
+    border-radius: 9px; 
+    text-align: center; 
+    border: 0px; 
+    background: #e4e4e4; 
+  } 
+  
+  .price-input { 
+    width: 100%; 
+    font-size: 19px; 
+    color: #555; 
+  } 
+  
+  /* Remove Arrows/Spinners */
+  input::-webkit-outer-spin-button, 
+  input::-webkit-inner-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+  } 
+  
+  .slider-container { 
+    width: 100%; 
+  } 
+  
+  .slider-container { 
+    height: 6px; 
+    position: relative; 
+    background: #e4e4e4; 
+    border-radius: 5px; 
+  } 
+  
+  .slider-container .price-slider { 
+    height: 100%; 
+    left: 25%; 
+    right: 15%; 
+    position: absolute; 
+    border-radius: 5px; 
+    background: #01940b; 
+  } 
+  
+  .range-input { 
+    position: relative; 
+  } 
+  
+  .range-input input { 
+    position: absolute; 
+    width: 100%; 
+    height: 5px; 
+    background: none; 
+    top: -5px; 
+    pointer-events: none; 
+    cursor: pointer; 
+    -webkit-appearance: none; 
+  } 
+  
+  /* Styles for the range thumb in WebKit browsers */
+  input[type="range"]::-webkit-slider-thumb { 
+    height: 18px; 
+    width: 18px; 
+    border-radius: 70%; 
+    background: #555; 
+    pointer-events: auto; 
+    -webkit-appearance: none; 
+  } 
+  
+  @media screen and (max-width: 768px) { 
+    .main { 
+        width: 80%; 
+        margin-right: 5px; 
+    } 
+  
+    .custom-wrapper { 
+        width: 100%; 
+        left: 0; 
+        padding: 0 10px; 
+    } 
+  
+    .projtitle { 
+        width: 100%; 
+        position: relative; 
+        right: 26px; 
+    } 
+  
+    .price-input { 
+        flex-direction: column; 
+        align-items: center; 
+    } 
+  
+    .price-field { 
+        margin-bottom: 10px; 
+    } 
+  }  
+
+
+a:hover{
+    text-decoration: none;
+}
+
+#precoDesliza{
+    display: none;
+}

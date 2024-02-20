@@ -12,11 +12,11 @@
     
     $id=intval($_GET['id']);
 
-    drawTopFO();
+    drawTopHoteisFO();
     navBarHotel($id);
     hotel($id);
     recomendR();
     navBarBottomFO();
-    drawBottomFO();
+    drawBottomHoteisFO();
 
 ?>

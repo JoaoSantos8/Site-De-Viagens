@@ -17,6 +17,6 @@
     pacote($id);
     recomendPais();
     navBarBottomFO();
-    drawBottomFO();
+    drawBottomPacotesFO();
 
 ?>

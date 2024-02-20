@@ -1,0 +1,80 @@
+:root{
+  --blue: #2782ff !important;
+  --borda: rgb(189, 189, 189);
+}
+
+body{
+margin: 0px auto;
+}
+
+/******************Nav Bar Bottom ****************************/
+#navBarBottom{
+  background-color: #1845834f;
+  height: 100px;
+  border-top-left-radius: 20px !important;
+  border-top-right-radius: 20px !important;
+  font-family: 'Times New Roman', Times, serif;
+  width: 1650px !important;
+}
+
+#navBarBottom:hover{
+background-color: #184583;
+}
+
+a{
+  text-decoration: none !important;
+}
+
+.navbar{
+  height: 100px;
+}
+
+.nav-item{
+  padding-right: 120px;
+  padding-left: 50px;
+  font-size: 18pt;
+  cursor: pointer;
+}
+
+#dropDownMenuP{
+  width: 273px;
+  background-color: var(--blue);
+  display: none;
+  position: absolute;
+  top: -211px;
+  left: -21px;
+  border-radius: 20px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.dropdown-item:hover{
+  color: black !important;
+}
+
+#dropDownMenuD{
+  width: 292px;
+  background-color: var(--blue);
+  display: none;
+  position: absolute;
+  top: -155px;
+  left: -32px;
+  border-radius: 20px;
+  font-family: 'Times New Roman', Times, serif;
+
+}
+
+
+#dropDownMenuA{
+  width: 300px;
+  background-color: var(--blue);
+  display: none;
+  position: absolute;
+  top: -379px;
+  left: -36px;
+  border-radius: 20px;
+}
+
+#navBarB{
+  border-top-left-radius: 20px !important;
+  border-top-right-radius: 20px !important;
+}

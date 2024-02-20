@@ -1,0 +1,35 @@
+
+/************************Paises*******************************/
+
+#caixaPais{
+    width: 600px; 
+    height: 700px;  
+    margin: 100px;
+    background-color: #1f559c;
+    border-radius: 10px;
+  }
+  
+  
+  #caixaPais:hover{
+    border: solid 3px black;
+  }
+  
+  #concelho{
+    width: auto;
+    padding: 15px;
+  }
+  
+  
+  #concelho:hover{
+    border: solid 3px white;
+  }
+  
+  #pais{
+    border: solid 10px #0c6ef0;
+  }
+  
+  
+  #pais:hover{
+    background-color: white;
+    color: black;
+  }

@@ -10,7 +10,7 @@
         exit;
     }
 
-    drawTopFO();
+    drawTopEventosFO();
     navBarAtividades();
     atividadesP();
     navBarBottomFO();

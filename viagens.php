@@ -10,9 +10,9 @@
         exit;
     }
 
-    drawTopFO();
+    drawTopViagensFO();
     navBarViagens();
     viagens();
     navBarBottomFO();
-    drawBottomFO();
+    drawBottomViagensFO();
 ?>

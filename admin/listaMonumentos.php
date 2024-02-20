@@ -25,7 +25,7 @@ if (isset($_GET['q']) && !empty($_GET['q'])) {
             </div>
             </form>
 
-            <div id="cabeca" class="ml-5 mt-5">
+            <div id="cabeca" class="mt-5">
                 <a href="novoMonumento.php" class="btn-sm btn-success w-100 mt-4" id="cabecaButton">NOVO MONUMENTO</a>
             </div>
 

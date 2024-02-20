@@ -1,0 +1,151 @@
+:root{
+  --blue: #2782ff !important;
+  --borda: rgb(189, 189, 189);
+}
+
+body{
+margin: 0px auto;
+}
+
+
+
+
+/*********** NavBar Top **************************/
+#navBarTop{
+    background: rgb(39,130,255);
+    background: linear-gradient(180deg, rgba(39,130,255,1) 50%, rgba(255,255,255,1) 91%);
+    height: 130px;
+  }
+  
+  #navBarTopPacotes{
+    height: 130px;
+    background-color: #0c6ef0;
+  }
+  
+  #logotipo{
+      background-image: url(../images/logotipo.png);
+      width: 350px;
+      height: 100px;
+      background-size: cover;
+      position: absolute;
+      top: 2vh;
+      left: 10vh;
+  }
+  
+  #logotipoPacotes{
+    background-image: url(../images/logotipoBranco.png);
+    width: 350px;
+    height: 100px;
+    background-size: cover;
+    position: absolute;
+    top: 2vh;
+    left: 10vh;
+  }
+  
+  #titulo{
+      color: white;
+      font-family: 'Jacques Francois Shadow', cursive;
+      text-transform: uppercase;
+      font-size: 20pt;
+      padding-top: 50px;
+      display: flex;
+      flex-direction: column-reverse;
+  }
+  
+  #opcoes{
+      width: 400px;
+      height: 70px;
+      position: absolute;
+      right: 3%;
+      top: 15px;
+      display: flex;
+      font-size: 20pt;
+      font-family: 'Itim', sans-serif;
+  }
+  
+  #signUp{
+    border: 0;
+    border-radius: 5px;
+    color: #1F1A25;
+    font-family: "Muli", Arial, sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    background-color: #78E0DC;
+    box-shadow: 0 8px #2dc5bf;
+    padding: 20px !important;
+    height: 70px;
+    margin-right: 20px !important;
+  }
+  
+  #login{  
+    border: 0;
+    border-radius: 5px;
+    color: #1F1A25;
+    font-family: "Muli", Arial, sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    padding: 20px !important;
+    background-color: #B8B3E9;
+    box-shadow: 0 8px #6e64d2;
+    height: 70px;
+    margin-left: 20px !important;
+  }
+  #signUp:hover{
+    background-color: #4fd6d1;
+  }
+  
+  #login:hover{
+    background-color: #938bde;
+  }
+  
+  #signUp:active{
+    transform: translateY(4px);
+    box-shadow: 0 3px #2dc5bf;
+  }
+  
+  #login:active{
+    transform: translateY(4px);
+    box-shadow: 0 3px #6e64d2;
+  }
+
+  
+/**************Menu Perfil***********************/
+
+#menuPerfil{
+  display: none;
+  background-color: var(--blue);
+  position: absolute;
+  top: 86px;
+  right: 2%;
+  left: 18%;
+}
+
+#perfilUti{
+    text-align: center;
+    color: white;
+    letter-spacing: 5px;
+    
+}
+
+#imgP{
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+  border: 3px solid white;
+}
+
+
+#link{
+  display: flex;
+}
+
+#itemDrop{
+  color: white; 
+  font-weight: bold; 
+  letter-spacing: 2px; 
+  text-transform:uppercase;
+}
