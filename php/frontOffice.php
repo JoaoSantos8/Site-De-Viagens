@@ -1747,40 +1747,36 @@ function pacotes()
   ?>
   <section id="pacotesMeio">
 
-    <form action="" method="get" id="filtro">
+    <form action="filtrarPacotes" method="POST" id="filtro">
 
       <navbar id="navFiltros" class="navbar navbar-expand-lg bg-body-tertiary">
 
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Localização
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
+      <select name="localizacao" class="dropdown-item dropdown-toggle text-center itemLocalizacao w-25">
+        <option value="">Localização</option>
+        <?php
+        $sql = "SELECT * FROM viagens INNER JOIN destinos ON destinoId = viagemDestinoId";
+        $destinos = mysqli_query($con, $sql);
+
+        while($dadosD = mysqli_fetch_array($destinos)){
+        ?>
+        <option value="<?php echo $dadosD['destinoNome'] ?>"><?php echo $dadosD['destinoNome'] ?></option>
+        <?php
+        }
+        ?>
+    </select>
 
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle itemData" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Data
           </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          <ul class="dropdown-menu p-3" id="dropMenuData">
+                <h2>Selecione a data: </h2><br>
+                <input type="date" name="data" id="" class="mx-auto w-100">
           </ul>
         </li>
 
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle itemPreco" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle itemPreco" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Preço
           </a>
 
@@ -1790,13 +1786,15 @@ function pacotes()
                         <span>Minimum Price</span> 
                         <input type="number" 
                                class="min-input" 
-                               value="2500"> 
+                               value="2300"
+                               name="precoMin"> 
                     </div> 
                     <div class="price-field"> 
                         <span>Maximum Price</span> 
                         <input type="number" 
                                class="max-input" 
-                               value="8500"> 
+                               value="8700"
+                               name="precoMax"> 
                     </div> 
                 </div> 
                 <div class="slider-container"> 
@@ -1825,8 +1823,32 @@ function pacotes()
 
       </navbar>
 
+      <input type="submit" id="procurar" value="Procurar">
+
     </form>
 
+  </section>
+
+
+  <section id="dadosPacotes" class="d-flex w-100 p-5">
+  <?php 
+
+    if(isset($_SESSION['pacotesEncontrados'])) {
+
+        $pacotesEncontrados = $_SESSION['pacotesEncontrados'];
+
+        echo "<h1>Lista de Pacotes Encontrados:</h1>";
+        echo "<ul>";
+        foreach ($pacotesEncontrados as $pacote) {
+            echo "<li>$pacote</li>";
+        }
+        echo "</ul>";
+
+        unset($_SESSION['pacotesEncontrados']);
+    } else {
+        echo "<p>Nenhum pacote encontrado.</p>";
+    }
+    ?>
   </section>
 
   <?php

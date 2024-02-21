@@ -69,3 +69,17 @@ $(document).ready(function() {
         }
     }
 });
+
+
+$(".itemPreco").click(function(){
+    $(".precoDesliza").slideToggle();
+    $(".range-input").slideToggle();    
+})
+
+$(".itemLocalizacao").click(function(){
+    $("#dropMenuLocalizacao").slideToggle();
+});
+
+$(".itemData").click(function(){
+    $("#dropMenuData").slideToggle();
+});

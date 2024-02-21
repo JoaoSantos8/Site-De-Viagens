@@ -1,0 +1,43 @@
+LOGICA DO FILTROS EM PACOTES
+SQL 
+
+Ele recebe:
+
+Localização
+Data
+Preço
+
+
+Selecionar
+
+
+
+
+Localização
+Tenho de selecionar os pacotes onde a viagemId dos pacotes
+é igual ao viagemId da tabela viagens que o destinoId seja 
+o recebido na Localização
+
+
+
+
+
+
+Data
+Tenho de selecionar o pacote que o viagemId seja igual ao
+viagemId da tabela viagens do que a data seja igual ao recebido
+
+
+
+
+
+Preço
+Tenho o minimo e o máximo
+
+
+tenho de selecionar o valor do hotel guardar numa outra variavel
+tenho de selecionar o valor da viagem numa outra variavel
+
+Tenho de guardar uma variavel total com a soma desses valores
+
+selecionar o pacote onde o hotelPreco + viagemPreco seja maior que o minimo e menor que o máximo

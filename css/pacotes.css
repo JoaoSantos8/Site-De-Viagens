@@ -10,8 +10,8 @@ li{
 }
 
 a{
-    color: white !important;
-    letter-spacing: 3px;
+    color: white;
+    letter-spacing: 1px;
 }
 
 /*************Caixa Pacotes****************/
@@ -94,14 +94,16 @@ a{
   
   #filtro{
     background-color: #0e70d1bd;
-    font-weight: bold;
-    position: fixed;
-    left: 50px;
-    width: auto;
+    margin-left: 50px;
+    width: 1280px;
   }
   
 
 /***********************Slide preço ******************/
+
+.nav-item{
+  height: 60px;
+}
 
 .price-input-container { 
     width: 100%; 
@@ -159,7 +161,7 @@ a{
     right: 15%; 
     position: absolute; 
     border-radius: 5px; 
-    background: #01940b; 
+    background: #013c94; 
   } 
   
   .range-input { 
@@ -171,7 +173,7 @@ a{
     width: 100%; 
     height: 5px; 
     background: none; 
-    top: -5px; 
+    top: -6px; 
     pointer-events: none; 
     cursor: pointer; 
     -webkit-appearance: none; 
@@ -220,6 +222,49 @@ a:hover{
     text-decoration: none;
 }
 
-#precoDesliza{
+.precoDesliza, .range-input{
     display: none;
+}
+
+.precoDesliza{
+  margin-top: 40px;
+  position: relative;
+}
+
+#dropMenuLocalizacao, #dropMenuData{
+  color: black;
+}
+
+#procurar{
+  width: 300px;
+  background-color: greenyellow;
+  position: relative;
+  top: -75px;
+  right: 50px;
+  float: right;
+  border: none;
+  height: 50px;
+  font-size: 15pt;
+}
+
+#procurar:hover{
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  border: 3px solid greenyellow;
+  cursor: pointer;
+}
+
+.itemLocalizacao{
+  font-size: 18pt;
+}
+
+.itemLocalizacao:hover{
+    background-color: transparent !important;
+    cursor: pointer;
+}
+
+.itemLocalizacao:active{
+  background-color: transparent !important;
+
 }
