@@ -103,6 +103,7 @@ a{
 
 .nav-item{
   height: 60px;
+  padding-top: 4px;
 }
 
 .price-input-container { 
