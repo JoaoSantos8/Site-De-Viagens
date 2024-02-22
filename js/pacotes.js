@@ -83,3 +83,13 @@ $(".itemLocalizacao").click(function(){
 $(".itemData").click(function(){
     $("#dropMenuData").slideToggle();
 });
+  
+
+$("#dropMenuLocalizacao").mouseleave(function(){
+    $("#dropMenuLocalizacao").slideUp();
+  });
+
+
+$("#dropMenuData").mouseleave(function(){
+    $("#dropMenuData").slideUp();
+  });

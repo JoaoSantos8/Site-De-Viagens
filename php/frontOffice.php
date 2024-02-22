@@ -1729,21 +1729,6 @@ function pacotes()
 
   global $con;
 
-  if (isset($_GET['escrevo']) && !empty($_GET['escrevo'])) {
-    $termoPesquisa = mysqli_real_escape_string($con, $_GET['escrevo']);
-    $sql = "SELECT * FROM pacotes INNER JOIN viagens ON pacoteViagemId = viagemId 
-    INNER JOIN hoteis ON pacoteHotelId = hotelId
-    WHERE pacoteNome LIKE '%$termoPesquisa%'";
-    $result = mysqli_query($con, $sql);
-  } else {
-
-    $sql = "SELECT * FROM pacotes INNER JOIN viagens ON pacoteViagemId = viagemId 
-    INNER JOIN hoteis ON pacoteHotelId = hotelId
-    ";
-
-    $result = mysqli_query($con, $sql);
-    $dados = mysqli_fetch_array($result);
-  }
   ?>
   <section id="pacotesMeio">
 
@@ -1751,19 +1736,19 @@ function pacotes()
 
       <navbar id="navFiltros" class="navbar navbar-expand-lg bg-body-tertiary">
 
-      <select name="localizacao" class="dropdown-item dropdown-toggle text-center itemLocalizacao w-25">
-        <option value="">Localização</option>
-        <?php
-        $sql = "SELECT * FROM viagens INNER JOIN destinos ON destinoId = viagemDestinoId";
-        $destinos = mysqli_query($con, $sql);
+      <select class="dropdown-item dropdown-toggle w-25 itemLocalizacao" name="localizacao">
+        <option value="" id="campoDestinos" class="w-100">Localização</option>
+          <?php
+            $sql = "SELECT * FROM viagens INNER JOIN destinos ON destinoId = viagemChegadaDestinoId";
+            $destinos = mysqli_query($con, $sql);
 
-        while($dadosD = mysqli_fetch_array($destinos)){
-        ?>
-        <option value="<?php echo $dadosD['destinoNome'] ?>"><?php echo $dadosD['destinoNome'] ?></option>
-        <?php
-        }
-        ?>
-    </select>
+            while($dadosD = mysqli_fetch_array($destinos)){
+            ?>
+              <option id="campoDestinos" class="w-100" value="<?php echo $dadosD['destinoNome'] ?>"><?php echo $dadosD['destinoNome'] ?></option>
+            <?php
+            }
+          ?>
+            </select>
 
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle itemData" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -1783,18 +1768,12 @@ function pacotes()
           <div class="price-input-container precoDesliza"> 
                 <div class="price-input"> 
                     <div class="price-field"> 
-                        <span>Minimum Price</span> 
-                        <input type="number" 
-                               class="min-input" 
-                               value="2300"
-                               name="precoMin"> 
+                        <span id="textoPreco">Minimum Price</span> 
+                        <input type="number" class="min-input" value="0" name="precoMin"> 
                     </div> 
                     <div class="price-field"> 
-                        <span>Maximum Price</span> 
-                        <input type="number" 
-                               class="max-input" 
-                               value="8700"
-                               name="precoMax"> 
+                        <span id="textoPreco">Maximum Price</span> 
+                        <input type="number" class="max-input" value="1500" name="precoMax"> 
                     </div> 
                 </div> 
                 <div class="slider-container"> 
@@ -1805,22 +1784,10 @@ function pacotes()
   
             <!-- Slider -->
             <div class="range-input"> 
-                <input type="range" 
-                       class="min-range" 
-                       min="0" 
-                       max="10000" 
-                       value="2500" 
-                       step="1"> 
-                <input type="range" 
-                       class="max-range" 
-                       min="0" 
-                       max="10000" 
-                       value="8500" 
-                       step="1"> 
+                <input type="range" class="min-range" min="0" max="10000" value="0" step="1"> 
+                <input type="range" class="max-range" min="0" max="10000" value="1500" step="1"> 
             </div> 
-
         </li>
-
       </navbar>
 
       <input type="submit" id="procurar" value="Procurar">
@@ -1830,26 +1797,36 @@ function pacotes()
   </section>
 
 
-  <section id="dadosPacotes" class="d-flex w-100 p-5">
+  <section id="dadosPacotes" class="d-flex w-100 p-3">
   <?php 
-
-    if(isset($_SESSION['pacotesEncontrados'])) {
-
+    if(isset($_SESSION['pacotesEncontrados']) && !empty($_SESSION['pacotesEncontrados'])) {
         $pacotesEncontrados = $_SESSION['pacotesEncontrados'];
-
-        echo "<h1>Lista de Pacotes Encontrados:</h1>";
-        echo "<ul>";
+        $i=0;
         foreach ($pacotesEncontrados as $pacote) {
-            echo "<li>$pacote</li>";
+          $precoTotal=$_SESSION['precoTotal'];
+          ?>
+
+          <div id="caixaContentPacotes" class="w-100">
+
+              <div id="nomePacote"><?php echo $pacote['pacoteNome'] ?> </div>
+
+          </div>
+
+        <?php
         }
-        echo "</ul>";
 
         unset($_SESSION['pacotesEncontrados']);
+        unset($_SESSION['precoTotal']);
     } else {
-        echo "<p>Nenhum pacote encontrado.</p>";
+        ?>
+
+        <div class="w-100 semPacotes"> Sem Pacotes</div>
+
+        <?php
     }
-    ?>
-  </section>
+  ?>
+</section>
+
 
   <?php
 }

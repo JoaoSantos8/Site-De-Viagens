@@ -14,40 +14,107 @@ echo "<br>Data: ".$data;
 echo "<br>Minimo: ".$precoMin;
 echo "<br>Maximo: ".$precoMax;
 
-$sql="SELECT destinoId FROM destinos WHERE destinoNome='$localizacao'";
-echo $sql;
-$result=mysqli_query($con,$sql);
-$dados=mysqli_fetch_array($result);
+if(empty($localizacao) && empty($data)){
+    echo "<script>alert('Entreii AQui');</script>";
+    $sql="SELECT * FROM pacotes INNER JOIN viagens ON pacoteViagemId=viagemId INNER JOIN hoteis ON pacoteHotelId=hotelId  INNER JOIN destinos ON viagemChegadaDestinoId=destinoId
+    WHERE hotelPreco + viagemPreco > $precoMin 
+    AND hotelPreco + viagemPreco < $precoMax";
+    $result = mysqli_query($con, $sql);
 
-$localizacaoId=$dados['destinoId'];
+}else if(empty($data)){
 
-echo "<br>Id da localizacao: ".$localizacaoId;
-echo "<br>Nome de utilizador: ".$_SESSION['utilizadorNome'];
+    /*********************Sem Data******************************/
+    
+    echo "<script>alert('Sem data');</script>";
+    $sql="SELECT destinoId FROM destinos WHERE destinoNome='$localizacao'";
+    $result=mysqli_query($con,$sql);
+    $dados=mysqli_fetch_array($result);
 
-$sql = "SELECT pacoteNome 
-        FROM pacotes 
-        INNER JOIN viagens ON pacoteViagemId = viagemId 
-        WHERE viagemChegadaDestinoId = '$localizacaoId'
-        AND viagemData = '$data'
-        AND pacoteId IN (
-            SELECT pacoteId 
-            FROM pacotes 
-            INNER JOIN hoteis ON pacoteHotelId = hotelId 
-            INNER JOIN viagens ON pacoteViagemId = viagemId 
-            WHERE hotelPreco + viagemPreco > $precoMin 
-            AND hotelPreco + viagemPreco < $precoMax
+    $localizacaoId=$dados['destinoId'];
+
+    echo "<br>Id da localizacao: ".$localizacaoId."<br>";
+
+    $sql = "SELECT *
+    FROM pacotes
+    INNER JOIN viagens ON pacoteViagemId = viagemId
+    INNER JOIN hoteis ON pacoteHotelId = hotelId INNER JOIN destinos ON viagemChegadaDestinoId=destinoId
+    WHERE viagemChegadaDestinoId = '$localizacaoId'
+    AND pacoteId IN (
+        SELECT pacoteId
+        FROM pacotes
+        INNER JOIN hoteis ON pacoteHotelId = hotelId
+        INNER JOIN viagens ON pacoteViagemId = viagemId
+        WHERE hotelPreco + viagemPreco > $precoMin
+        AND hotelPreco + viagemPreco < $precoMax
         )";
 $result = mysqli_query($con, $sql);
 
+}else if(empty($localizacao)){
+
+        /************************Sem Localização********************************/
+    echo "<script>alert('Sem Localização');</script>";
+        $sql="SELECT destinoId FROM destinos WHERE destinoNome='$localizacao'";
+        $result=mysqli_query($con,$sql);
+        $dados=mysqli_fetch_array($result);
+
+        $localizacaoId=$dados['destinoId'];
+
+        echo "<br>Id da localizacao: ".$localizacaoId."<br>";
+
+        $sql = "SELECT *
+        FROM pacotes
+        INNER JOIN viagens ON pacoteViagemId = viagemId
+        INNER JOIN hoteis ON pacoteHotelId = hotelId INNER JOIN destinos ON viagemChegadaDestinoId=destinoId
+        WHERE viagemData = '$data'
+        AND pacoteId IN (
+            SELECT pacoteId
+            FROM pacotes
+            INNER JOIN hoteis ON pacoteHotelId = hotelId
+            INNER JOIN viagens ON pacoteViagemId = viagemId
+            WHERE hotelPreco + viagemPreco > $precoMin
+            AND hotelPreco + viagemPreco < $precoMax
+            )";
+    $result = mysqli_query($con, $sql);
+
+}else{
+    $sql="SELECT destinoId FROM destinos WHERE destinoNome='$localizacao'";
+    $result=mysqli_query($con,$sql);
+    $dados=mysqli_fetch_array($result);
+
+    $localizacaoId=$dados['destinoId'];
+
+    echo "<br>Id da localizacao: ".$localizacaoId."<br>";
+
+    $sql = "SELECT *
+    FROM pacotes
+    INNER JOIN viagens ON pacoteViagemId = viagemId
+    INNER JOIN hoteis ON pacoteHotelId = hotelId INNER JOIN destinos ON viagemChegadaDestinoId=destinoId
+    WHERE viagemChegadaDestinoId = '$localizacaoId'
+    AND viagemData = '$data'
+    AND pacoteId IN (
+        SELECT pacoteId
+        FROM pacotes
+        INNER JOIN hoteis ON pacoteHotelId = hotelId
+        INNER JOIN viagens ON pacoteViagemId = viagemId
+        WHERE hotelPreco + viagemPreco > $precoMin
+        AND hotelPreco + viagemPreco < $precoMax
+        )";
+$result = mysqli_query($con, $sql);
+}
+
+//echo $sql;
 $pacotesEncontrados = array();
+$totalPreco = array();
 
 while ($dados = mysqli_fetch_array($result)) {
-    $pacotesEncontrados[] = $dados['pacoteNome'];
+    $pacotesEncontrados[] = $dados;
+    $totalPreco[]=$dados['hotelPreco']+$dados['viagemPreco'];
 }
 
 $_SESSION['pacotesEncontrados'] = $pacotesEncontrados;
+$_SESSION['precoTotal'] = $totalPreco;
 
-print_r($_SESSION['pacotesEncontrados']);
-
+//print_r($_SESSION['pacotesEncontrados']);
+//print_r($_SESSION['precoTotal']);
 header("Location: pacotes.php");
 exit();
