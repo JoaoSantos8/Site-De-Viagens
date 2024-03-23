@@ -93,3 +93,22 @@ $("#dropMenuLocalizacao").mouseleave(function(){
 $("#dropMenuData").mouseleave(function(){
     $("#dropMenuData").slideUp();
   });
+
+
+  $("#img1").click(function(){
+    $("#caixa1").show()
+    $("#caixa2").hide();
+  });
+
+  $("#img2").click(function(){
+    $("#caixa2").show();
+    $("#caixa1").hide();
+  });
+
+
+
+
+
+
+
+

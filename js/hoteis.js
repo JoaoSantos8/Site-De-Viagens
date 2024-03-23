@@ -17,6 +17,7 @@ $("#btnHotel").click(function(){
   if(Quantidade!=0){
   $("#formHotel").submit();
   }else{
+    alert("Noites Inválidas");
     $("#inputQuanti").css("border","2px solid red")
   }
   });

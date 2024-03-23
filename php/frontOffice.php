@@ -42,6 +42,7 @@ function drawTopFO()
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Itim&display=swap">
+    <link rel="icon" type="image/png" href="images/logoCoracao.png">
     <?php 
       mainEstilos();
     ?>
@@ -51,6 +52,34 @@ function drawTopFO()
   <body>
     <?php
 }
+
+function drawTopPacoteFO()
+{
+  ?>
+
+  <!DOCTYPE html>
+  <html lang="pt">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Itim&display=swap">
+    <link rel="icon" type="image/png" href="images/logoCoracao.png">
+    <?php
+    mainEstilos();
+    pacoteEstilos();
+    ?>
+    <title> E U R O - T R I P</title>
+  </head>
+
+  <body>
+    <?php
+}
+
 
 function drawTopPacotesFO()
 {
@@ -67,6 +96,7 @@ function drawTopPacotesFO()
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Itim&display=swap">
+    <link rel="icon" type="image/png" href="images/logoCoracao.png">
     <?php
     mainEstilos();
     pacotesEstilos();
@@ -93,6 +123,7 @@ function drawTopSignUpFO()
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Itim&display=swap">
+    <link rel="icon" type="image/png" href="images/logoCoracao.png">
     <?php
     mainEstilos();
     signUpEstilos();
@@ -118,6 +149,7 @@ function drawTopLoginFO()
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Itim&display=swap">
+    <link rel="icon" type="image/png" href="images/logoCoracao.png">
     <?php
     mainEstilos();
     loginEstilos();
@@ -142,6 +174,7 @@ function drawTopPPFO()
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="icon" type="image/png" href="images/logoCoracao.png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Itim&display=swap">
     <?php
@@ -170,6 +203,7 @@ function drawTopRestaurantesFO()
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Itim&display=swap">
+    <link rel="icon" type="image/png" href="images/logoCoracao.png">
     <?php
     mainEstilos();
     restaurantesEstilos();
@@ -196,6 +230,7 @@ function drawTopViagensFO()
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Itim&display=swap">
+    <link rel="icon" type="image/png" href="images/logoCoracao.png">
     <?php
     mainEstilos();
     viagensEstilos();
@@ -222,6 +257,7 @@ function drawTopHoteisFO()
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Itim&display=swap">
+    <link rel="icon" type="image/png" href="images/logoCoracao.png">
     <?php
     mainEstilos();
     hoteisEstilos();
@@ -248,6 +284,7 @@ function drawTopMonumentosFO()
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Itim&display=swap">
+    <link rel="icon" type="image/png" href="images/logoCoracao.png">
     <?php
     mainEstilos();
     monumentosEstilos();
@@ -275,6 +312,7 @@ function drawTopEventosFO()
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Itim&display=swap">
+    <link rel="icon" type="image/png" href="images/logoCoracao.png">
     <?php
     mainEstilos();
     eventosEstilos();
@@ -301,6 +339,7 @@ function drawTopPaisesFO()
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Itim&display=swap">
+    <link rel="icon" type="image/png" href="images/logoCoracao.png">
     <?php
     mainEstilos();
     paisesEstilos();
@@ -331,6 +370,13 @@ function pacotesEstilos(){
   ?>
 
   <link rel="stylesheet" href="css/pacotes.css">
+  
+  <?php
+}
+function pacoteEstilos(){
+  ?>
+
+  <link rel="stylesheet" href="css/pacote.css">
   
   <?php
 }
@@ -464,7 +510,7 @@ function botaoViagens($id, $nome, $preco)
       <input type="hidden" name="nomeProduto" value="<?php echo $nome; ?>">
       <input type="hidden" name="preco" value="<?php echo $preco; ?>">
       <button type="button" class="btn btn-success" id="btnV"
-        onclick="verificar(<?php echo $dados['viagemLugares'] ?>)">Confirmar</button>
+        onclick="verificarViagem(<?php echo $dados['viagemLugares'] ?>)">Confirmar</button>
 
       <script>
 
@@ -1045,9 +1091,11 @@ function navBarViagem($id)
   global $con;
 
   $sql = "SELECT * FROM viagens INNER JOIN companhias ON viagemCompanhiaId = companhiaId
-  INNER JOIN destinos ON viagemDestinoId = destinoId";
+  INNER JOIN destinos ON viagemChegadaDestinoId = destinoId WHERE viagemId=$id";
   $result = mysqli_query($con, $sql);
   $dados = mysqli_fetch_array($result);
+
+  //echo $sql;
 
   $sql = "SELECT * FROM destinos WHERE destinoId = {$dados['viagemChegadaDestinoId']}";
   $chegada = mysqli_query($con, $sql);
@@ -1197,7 +1245,7 @@ function slidePacotes()
                 </h4>
                 <img src="admin/<?php echo $dados['hotelImagemURL'] ?>" alt="" class="w-100" height="250px">
 
-                <div class="w-75 float-left text-center pt-4 info">
+                <div class="w-75 float-left text-center p-3 info">
                   <div class="w-50 float-left">Destino:
                     <?php echo $dadosD['destinoNome'] ?>
                   </div>
@@ -1377,7 +1425,7 @@ function drawBottomFO()
   <div class="container-fluid">
     <div class="row">
       <div class="col-12 mt-5">
-        <footer class="bg-dark text-white text-center py-3">
+        <footer class="bg-dark text-white text-center p-3">
           <p>&copy; 2023 Seu Site. Todos os direitos reservados.</p>
         </footer>
       </div>
@@ -1398,9 +1446,9 @@ function drawBottomPacotesFO()
 
   </body>
   <div class="container-fluid">
-    <div class="row">
+    <div class="row w-100">
       <div class="col-12 mt-5">
-        <footer class="bg-dark text-white text-center py-3">
+        <footer class="bg-dark text-white text-center p-3">
           <p>&copy; 2023 Seu Site. Todos os direitos reservados.</p>
         </footer>
       </div>
@@ -1455,7 +1503,7 @@ function drawBottomLoginFO()
   </div>
   <?php
     mainJava();
-    signUpJava();
+    loginJava();
   ?>
 
   </html>
@@ -1471,7 +1519,7 @@ function drawBottomViagensFO()
   <div class="container-fluid">
     <div class="row">
       <div class="col-12 mt-5">
-        <footer class="bg-dark text-white text-center py-3">
+        <footer class="bg-dark text-white text-center" style="bottom:-70px;">
           <p>&copy; 2023 Seu Site. Todos os direitos reservados.</p>
         </footer>
       </div>
@@ -1730,105 +1778,157 @@ function pacotes()
   global $con;
 
   ?>
-  <section id="pacotesMeio">
+    <section id="pacotesMeio">
 
-    <form action="filtrarPacotes" method="POST" id="filtro">
+      <form action="filtrarPacotes.php" method="POST" id="filtro">
 
-      <navbar id="navFiltros" class="navbar navbar-expand-lg bg-body-tertiary">
+        <navbar id="navFiltros" class="navbar navbar-expand-lg bg-body-tertiary">
 
-      <select class="dropdown-item dropdown-toggle w-25 itemLocalizacao" name="localizacao">
-        <option value="" id="campoDestinos" class="w-100">Localização</option>
-          <?php
+        <select class="dropdown-item dropdown-toggle w-25 itemLocalizacao" name="localizacao">
+          <option value="" id="campoDestinos" class="w-100">Localização</option>
+            <?php
             $sql = "SELECT * FROM viagens INNER JOIN destinos ON destinoId = viagemChegadaDestinoId";
             $destinos = mysqli_query($con, $sql);
 
-            while($dadosD = mysqli_fetch_array($destinos)){
-            ?>
-              <option id="campoDestinos" class="w-100" value="<?php echo $dadosD['destinoNome'] ?>"><?php echo $dadosD['destinoNome'] ?></option>
-            <?php
+            while ($dadosD = mysqli_fetch_array($destinos)) {
+              ?>
+                  <option id="campoDestinos" class="w-100" value="<?php echo $dadosD['destinoNome'] ?>"><?php echo $dadosD['destinoNome'] ?></option>
+                <?php
             }
-          ?>
-            </select>
+            ?>
+              </select>
 
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle itemData" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Data
-          </a>
-          <ul class="dropdown-menu p-3" id="dropMenuData">
-                <h2>Selecione a data: </h2><br>
-                <input type="date" name="data" id="" class="mx-auto w-100">
-          </ul>
-        </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle itemData" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Data
+            </a>
+            <ul class="dropdown-menu p-3" id="dropMenuData">
+                  <h2>Selecione a data: </h2><br>
+                  <input type="date" name="data" id="" class="mx-auto w-100">
+            </ul>
+          </li>
 
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle itemPreco" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Preço
-          </a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle itemPreco" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Preço
+            </a>
 
-          <div class="price-input-container precoDesliza"> 
-                <div class="price-input"> 
-                    <div class="price-field"> 
-                        <span id="textoPreco">Minimum Price</span> 
-                        <input type="number" class="min-input" value="0" name="precoMin"> 
-                    </div> 
-                    <div class="price-field"> 
-                        <span id="textoPreco">Maximum Price</span> 
-                        <input type="number" class="max-input" value="1500" name="precoMax"> 
-                    </div> 
-                </div> 
-                <div class="slider-container"> 
-                    <div class="price-slider"> 
-                    </div> 
-                </div> 
-            </div> 
+            <div class="price-input-container precoDesliza"> 
+                  <div class="price-input"> 
+                      <div class="price-field"> 
+                          <span id="textoPreco">Minimum Price</span> 
+                          <input type="number" class="min-input" value="0" name="precoMin"> 
+                      </div> 
+                      <div class="price-field"> 
+                          <span id="textoPreco">Maximum Price</span> 
+                          <input type="number" class="max-input" value="1500" name="precoMax"> 
+                      </div> 
+                  </div> 
+                  <div class="slider-container"> 
+                      <div class="price-slider"> 
+                      </div> 
+                  </div> 
+              </div> 
   
-            <!-- Slider -->
-            <div class="range-input"> 
-                <input type="range" class="min-range" min="0" max="10000" value="0" step="1"> 
-                <input type="range" class="max-range" min="0" max="10000" value="1500" step="1"> 
-            </div> 
-        </li>
-      </navbar>
+              <!-- Slider -->
+              <div class="range-input"> 
+                  <input type="range" class="min-range" min="0" max="10000" value="0" step="1"> 
+                  <input type="range" class="max-range" min="0" max="10000" value="1500" step="1"> 
+              </div> 
+          </li>
+        </navbar>
 
-      <input type="submit" id="procurar" value="Procurar">
+        <input type="submit" id="procurar" value="Procurar">
 
-    </form>
+      </form>
 
+    </section>
+
+
+    <section id="dadosPacotes" class="d-flex w-100 p-3">
+    <?php
+    if (isset($_SESSION['pacotesEncontrados']) && !empty($_SESSION['pacotesEncontrados'])) {
+      //echo "<script>alert('Entrei no Cheio')</script>";
+      $pacotesEncontrados = $_SESSION['pacotesEncontrados'];
+      $i = 0;
+      foreach ($pacotesEncontrados as $pacote) {
+        $precoTotal = $_SESSION['precoTotal'];
+        ?>
+
+                <div id="caixaContentPacotes" class="w-100">
+
+                    <div id="nomePacote"><?php echo $pacote['pacoteNome'] ?> </div>
+
+                    <div id="titDestinoViagem" class="p-2 mt-3">Destino da Viagem</div>
+                    <div id="destinoViagem" class="p-3"><?php echo $pacote['destinoNome'] ?></div>
+
+                    <a href="viagem.php?id=<?php echo $pacote['viagemId'] ?>" id="botaoViagem" class="d-block mt-4">Ver Viagem</a>
+              
+                    <div id="hotelTit" class="p-2 mt-4">estadia</div>
+                    <div id="hotelNome" class="p-3"><?php echo $pacote['hotelNome'] ?></div>
+                    <div id="hotelPreco" class="p-3"><?php echo $pacote['hotelPreco'] ?>€ / por Noite</div>
+                    
+                    <a href="hotel.php?id=<?php echo $pacote['hotelId'] ?>" id="botaoViagem" class="d-block mt-4">Ver Hotel</a>
+
+                    
+                    <div id="titDestinoViagem" class="p-2 mt-4">Preço Total do Pacote</div>
+                    <div id="destinoViagem" class="p-3"><?php echo $precoTotal[$i] ?>€</div>
+                    
+                    <a href="pacote.php?id=<?php echo $pacote['pacoteId'] ?>" id="botaoViagem" class="d-block mt-4">Ver Pacote</a>
+
+
+                </div>
+
+              <?php
+              $i++;
+      }
+
+      unset($_SESSION['pacotesEncontrados']);
+      unset($_SESSION['precoTotal']);
+    } else {
+      //echo "<script>alert('Entrei no Vazio')</script>";
+      $sql = "SELECT * FROM pacotes INNER JOIN viagens ON pacoteViagemId=viagemId INNER JOIN hoteis ON pacoteHotelId=hotelId  INNER JOIN destinos ON viagemChegadaDestinoId=destinoId";
+      $result = mysqli_query($con, $sql);
+      while ($pacotes = mysqli_fetch_array($result)) {
+
+        ?>
+
+                <div id="caixaContentPacotes" class="w-100">
+
+                    <div id="nomePacote"><?php echo $pacotes['pacoteNome'] ?> </div>
+
+                    <div id="titDestinoViagem" class="p-2 mt-5">Destino da Viagem</div>
+                    <div id="destinoViagem" class="p-3"><?php echo $pacotes['destinoNome'] ?></div>
+              
+                    <a href="viagem.php?id=<?php echo $pacotes['viagemId'] ?>" id="botaoViagem" class="d-block mt-4">Ver Viagem</a>
+
+
+                    <div id="hotelTit" class="p-2 mt-4">estadia</div>
+                    <div id="hotelNome" class="p-3"><?php echo $pacotes['hotelNome'] ?></div>
+                    <div id="hotelPreco" class="p-3"><?php echo $pacotes['hotelPreco']?>€ / por Noite</div>
+                    
+                    <a href="hotel.php?id=<?php echo $pacotes['hotelId'] ?>" id="botaoViagem" class="d-block mt-4">Ver Hotel</a>
+
+                    
+                    <div id="titDestinoViagem" class="p-2 mt-4">Preço Total do Pacote</div>
+                    <?php $total=$pacotes['hotelPreco'] + $pacotes['viagemPreco'] ?>
+                    <div id="destinoViagem" class="p-3"><?php echo $total ?>€</div>
+                    
+                    <a href="pacote.php?id=<?php echo $pacotes['pacoteId'] ?>" id="botaoViagem" class="d-block mt-4">Ver Pacote</a>
+
+
+                </div>
+      <?php
+
+      unset($_SESSION['pacotesEncontrados']);
+      unset($_SESSION['precoTotal']);
+      }
+    }
+    ?>
   </section>
 
 
-  <section id="dadosPacotes" class="d-flex w-100 p-3">
-  <?php 
-    if(isset($_SESSION['pacotesEncontrados']) && !empty($_SESSION['pacotesEncontrados'])) {
-        $pacotesEncontrados = $_SESSION['pacotesEncontrados'];
-        $i=0;
-        foreach ($pacotesEncontrados as $pacote) {
-          $precoTotal=$_SESSION['precoTotal'];
-          ?>
-
-          <div id="caixaContentPacotes" class="w-100">
-
-              <div id="nomePacote"><?php echo $pacote['pacoteNome'] ?> </div>
-
-          </div>
-
-        <?php
-        }
-
-        unset($_SESSION['pacotesEncontrados']);
-        unset($_SESSION['precoTotal']);
-    } else {
-        ?>
-
-        <div class="w-100 semPacotes"> Sem Pacotes</div>
-
-        <?php
-    }
-  ?>
-</section>
-
-
-  <?php
+    <?php
 }
 
 
@@ -1908,30 +2008,30 @@ function hoteis()
           <div id="caixaDirHotel">
             <div id="infoEmails" style="border-top-left-radius:0px; border-top-right-radius:20px; ">
 
-              <div id="tEmail">email</div>
+              <div id="tEmail">1 Noite</div>
 
               <div id="dadosEmails">
-                <?php echo $dados['hotelEmail'] ?>
+                <?php echo $dados['hotelPreco'] ?>€
               </div>
 
             </div>
 
             <div id="infoEmails" style="border-radius: 0px;">
 
-              <div id="tEmail">telefone</div>
+              <div id="tEmail">3 Noites</div>
 
               <div id="dadosEmails">
-                <?php echo $dados['hotelTelefone'] ?>
+                <?php echo $dados['hotelPreco']*3 ?>€
               </div>
 
             </div>
 
             <div id="infoEmails" style="border-radius: 0px;">
 
-              <div id="tEmail">localização</div>
+              <div id="tEmail">1 Semana / 7 Dias</div>
 
               <div id="dadosEmails">
-                <?php echo $dadosC['concelhoNome'] ?>
+                <?php echo $dados['hotelPreco']*7 ?>€
               </div>
 
             </div>
@@ -2962,151 +3062,150 @@ function pacote($id)
 {
   global $con;
 
-  $sql = "SELECT * FROM pacotes INNER JOIN viagens ON pacoteViagemId = viagemId 
-  INNER JOIN hoteis ON pacoteHotelId = hotelId
-  ";
+  $sql = "SELECT * FROM pacotes INNER JOIN viagens ON pacoteViagemId=viagemId INNER JOIN hoteis ON pacoteHotelId=hotelId  INNER JOIN destinos ON viagemChegadaDestinoId=destinoId WHERE pacoteId=$id";
   $result = mysqli_query($con, $sql);
   $dados = mysqli_fetch_array($result);
 
-  $sql = "SELECT * FROM destinos WHERE destinoId = {$dados['viagemDestinoId']}";
-  $resultado = mysqli_query($con, $sql);
-  $dadosD = mysqli_fetch_array($resultado);
+  $sqlD = "SELECT * FROM viagens INNER JOIN destinos ON viagemDestinoId = destinoId WHERE viagemId={$dados['viagemId']}";
+  $result = mysqli_query($con, $sqlD);
+  $dadosD = mysqli_fetch_array($result);
 
-  $sql = "SELECT * FROM destinos WHERE destinoId = {$dados['viagemChegadaDestinoId']}";
-  $resultd = mysqli_query($con, $sql);
-  $chegadas = mysqli_fetch_array($resultd);
+  $sql = "SELECT * FROM concelhos WHERE concelhoId = {$dados['hoteisConcelhoId']}";
+  $resultado = mysqli_query($con, $sql);
+  $dadosC = mysqli_fetch_array($resultado)
+
 
   ?>
-  <div id="caixaHotelP">
+  
+    <section id="caixaPacotes">
+
+    <div id="img1" class="w-25" title="SELECIONAR PARA DETALHES DA VIAGEM"><img src="admin/<?php echo $dadosD['destinoImagemURL']; ?>" class="w-100" height="100%"></div>
+    <div id="img2" class="w-25" title="SELECIONAR PARA DETALHES DO HOTEL"><img src="admin/<?php echo $dados['hotelImagemURL']; ?>" class="w-100" height="100%"></div>
+
+    <h2 id="selecionar" class="w-50 text-center">selecione para detalhes ...</h2>
 
 
-    <a href="hotel.php?id=<?php echo $dados['hotelId'] ?>" style="color:black !important;">
-      <div class="text-center w-100"
-        style="color:white; padding-top:10px; font-size: 24pt;height:70px;border-bottom:solid 3px white;">Hotel
-        <?php echo $dados['hotelNome'] ?>
-      </div>
+    <div id="caixa1" class="w-50">
+      
+
+      <h2 class="text-center mb-5 w-100">Viagem</h2>
+
+      <div id="caixaEsquerda" class="w-50 text-center float-left">
 
 
+        <div id="esquerda" class="w-100 p-1">Partida de</div>
+        <div id="textoEsquerda" class="w-100 p-1 mb-4"><?php echo $dadosD['destinoNome'] ?></div>
+        
+        <div id="esquerda" class="w-100 p-1">Classe da viagem</div>
+        <div id="textoEsquerda" class="w-100 p-1 mb-4"><?php echo $dadosD['viagemClasse'] ?></div>
+        
+        <div id="esquerda" class="w-100 p-1">Hora De partida</div>
+        <div id="textoEsquerda" class="w-100 p-1 mb-4"><?php echo date('H:i', strtotime($dadosD['viagemIni'])) ?></div>
+        
+        <div id="esquerda" class="w-100 p-1">Lugares Disponiveis</div>
+        <div id="textoEsquerda" class="w-100 p-1 mb-4"><?php echo $dadosD['viagemLugares'] ?></div>
 
-
-      <div id="containerImg" class="text-center p-3" style="border-bottom: solid 3px white">
-        <img src="admin/<?php echo $dados['hotelImagemURL'] ?>" width="650px" height="400px">
-      </div>
-
-      <h4 class="text-center p-1">Descrição</h4>
-      <div class="text-center p-2" style="font-size:18pt; border-bottom: solid 3px white; color: white">
-        <?php echo $dados['hotelDescricao'] ?>
-      </div>
-
-      <div>
-
-        <div class="w-100 text-center pt-3" style="height:62px;color: white; font-size: 18pt;">Email</div>
-        <div class="w-100 text-center pt-2" style="height:62px;color: white; font-size: 18pt;background-color:#0a6ee9">
-          <?php echo $dados['hotelEmail'] ?>
-        </div>
-
-        <div class="w-100 text-center pt-3" style="height:62px;color: white; font-size: 18pt;">Telefone</div>
-        <div class="w-100 text-center pt-2" style="height:62px;color: white; font-size: 18pt;background-color:#0a6ee9">
-          <?php echo $dados['hotelTelefone'] ?>
-        </div>
 
       </div>
 
-      <div class="text-center w-100" style="color:white; padding-top:20px; font-size: 18pt;">Localização</div>
+      <div id="caixaDireita" class="w-50 text-center float-right">
 
-      <div>
+        <div id="direita" class="w-100 p-1">Destino para</div>
+        <div id="textoDireita" class="w-100 p-1 mb-4"><?php echo $dados['destinoNome'] ?></div>
+        
+        <div id="direita" class="w-100 p-1">Tipo da viagem</div>
+        <div id="textoDireita" class="w-100 p-1 mb-4"><?php echo $dados['viagemTipo'] ?></div>
+        
+        <div id="direita" class="w-100 p-1">Hora de Chegada</div>
+        <div id="textoDireita" class="w-100 p-1 mb-4"><?php echo date('H:i', strtotime($dados['viagemChegada'])) ?></div>
+        
+        <div id="direita" class="w-100 p-1">Contacto Telefónico</div>
+        <div id="textoDireita" class="w-100 p-1 mb-4"><?php echo $dados['viagemTelefone'] ?></div>
 
-        <div class="w-100 text-center"
-          style="color:white; padding-top:10px;background-color:#0a6ee9; font-size: 18pt; height:50px;">
-          <?php echo $dadosD['destinoNome'] . "<br><br>"; ?>
 
-        </div>
-
-
-        <div class="w-100 text-center pt-2" style="height:50px; background-color: rgb(11, 11, 114); color: white;">
-          <div class="w-25 float-left">1 DIA
-          </div>
-          <div class="w-50 float-left">5 DIAS
-          </div>
-          <div class="w-25 float-right">1 SEMANA
-          </div>
-        </div>
-
-        <div class="w-100 text-center"
-          style="height:50px; background-color: rgb(11, 11, 114); color: white;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;">
-          <div class="w-25 float-left">
-            <?php echo $dados['hotelPreco'] ?>€
-          </div>
-          <div class="w-50 float-left">
-            <?php echo $dados['hotelPreco'] * 5 ?>€
-          </div>
-          <div class="w-25 float-right">
-            <?php echo $dados['hotelPreco'] * 7 ?>€
-          </div>
-        </div>
       </div>
-    </a>
+
+    </div>
+    <div id="caixa2" class="w-50">
+      
+      <h2 class="text-center mb-5"><?php echo $dados['hotelNome'] ?></h2>
+
+      <div id="caixaEsquerda" class="w-50 text-center float-left">
+
+        <div id="esquerda" class="w-100 p-1">Email</div>
+        <div id="textoEsquerda" class="w-100 p-1 mb-4"><?php echo $dados['hotelEmail'] ?></div>
+        
+        <div id="esquerda" class="w-100 p-1">telefone</div>
+        <div id="textoEsquerda" class="w-100 p-1 mb-4"><?php echo $dados['hotelTelefone'] ?></div>
+        
+        <div id="esquerda" class="w-100 p-1">Localização</div>
+        <div id="textoEsquerda" class="w-100 p-1 mb-4"><?php echo $dadosC['concelhoNome'] ?></div>
+
+
+      </div>
+
+      <div id="caixaDireita" class="w-50 text-center float-right">
+
+        <div id="direita" class="w-100 p-1">1 Noite</div>
+        <div id="textoDireita" class="w-100 p-1 mb-4"><?php echo $dados['hotelPreco'] ?>€</div>
+        
+        <div id="direita" class="w-100 p-1">3 Noites</div>
+        <div id="textoDireita" class="w-100 p-1 mb-4"><?php echo $dados['hotelPreco']*3 ?>€</div>
+        
+        <div id="direita" class="w-100 p-1">1 Semana / 7 Dias</div>
+        <div id="textoDireita" class="w-100 p-1 mb-4"><?php echo $dados['hotelPreco']*7 ?>€</div>
+
+      </div>
+
+    </div>
+
+
+    </section>
+
+    <section id="caixaDetalhes" class="w-100 mb-5">
+
+    <h1 class="w-100 text-center"><img src="images/engrenagem.png" width="50px" height="50px">&nbsp&nbsp&nbsp CONFIGURAÇÃO DE PACOTE &nbsp&nbsp&nbsp <img src="images/engrenagem.png" width="50px" height="50px"></h1>
+
+    <form action="" method="post" id="formDetalhes">
+
+    <div class="text-center ml-5 float-left mt-5" id="detalhesEsquerda">
+      <h2 class="pt-2">Reserve Bilhetes</h2>
+      <h6>Escreva a quantidade de Pessoas/Lugares</h6>
+      <input type="number" name="lugares" id="inputLugares" class="w-100 text-center p-3 mt-3" placeholder="Quantidade Lugares ...">
   </div>
 
-  <div id="caixaViagensP">
-
-
-    <a href="viagens.php" style="color:black;">
-      <div id="campoCima" style="background-color: #1f559c; color: white">
-        <div id="campoEsq">De
-          <?php echo $dadosD['destinoNome'] ?>
-        </div>
-        <div id="campoDir">Para
-          <?php echo $chegadas['destinoNome'] ?>
-        </div>
-      </div>
-      <div id="campoCima" class="text-center" style="font-size:18pt; padding-top:10px;">
-        <?php echo date('d/m/Y', strtotime($dados['viagemData'])); ?>
-      </div>
-
-      <div id="campoCima" style="background-color: #1f559c; color: white">
-
-        <div id="campoEsq" class="w-50 text-center">Partida</div>
-        <div id="campoDir" class="w-50 text-center">Chegada</div>
-
-      </div>
-
-      <div id="campoCima">
-
-        <div id="campoEsq" class="w-50 text-center">
-          <?php echo date('H:i', strtotime($dados['viagemIni'])); ?>
-        </div>
-        <div id="campoDir" class="w-50 text-center">
-          <?php echo date('H:i', strtotime($dados['viagemChegada'])); ?>
-        </div>
-
-      </div>
-
-
-      <div id="campoCima" class="text-center"
-        style="font-size:18pt; padding-top:10px;background-color: #1f559c; color: white">Suporte Telefónico:
-        <?php echo $dados['viagemTelefone'] ?>
-      </div>
-
-
-      <div id="campoCima" class="text-center" style="font-size:18pt; padding-top:10px;">
-        <?php echo $dados['viagemPreco'] ?>€ / Bilhete
-      </div>
-
-
-
-
-
-
-
-
-
-
-    </a>
+  <div class="text-center mr-5 mt-5 float-right" id="detalhesDireita">
+      <h2 class="pt-2">Reserve Hotel</h2>
+      <h6>Escreva a quantidade de Dias/Noites</h6>
+      <input type="number" name="hotel" id="inputHotel" class="w-100 text-center p-3 mt-3" placeholder="Quantidade Noites ...">
+      <h6 id="totalPrevisto" class="text-center w-100 p-1">Preço Previsto:</h6>
   </div>
 
+  <script>
+    $(document).ready(function() {
+        var hotelPreco = <?php echo $dados['hotelPreco']; ?>;
 
-  <?php
+        $("#inputHotel").on("input", function() {
+            var quantidadeNoites = $(this).val();
+            
+            var totalPrevisto = quantidadeNoites * hotelPreco;
+            
+            $("#totalPrevisto").text("Preço Previsto: " + totalPrevisto + "€");
+        });
+    });
+</script>
+
+    </form>
+
+
+    </section>
+
+
+
+
+
+
+    <?php
 }
 
 
@@ -3459,7 +3558,7 @@ function viagem($id)
 
     <div id="caixaDireitaViagens">
 
-      <label id="campoDirTit">DESTINO DE CHEGADA</label>
+      <label id="campoDirTit">DESTINO</label>
       <label id="campoDirDados">
         <?php echo $chegadas['destinoNome'] ?>
       </label>
@@ -3487,7 +3586,7 @@ function viagem($id)
 
     <div id="caixaEsquerdaViagens">
 
-      <label id="campoDirTit">DESTINO DE PARTIDA</label>
+      <label id="campoDirTit">PARTIDA</label>
       <label id="campoDirDados">
         <?php echo $dados['destinoNome'] ?>
       </label>

@@ -1,8 +1,9 @@
 
 body {
-    background: rgb(12, 110, 240);
-    background: linear-gradient(180deg, rgba(12, 110, 240, 1) 14%, rgba(157, 196, 249, 1) 39%, rgba(255, 255, 255, 1) 65%, rgba(255, 255, 255, 1) 85%);
+    background: rgb(12,110,240);
+    background: linear-gradient(180deg, rgba(12,110,240,1) 14%, rgba(50,134,239,1) 33%, rgba(154,200,236,1) 59%);
     font-family: 'itim';
+    height: auto;
 }
 
 li{
@@ -12,6 +13,10 @@ li{
 a{
     color: white;
     letter-spacing: 1px;
+}
+
+a:hover{
+  color: white;
 }
 
 /*************Caixa Pacotes****************/
@@ -84,9 +89,8 @@ a{
   
   #pacotesMeio{
     width: 100%;
-    height: 250px;
-    background: rgb(178,209,251);
-    background: linear-gradient(180deg, rgba(178,209,251,1) 25%, rgba(77,162,230,0.9416141456582633) 85%);
+    height: 150px;
+    background-color: transparent;
   }
   
   #filtro{
@@ -243,7 +247,8 @@ a:hover{
 
 #procurar{
   width: 300px;
-  background-color: greenyellow;
+  color: white;
+  background-color: #001F3F;
   position: relative;
   top: -75px;
   right: 50px;
@@ -251,15 +256,39 @@ a:hover{
   border: none;
   height: 50px;
   font-size: 15pt;
+  border-radius: 3px;
 }
 
 #procurar:hover{
-  background-color: white;
   color: black;
   font-weight: bold;
-  border: 3px solid greenyellow;
   cursor: pointer;
+  animation: changeBackgroundColor 3s infinite;
 }
+
+
+@keyframes changeBackgroundColor {
+  0% {
+    color: white;
+    background-color: #001F3F;
+  }
+  50% {
+    color: black;
+    background-color: #FF4136;
+  }
+  100% {
+    color: white;
+    background-color: #001F3F;
+  }
+}
+
+
+
+
+
+
+
+
 
 .itemLocalizacao{
   font-size: 18pt;
@@ -296,6 +325,9 @@ a:hover{
   height: auto;
   padding: 20px;
   margin: 30px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px gray;
+  display: block;
 }
 
 #nomePacote{
@@ -305,7 +337,7 @@ a:hover{
 }
 
 #dadosPacotes{
-  height: 250px;
+  height: auto;
 }
 
 .semPacotes{
@@ -319,6 +351,96 @@ a:hover{
   border-radius: 10px;
 }
 
-.select select{
-  appearance: none;
+#destinoViagem{
+  color: #4490DC;
+  text-align: center;
+  background-color: white;
+  border-bottom-left-radius: 5px;
+  font-size: 15pt;
+  border-bottom-right-radius: 5px;
+  box-shadow: 10px 10px 10px black;
+  height: auto;
+}
+
+#titDestinoViagem{
+  color: #4490DC;
+  text-align: center;
+  background-color: white;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  font-size: 15pt;
+  border-bottom: 2px solid gray;
+  text-transform: uppercase;
+  box-shadow: 10px 15px 10px black;
+  height: auto;
+}
+
+
+
+
+#hotelTit{
+  color: #4490DC;
+  text-align: center;
+  background-color: white;
+  font-size: 15pt;
+  border-bottom: 2px solid gray;
+  text-transform: uppercase;
+  box-shadow: 10px 20px 10px black;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  height: auto;
+}
+
+#hotelNome{
+  color: #4490DC;
+  text-align: center;
+  background-color: white;
+  font-size: 15pt;
+  box-shadow: 10px 15px 10px black;
+  height: auto;
+}
+
+#hotelPreco{
+  color: #4490DC;
+  text-align: center;
+  background-color: white;
+  border-bottom-left-radius: 5px;
+  font-size: 15pt;
+  border-bottom-right-radius: 5px;
+  box-shadow: 10px 10px 10px black;
+  height: auto;
+}
+
+
+
+
+
+
+#botaoViagem{
+  background-color: greenyellow;
+  height: 50px;
+  box-shadow: 0px 10px  green;
+  color: black;
+  text-align: center;
+  border-radius: 5px;
+  padding-top: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-family: "Muli", Arial, sans-serif;
+}
+
+#botaoViagem:hover{
+  background-color: rgb(4, 199, 4);
+  font-weight: bold;
+  color: white;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-family: "Muli", Arial, sans-serif;
+}
+
+#botaoViagem:active{
+  box-shadow: none;
+  margin-top: 3px;
+  margin-left: 3px;
+  box-shadow: 0px 3px  green;
 }

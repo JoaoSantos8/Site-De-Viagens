@@ -1,7 +1,6 @@
 /***************Viagens*********************************/
 
-$(document).ready(function() {
-function verificar(cont){
+function verificarViagem(cont){
     var Quantidade = $("#inputQuantiV").val();
     if(Quantidade!=0){
       if(Quantidade>cont){
@@ -24,5 +23,3 @@ function verificar(cont){
     $("#formViagens").slideDown();
     $("#btnV").css("display","block");
   });
-
-});

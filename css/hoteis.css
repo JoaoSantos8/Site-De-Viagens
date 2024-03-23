@@ -1,205 +1,237 @@
-
 /******Hotel********/
 
-#caixaInfos{
-    border: 7px solid var(--blue);
-    background-color: var(--gray);
-    width: auto;
-    height: 700px;
-    margin: 5% 5%;
-    border-radius: 20px;
-  }
-  
-  #imgInfo{
-    margin: 4%;
-    border: 5px solid var(--blue);
-    width: 740px;
-    border-radius: 20px;
-    position: relative;
-  }
-  
-  #imagemInfo{
-    width: 100%;
-    height: 450px;
-    border-radius: 15px;
-    object-fit: cover;
-  }
-  
-  #descInfo {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente para legibilidade */
-    color: white;
-    padding: 10px;
-    width: 100%;
-    text-align: center;
-    box-sizing: border-box;
-    margin-bottom: 0px;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-  }
-  
-  
-  #tituloInfo{
-    background-color: var(--gray);
-    border: 7px solid var(--blue);
-    width: auto;
-    height: 80px;
-    text-align: center;
-    padding: 15px;
-    margin: -5% 41%;
-    border-radius: 10px;
-    font-size: 18pt;
-    color: white;
-    font-weight: bold;
-    letter-spacing: 1px;
-  }
-    
-  #caixaInfo{
-    background-color: var(--gray);
-    width: 300px;
-    height: 450px;
-    float: right;
-    margin-top: -32%;
-    margin-right: 3%;
-    height: 400px;
-    width: 800px;
-    border-radius: 20px;
-  } 
-  
-  #caixaEmail{
-    background-color: var(--blue);
-    height: 110px;
-    padding-top: 10px;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-  }
-  
-  #emailInfo{
-    height: 50px;
-    text-align: center;
-    font-size: 18pt;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: white;
-    background-color: #184583;
-    width: 100%;
-    padding-top: 8px;
-  }
-  
-  #infoEmail{
-    height: 50px;
-    text-align: center;
-    font-size: 18pt;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: white;
-  }
-  
-  
-  #caixaTel{
-    background-color: var(--blue);
-    height: 110px;
-    padding-top: 10px;
-    margin-top: 30px;
-  }
-  
-  #telInfo{
-    height: 50px;
-    text-align: center;
-    font-size: 18pt;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: white;
-    background-color: #184583;
-    width: 100%;
-    padding-top: 8px;
-  }
-  
-  #infoTel{
-    height: 50px;
-    text-align: center;
-    font-size: 18pt;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: white;
-  }
-  
-  #caixaPreco{
-    background-color: var(--blue);
-    height: 110px;
-    padding-top: 10px;
-    margin-top: 30px;
-  }
-  
-  #infoPreco1, #infoPreco2, #infoPreco3{
-    height: 50px;
-    text-align: center;
-    font-size: 18pt;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: white;
-    width: 33%;
-    float: left;
-  }
-  
-  #precoInfo1, #precoInfo2{
-    height: 50px;
-    text-align: center;
-    font-size: 18pt;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: white;
-    width: 33%;
-    float: left;
-    background-color: #184583;
-    padding-top: 8px;
-  }
-  
-  
-  #precoInfo3{
-    height: 50px;
-    text-align: center;
-    font-size: 18pt;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: white;  
-    width: 34%;
-    float: right;
-    background-color: #184583;
-    padding-top: 8px;
-  }
-  
-  #caixaConcelho{
-    background-color: var(--blue);
-    height: 110px;
-    padding-top: 10px;
-    margin-top: 30px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-  }
-  
-  #concelhoInfo{
-    height: 50px;
-    text-align: center;
-    font-size: 18pt;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: white;
-    background-color: #184583;
-    width: 100%;
-    padding-top: 8px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-  }
-  
-  #infoConcelho{
-    height: 50px;
-    text-align: center;
-    font-size: 18pt;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: white;
-  }
-  
+#caixaInfos {
+  border: 7px solid var(--blue);
+  background-color: var(--gray);
+  width: auto;
+  height: 700px;
+  margin: 5% 5%;
+  border-radius: 20px;
+}
+
+#imgInfo {
+  margin: 4%;
+  border: 5px solid var(--blue);
+  width: 740px;
+  border-radius: 20px;
+  position: relative;
+}
+
+#imagemInfo {
+  width: 100%;
+  height: 450px;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+#descInfo {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  /* Fundo semi-transparente para legibilidade */
+  color: white;
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  margin-bottom: 0px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+
+#tituloInfo {
+  background-color: var(--gray);
+  border: 7px solid var(--blue);
+  width: auto;
+  height: 80px;
+  text-align: center;
+  padding: 4px;
+  margin: -82% 41%;
+  border-radius: 10px;
+  font-size: 28pt;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+#caixaInfo {
+  background-color: var(--gray);
+  width: 300px;
+  height: 450px;
+  float: right;
+  margin-top: -32%;
+  margin-right: 3%;
+  height: 400px;
+  width: 800px;
+  border-radius: 20px;
+}
+
+#caixaEmail {
+  background-color: var(--blue);
+  height: 110px;
+  padding-top: 10px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+#emailInfo {
+  height: 50px;
+  text-align: center;
+  font-size: 18pt;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+  background-color: #184583;
+  width: 100%;
+  padding-top: 8px;
+}
+
+#infoEmail {
+  height: 50px;
+  text-align: center;
+  font-size: 18pt;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+}
+
+
+#caixaTel {
+  background-color: var(--blue);
+  height: 110px;
+  padding-top: 10px;
+  margin-top: 30px;
+}
+
+#telInfo {
+  height: 50px;
+  text-align: center;
+  font-size: 18pt;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+  background-color: #184583;
+  width: 100%;
+  padding-top: 8px;
+}
+
+#infoTel {
+  height: 50px;
+  text-align: center;
+  font-size: 18pt;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+}
+
+#caixaPreco {
+  background-color: var(--blue);
+  height: 110px;
+  padding-top: 10px;
+  margin-top: 30px;
+}
+
+#infoPreco1,
+#infoPreco2,
+#infoPreco3 {
+  height: 50px;
+  text-align: center;
+  font-size: 18pt;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+  width: 33%;
+  float: left;
+}
+
+#precoInfo1,
+#precoInfo2 {
+  height: 50px;
+  text-align: center;
+  font-size: 18pt;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+  width: 33%;
+  float: left;
+  background-color: #184583;
+  padding-top: 8px;
+}
+
+
+#precoInfo3 {
+  height: 50px;
+  text-align: center;
+  font-size: 18pt;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+  width: 34%;
+  float: right;
+  background-color: #184583;
+  padding-top: 8px;
+}
+
+#btnH {
+  width: 500px;
+  height: 70px;
+  margin-top: -5%;
+  margin-left: 35%;
+  border-radius: none;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 10px;
+  z-index: 9999;
+  position: relative;
+  box-shadow: 10px 10px 10px var(--blue);
+  border: 3px solid var(--blue);
+}
+
+#btnHotel {
+  width: 50%;
+  height: 70px;
+  margin-top: 2%;
+  margin-left: 25%;
+  border-radius: none;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: 3px solid var(--blue);
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px var(--blue);
+}
+
+#caixaConcelho {
+  background-color: var(--blue);
+  height: 110px;
+  padding-top: 10px;
+  margin-top: 30px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+#concelhoInfo {
+  height: 50px;
+  text-align: center;
+  font-size: 18pt;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+  background-color: #184583;
+  width: 100%;
+  padding-top: 8px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+#infoConcelho {
+  height: 50px;
+  text-align: center;
+  font-size: 18pt;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+}

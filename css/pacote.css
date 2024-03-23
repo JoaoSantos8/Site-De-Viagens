@@ -1,0 +1,149 @@
+body{
+    font-family: 'itim';
+}
+
+#img1{
+    height: 300px;
+    margin: 100px;
+    border-radius: 15px;
+    box-shadow: 10px 10px 10px var(--blue);
+    position: relative;
+    z-index: 6 !important;
+
+
+}
+
+#img2{
+    height: 300px;
+    position: relative;
+    top: -330px;
+    left: 160px;
+    display: flex;
+    border-radius: 15px;
+    box-shadow: 10px 10px 10px var(--blue);
+    position: relative;
+    z-index: 6 !important;
+}
+
+img{
+    border-radius: 15px;
+}
+
+#caixaPacotes{
+    height: 60vh;
+}
+
+#img1:hover{
+    z-index: 7 !important;
+}
+
+#img1:hover, #img2:hover{
+    cursor: pointer;
+}
+
+#caixa1{
+    display: none;
+}
+
+#caixa2{
+    display: none;
+}
+
+#caixa1, #caixa2{
+    float: right;
+    position: relative;
+    top: -800px;
+    margin-right: 100px;
+    max-height: 0px !important;
+    animation: slideEsquerda 1s forwards;
+}
+
+@keyframes slideEsquerda {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+#selecionar{
+    position: relative;
+    top: -250px;
+    left: -110px;
+    font-family: 'itim';
+    text-transform: uppercase;
+}
+
+#esquerda{
+    background-color: var(--blue);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    text-transform: uppercase;
+    color: white;
+}
+
+#esquerda, #textoEsquerda, #direita, #textoDireita{
+    height: 50px;
+    font-size: 18pt;
+}
+
+#direita{
+    background-color: var(--blue);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    text-transform: uppercase;
+    color: white;
+}
+
+#img1:active, #img2:active{
+    box-shadow: 5px 5px 5px var(--blue);
+}
+
+#img1:hover, #img2:hover{    
+    filter: brightness(30%);
+}
+
+
+#caixaDetalhes{
+    height: 300px;
+}
+
+
+#formDetalhes{
+}
+
+#detalhesEsquerda, #detalhesDireita{
+    max-height: 180px !important;
+    color: white;
+    background: rgb(67,72,78);
+    background: radial-gradient(circle, rgba(67,72,78,1) 36%, rgba(201,109,23,1) 70%);
+    border-radius: 10px;
+    width: 45%;
+}
+
+#inputLugares, #inputHotel{
+    height: 50px;
+    border: solid 3px gray;
+}
+
+#inputLugares::placeholder, #inputHotel::placeholder{
+    color: black;
+}
+
+#inputLugares:focus, #inputHotel:focus{
+    outline: none;
+}
+
+
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {
+    padding: 10px;
+    height: 20px;
+    color: blue;
+}
+
+#totalPrevisto{
+    height: 50px;
+}

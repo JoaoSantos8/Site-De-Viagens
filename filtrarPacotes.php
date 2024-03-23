@@ -15,7 +15,8 @@ echo "<br>Minimo: ".$precoMin;
 echo "<br>Maximo: ".$precoMax;
 
 if(empty($localizacao) && empty($data)){
-    echo "<script>alert('Entreii AQui');</script>";
+    
+    echo "<script>alert('Nenhum Filtro');</script>";
     $sql="SELECT * FROM pacotes INNER JOIN viagens ON pacoteViagemId=viagemId INNER JOIN hoteis ON pacoteHotelId=hotelId  INNER JOIN destinos ON viagemChegadaDestinoId=destinoId
     WHERE hotelPreco + viagemPreco > $precoMin 
     AND hotelPreco + viagemPreco < $precoMax";

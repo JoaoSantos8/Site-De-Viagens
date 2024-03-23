@@ -12,10 +12,10 @@
     
     $id=intval($_GET['id']);
 
-    drawTopPacotesFO();
+    drawTopPacoteFO();
     navBarPacotes($id);
     pacote($id);
-    recomendPais();
+    //recomendPais();
     navBarBottomFO();
     drawBottomPacotesFO();
 
